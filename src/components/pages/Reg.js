@@ -7,6 +7,7 @@ const Reg = ({ showReg }) => {
         email: '',
         callNumber: '',
         whatsAppNumber: '',
+        message:'',
         state: '',
         country: '',
         category: '',
@@ -15,7 +16,7 @@ const Reg = ({ showReg }) => {
         password2: ''
     })
 
-    const { firstName, lastName, email, callNumber, whatsAppNumber, state, country, category, referer, password, password2 } = regDetails
+    const { firstName, lastName, email, callNumber, whatsAppNumber, message, state, country, category, referer, password, password2 } = regDetails
 
     const onChange = (e) => {
         setRegDetails({ ...regDetails, [e.target.name]: e.target.value })
@@ -27,13 +28,13 @@ const Reg = ({ showReg }) => {
 
     return (
         <form onSubmit={onSubmit} className={`${showReg ? 'regShow' : 'regHide'}`} id="registerBox" method="post">
-            <input onChange={onChange} name='firstName' type="text" placeholder="FirstName" value={firstName} required />
-            <input onChange={onChange} name='lastName' type="text" placeholder="lastName" value={lastName} required />
+            <input onChange={onChange} name='firstName' type="text" placeholder="Firstname" value={firstName} required />
+            <input onChange={onChange} name='lastName' type="text" placeholder="Surname" value={lastName} required />
             <input onChange={onChange} name='email' type="email" placeholder="E-mail" value={email} required />
             <input onChange={onChange} name='callNumber' type="number" placeholder="telephone number" value={callNumber} required />
-            <input onChange={onChange} name='whatsAppNumber' type='number' placeholder="Date Of Birth" value={whatsAppNumber} required />
-            <input onChange={onChange} name='state' type="text" placeholder="Place Of Birth" value={state} required />
-            <input onChange={onChange} name='country' type="text" placeholder="Nationality" value={country} required />
+            <input onChange={onChange} name='whatsAppNumber' type='number' placeholder="Whatsapp number" value={whatsAppNumber} required />
+            <input onChange={onChange} name='state' type="text" placeholder="Enter your state" value={state} required />
+            <input onChange={onChange} name='country' type="text" placeholder="Country" value={country} required />
             <select name='category' value={category} className="mdb-select md-form" searchable="Search here.." onChange={onChange}>
                 <option value="" disabled selected>Select your category</option>
                 <option value="Individual buyer/Investors">Individual buyer/Investors</option>
@@ -59,7 +60,8 @@ const Reg = ({ showReg }) => {
 
             <input onChange={onChange} name='password' type="password" placeholder="Password" value={password} required minLength='6' />
             <input onChange={onChange} name='password2' type="password" placeholder="Confirm-Password" value={password2} required minLength='6' />
-
+      {/*TODO: Style the textarea */}
+            <textarea onChange={onChange} name="message" value={message} placeholder="Any message?(how do you want us to help)"> </textarea>
             <input type='submit' value='Register' className="lr-submit" onClick={onSubmit} />
         </form>
     )

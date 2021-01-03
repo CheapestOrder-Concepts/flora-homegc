@@ -5,8 +5,8 @@ import Reg from './Reg';
 import '../../css/LorR.css';
 
 const LorR = () => {
-    const [showReg, setShowReg] = useState(false);
-    const [showLog, setShowLog] = useState(true);
+    const [showReg, setShowReg] = useState(true);
+    const [showLog, setShowLog] = useState(false);
 
     const login = useRef('Login')
     const register = useRef('Register')

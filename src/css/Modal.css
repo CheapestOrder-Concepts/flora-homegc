@@ -29,7 +29,7 @@
     transform: translate(-50%, -50%);
     max-width: 80%;
     width: 800px;
-    animation: modalopen var(--modal-duration);
+    /* animation: modalopen var(--modal-duration); */
 }
 
 /* .modal-header {

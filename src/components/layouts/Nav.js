@@ -56,7 +56,7 @@ const Nav = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#noWhere">Home <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#noWhere">About</a>
@@ -69,12 +69,10 @@ const Nav = () => {
 
                             <a className="dropdown-item" href="#noWhere">Verification Service</a>
                             <a className="dropdown-item" href="#noWhere">Complete Property Buyer Service</a>
-                            <a className="dropdown-item" href="#noWhere">Our Estates</a>
-                            <a className="dropdown-item" href="#noWhere">Design Build & Manage</a>
-                            <a className="dropdown-item" href="#noWhere">Done-For-You Investment</a>
-                            <a className="dropdown-item" href="#noWhere">Advisory</a>
+                            <a className="dropdown-item" href="#noWhere">FloraCity</a>
+                            <a className="dropdown-item" href="#noWhere">Bulk Land Purchase</a>
+                            <a className="dropdown-item" href="#noWhere">Design Build And Manage</a>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#noWhere">Sell My Property</a>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
@@ -92,15 +90,17 @@ const Nav = () => {
                     <li className="nav-item">
                         <a className="nav-link" href="#noWhere">Subscription</a>
                     </li>
+                    
                 </ul>
 
                 <div className="search-box-btn" id='open' onClick={showModal}>
                     <span className="fa fa-search"></span>
                 </div>
-
+                {/*TODO: The Register and login button doesn't show on mobile. Fix it*/}
                 <div className="d-flex justify-content-end">
                     <Link to='signUp' spy={true} smooth={true}>
                         <button type="button" className="custom-btn btn btn-lg">Register/Login</button>
+                      
                     </Link>
 
                 </div>

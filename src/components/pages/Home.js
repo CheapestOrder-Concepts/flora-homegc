@@ -12,10 +12,10 @@ import LorR from './LorR';
 
 import { SliderData as slides } from './sliderData';
 
-import Slide from 'react-reveal/Slide';
+
 import Fade from 'react-reveal/Fade';
-import Pulse from 'react-reveal/Pulse';
-import RubberBand from 'react-reveal/RubberBand';
+
+
 import HeadShake from 'react-reveal/HeadShake';
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
 
   setTimeout(() => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-  }, 5000);
+  }, 20000);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -121,14 +121,14 @@ const Home = () => {
             <div className='col-sm'>
               <span className='icon-dots'></span>
 
-              <Fade left>
+             
                 <div className='image-box'>
                   <figure className='image'>
                     <img id='bmw' src={surv} alt='' />
                     <img src={iconShape} alt='' className='bmw2' />
                   </figure>
                 </div>
-              </Fade>
+              
             </div>
 
             <div className='col-sm'>
@@ -147,9 +147,9 @@ const Home = () => {
         <div className='container-fluid con2'>
           <div className='row'>
             <div className='col-sm'>
-              <Fade bottom>
+             
                 <img src={mock} alt='mock' />
-              </Fade>
+              
             </div>
             <div className='col-sm col2'>
               <h2>
@@ -175,7 +175,7 @@ const Home = () => {
           </div>
           <div className='container'>
             <div className='row'>
-              <Pulse>
+              
                 <div className='col-sm'>
                   <div className='svg'>
                     <svg
@@ -273,7 +273,7 @@ const Home = () => {
                     </svg>
                   </div>
                 </div>
-              </Pulse>
+              
             </div>
 
             <button type='button' className='custom-btn btn btn-lg'>
@@ -304,11 +304,11 @@ const Home = () => {
           <div className='container'>
             <div className='row'>
               <div className='col-sm'>
-                <RubberBand>
+                
                   <h4>PURPOSE</h4>
                   <h2>our promise to you</h2>
-                </RubberBand>
-                <Slide left>
+               
+                
                   <ul>
                     <li className='noB'>
                       Providing 100% done-for-you real estate services to
@@ -323,7 +323,7 @@ const Home = () => {
                       occupying the space.
                     </li>
                   </ul>
-                </Slide>
+               
                 <button type='button' className='custom-btn btn btn-lg'>
                   Learn More...
                 </button>
@@ -339,10 +339,10 @@ const Home = () => {
 
         <div className='sec4'>
           <div className='testTile text-center'>
-            <RubberBand>
+            
               <h4>TESTIMONIAL</h4>
               <h2>What Clients Say</h2>
-            </RubberBand>
+            
           </div>
 
           <section className='slider'>

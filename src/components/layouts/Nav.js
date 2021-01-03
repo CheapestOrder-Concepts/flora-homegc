@@ -96,7 +96,7 @@ const Nav = () => {
                 <div className="search-box-btn" id='open' onClick={showModal}>
                     <span className="fa fa-search"></span>
                 </div>
-                {/*TODO: The Register and login button doesn't show on mobile. Fix it*/}
+                {/*TODO: The Register and login button doesn't show on mobile. Fix it. Today*/}
                 <div className="d-flex justify-content-end">
                     <Link to='signUp' spy={true} smooth={true}>
                         <button type="button" className="custom-btn btn btn-lg">Register/Login</button>

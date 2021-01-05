@@ -6,7 +6,6 @@ import logo from '../assets/FHGC weblogo.png';
 
 const Nav = () => {
     let location = useLocation()
-    // console.log(location.pathname, location.pathname.slice(1, location.pathname.length).length);
     useEffect(() => {
         if (location.pathname.slice(1, location.pathname.length)) {
             setNotHome(() => true)
@@ -32,6 +31,9 @@ const Nav = () => {
 
     document.addEventListener('scroll', onScroll)
 
+    const logoClick = (e) => {
+        if (button.current.ariaExpanded) {
+
     // const onClick = (e) => {
     //     if (button.current.ariaExpanded) {
     //         document.body.classList.toggle('noverflow')
@@ -48,6 +50,15 @@ const Nav = () => {
         e.preventDefault()
     }
 
+    // const unMountUL = (e) => {
+    //     // eslint-disable-next-line eqeqeq
+    //     if ((e.target.classList.contains('nav-item' || 'dropdown-item') && !e.target.id == 'dropdown-toggle') || e.target.id == 'logo' || button.current.ariaExpanded) {
+    //         document.body.classList.toggle('noverflow')
+    //         NavUL.current.classList.remove('show');
+    //     }
+    //     e.preventDefault()
+    // }
+
     const showModal = () => {
         const open = document.getElementById('open');
         const modal = document.getElementById('modal');
@@ -58,8 +69,13 @@ const Nav = () => {
     }
 
     return (
+
+        <nav ref={Nav} className={`navbar navbar-expand-lg sticky-top ${navScroll ? 'shadow' : 'inherit'} ${notHome ? 'navColorBlack' : 'inherit'}`}>
+            <div id='logo' onClick={logoClick}>
+
         <nav onClick={unMountUL} ref={Nav} className={`navbar navbar-expand-lg sticky-top ${navScroll ? 'shadow' : 'inherit'} ${notHome ? 'navColorBlack' : 'inherit'}`}>
             <div id='logo'>
+
                 <Link className="navbar-brand" to="/">
                     <img style={{ width: '150px' }} src={logo} alt="logo" />
                 </Link>
@@ -87,14 +103,16 @@ const Nav = () => {
         </Link>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                            <Link className="dropdown-item" to='/#'>Verification Service</Link>
-                            <Link className="dropdown-item" to='/#'>Complete Property Buyer Service</Link>
-                            <Link className="dropdown-item" to='/#'>Our Estates</Link>
-                            <Link className="dropdown-item" to='/#'>Design Build & Manage</Link>
-                            <Link className="dropdown-item" to='/#'>Done-For-You Investment</Link>
-                            <Link className="dropdown-item" to='/#'>Advisory</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Verification Service</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Complete Property Buyer Service</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Floracity</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Bulk And Purchase</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Design, Build And Manage</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Books</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Professional Advisory</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Investment Management</Link>
                             <div className="dropdown-divider"></div>
-                            <Link className="dropdown-item" to='/#'>Sell My Property</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Sell My Property</Link>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
@@ -102,15 +120,20 @@ const Nav = () => {
                             Our Estate
         </Link>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link className="dropdown-item" to='/#'>The Fern Island</Link>
-                            <Link className="dropdown-item" to='/#'>The Hive</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">The Fern Island</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">The Hive</Link>
                         </div>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to='/blog'>Blog</Link>
+                        <Link className="nav-link" to='/blog' data-toggle="collapse" data-target="#navbarSupportedContent">Blog</Link>
                     </li>
+
+                    <li className="nav-item">
+                        <Link className="nav-link" to='/login-register' data-toggle="collapse" data-target="#navbarSupportedContent">Register/Login</Link>
+
                     <li className="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
                         <Link className="nav-link" to='/login-register'>Register/Login</Link>
+
                     </li>
                 </ul>
 

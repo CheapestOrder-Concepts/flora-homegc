@@ -45,7 +45,7 @@ nav.shadow {
   position: fixed;
   width: 100%;
   /* padding: 0px 20px; */
-  background: #fff;
+  background: #fff !important;
   box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.04);
 }
 
@@ -59,7 +59,7 @@ nav.shadow {
 }
 
 button.navbar-toggler {
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-radius: 50%;
   padding: 7px 10px;
 }
@@ -79,6 +79,20 @@ a.nav-link {
   font-weight: 600;
   padding: 10px 0px;
   text-align: center;
+}
+
+nav div#navbarSupportedContent ul li:nth-child(3) a::after,
+nav div#navbarSupportedContent ul li:nth-child(4) a::after,
+.dropdown-toggle::after {
+  display: none;
+}
+
+nav .fa-chevron-circle-down {
+  float: right;
+  color: var(--secondary-color);
+  position: absolute;
+  top: 20px;
+  right: 40px;
 }
 
 nav.shadow a.nav-link,
@@ -362,6 +376,7 @@ div.con2 {
   background: var(--primary-color);
   color: #fff;
   padding: 60px 90px;
+  margin-bottom: 30px;
 }
 
 div.con2 .col-sm h2 {
@@ -877,6 +892,10 @@ ul.navbar-nav {
   .con3 div.col-sm div.word p {
     width: 300px;
   }
+
+  nav div#navbarSupportedContent ul li:last-child {
+    display: none;
+  }
 }
 
 @media all and (min-width: 992px) {
@@ -895,6 +914,10 @@ ul.navbar-nav {
   nav li:not(.noB):hover::after {
     /* width: 100%; */
     transform: scale(1, 1);
+  }
+
+  nav .fa-chevron-circle-down {
+    display: none;
   }
 
   div.beginning {
@@ -919,11 +942,6 @@ ul.navbar-nav {
   .navbar .nav-item:hover .dropdown-menu {
     display: block;
     padding-top: 32px;
-  }
-
-  nav div#navbarSupportedContent ul li:nth-child(3) a::after,
-  nav div#navbarSupportedContent ul li:nth-child(4) a::after {
-    display: none;
   }
 
   div.con1 div.image-box {
@@ -1049,10 +1067,12 @@ ul.navbar-nav {
 
   nav li.nav-item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100vw;
   }
 
   nav a.nav-link {
     color: #000;
+    text-align: inherit;
   }
 
   nav a.nav-link:hover {
@@ -1061,6 +1081,11 @@ ul.navbar-nav {
 
   nav div.d-flex button {
     display: none;
+  }
+
+  .navbar .nav-item a.nav-link::after:active+.dropdown-menu {
+    display: block;
+    padding-top: 32px;
   }
 
   div.collapse.show {

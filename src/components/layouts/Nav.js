@@ -5,8 +5,29 @@ import logo from '../assets/FHGC weblogo.png';
 
 
 const Nav = () => {
+    const [navScroll, setNavScroll] = useState(false)
+    const [notHome, setNotHome] = useState(false)
+
+    let button = useRef('button')
+    let Nav = useRef('Nav')
+    let NavUL = useRef('NavUL')
+
     let location = useLocation()
-    // console.log(location.pathname, location.pathname.slice(1, location.pathname.length).length);
+
+    useEffect(() => {
+        const onScroll = () => {
+            if (window.pageYOffset > 100 && Nav.current) {
+                setNavScroll(() => true)
+            } else if (window.pageYOffset < 100 && Nav.current) {
+                setNavScroll(() => false)
+            }
+        }
+
+        window.addEventListener('scroll', onScroll)
+
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
+
     useEffect(() => {
         if (location.pathname.slice(1, location.pathname.length)) {
             setNotHome(() => true)
@@ -15,38 +36,21 @@ const Nav = () => {
         }
     }, [location.pathname])
 
-    const [navScroll, setNavScroll] = useState(false)
-    const [notHome, setNotHome] = useState(false)
-
-    let button = useRef('button')
-    let Nav = useRef('Nav')
-    let NavUL = useRef('NavUL')
-
-    const onScroll = () => {
-        if (window.pageYOffset > 100 && Nav.current) {
-            setNavScroll(() => true)
-        } else if (window.pageYOffset < 100 && Nav.current) {
-            setNavScroll(() => false)
-        }
-    }
-
-    document.addEventListener('scroll', onScroll)
-
-    // const onClick = (e) => {
-    //     if (button.current.ariaExpanded) {
-    //         document.body.classList.toggle('noverflow')
-    //     }
-    //     e.preventDefault()
-    // }
-
-    const unMountUL = (e) => {
-        // eslint-disable-next-line eqeqeq
-        if ((e.target.classList.contains('nav-link' || 'dropdown-item') && !e.target.id == 'dropdown-toggle') || e.target.id == 'logo' || button.current.ariaExpanded) {
-            document.body.classList.remove('noverflow')
+    const logoClick = (e) => {
+        if (button.current.ariaExpanded) {
             NavUL.current.classList.remove('show');
         }
         e.preventDefault()
     }
+
+    // const unMountUL = (e) => {
+    //     // eslint-disable-next-line eqeqeq
+    //     if ((e.target.classList.contains('nav-item' || 'dropdown-item') && !e.target.id == 'dropdown-toggle') || e.target.id == 'logo' || button.current.ariaExpanded) {
+    //         document.body.classList.toggle('noverflow')
+    //         NavUL.current.classList.remove('show');
+    //     }
+    //     e.preventDefault()
+    // }
 
     const showModal = () => {
         const open = document.getElementById('open');
@@ -58,8 +62,8 @@ const Nav = () => {
     }
 
     return (
-        <nav onClick={unMountUL} ref={Nav} className={`navbar navbar-expand-lg sticky-top ${navScroll ? 'shadow' : 'inherit'} ${notHome ? 'navColorBlack' : 'inherit'}`}>
-            <div id='logo'>
+        <nav ref={Nav} className={`navbar navbar-expand-lg sticky-top ${navScroll ? 'shadow' : 'inherit'} ${notHome ? 'navColorBlack' : 'inherit'}`}>
+            <div id='logo' onClick={logoClick}>
                 <Link className="navbar-brand" to="/">
                     <img style={{ width: '150px' }} src={logo} alt="logo" />
                 </Link>
@@ -82,35 +86,39 @@ const Nav = () => {
                         <Link className="nav-link" to='/about'>About</Link>
                     </li>
                     <li className="nav-item dropdown">
-                        <Link className="nav-link dropdown-toggle" to='/product' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <Link className="nav-link" to='/product' id="navbarDropdown" data-toggle="collapse" data-target="#navbarSupportedContent">
                             Product
-        </Link>
+                        </Link>
+                        <span className='dropdown-toggle' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-chevron-circle-down"></i></span>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                            <Link className="dropdown-item" to='/#'>Verification Service</Link>
-                            <Link className="dropdown-item" to='/#'>Complete Property Buyer Service</Link>
-                            <Link className="dropdown-item" to='/#'>Our Estates</Link>
-                            <Link className="dropdown-item" to='/#'>Design Build & Manage</Link>
-                            <Link className="dropdown-item" to='/#'>Done-For-You Investment</Link>
-                            <Link className="dropdown-item" to='/#'>Advisory</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Verification Service</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Complete Property Buyer Service</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Floracity</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Bulk And Purchase</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Design, Build And Manage</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Books</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Professional Advisory</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Investment Management</Link>
                             <div className="dropdown-divider"></div>
-                            <Link className="dropdown-item" to='/#'>Sell My Property</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Sell My Property</Link>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
-                        <Link className="nav-link dropdown-toggle" to='/#' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <Link className="nav-link" to='/our-estate' id="navbarDropdown" data-toggle="collapse" data-target="#navbarSupportedContent">
                             Our Estate
-        </Link>
+                        </Link>
+                        <span className='dropdown-toggle' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-chevron-circle-down"></i></span>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link className="dropdown-item" to='/#'>The Fern Island</Link>
-                            <Link className="dropdown-item" to='/#'>The Hive</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">The Fern Island</Link>
+                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">The Hive</Link>
                         </div>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to='/blog'>Blog</Link>
+                        <Link className="nav-link" to='/blog' data-toggle="collapse" data-target="#navbarSupportedContent">Blog</Link>
                     </li>
-                    <li className="nav-item" data-toggle="collapse" data-target="#navbarSupportedContent">
-                        <Link className="nav-link" to='/login-register'>Register/Login</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to='/login-register' data-toggle="collapse" data-target="#navbarSupportedContent">Register/Login</Link>
                     </li>
                 </ul>
 
@@ -119,10 +127,13 @@ const Nav = () => {
                 </div>
 
                 <div className="d-flex justify-content-end">
-                    <ScrollLink to='signUp' spy={true} smooth={true}>
-                        <button type="button" className="custom-btn btn btn-lg">Register/Login</button>
-                    </ScrollLink>
-
+                    {
+                        notHome ? <Link to='/login-register'>
+                            <button type="button" className="custom-btn btn btn-lg">Register/Login</button>
+                        </Link> : <ScrollLink to='signUp' spy={true} smooth={true}>
+                                <button type="button" className="custom-btn btn btn-lg">Register/Login</button>
+                            </ScrollLink>
+                    }
                 </div>
             </div>
         </nav>

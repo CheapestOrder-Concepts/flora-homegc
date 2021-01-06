@@ -443,7 +443,7 @@ div.con3>div>h2 {
 
 @keyframes fadeIn {
   50% {
-    opacity: 0;
+    opacity: 0.9;
     transform: translateY(0px);
   }
 

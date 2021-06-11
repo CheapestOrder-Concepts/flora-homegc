@@ -109,7 +109,7 @@ const Home = () => {
         </div>
 
         <div className='img'>
-          <h4 className='text-center'>Our partner</h4>
+          <h4 className='text-center'>AFFILIATED PROFESSIONAL BODIES</h4>
           <img id='firstP' src={partner} alt='partners' />
         </div>
 
@@ -129,11 +129,21 @@ const Home = () => {
             <div className='col-sm'>
               <h4>Why we get</h4>
               <h2>Our hands dirty for you</h2>
+              <h5>
+                To Prevent Real Estate Losses by running end-to-end property verification
+                on every subject property before you pay for them, one property at a time.
+              </h5>
+
+              <br />
               <p>
-                To prevent real estate losses and give investors futuristic
-                landed property investment; in terms of verifying the property,
-                acquiring it, documenting it, designing, building and managing
-                the property.
+                When our certified professionals that include Estate Surveyors &
+                Valuers, Land Surveyors, Property Lawyers, Townplanners,
+                Civil Engineers, Architects, Builders, Journalists,
+                Quantity Surveyors, Researchers etc. take your interest land
+                or building through our verification checklist before you pay
+                for it, then be assured that you've been indemnified against
+                eviction, demolition, 3rd party claimants, scam, collapse and
+                any other form of property losses anywhere across Nigeria.
               </p>
             </div>
           </div>
@@ -173,10 +183,14 @@ const Home = () => {
                 <div className='word'>
                   <h4>Verification Service</h4>
                   <p>
-                    Save yourself from demolition, 3rd party claimant, and Scams
-                    by availing yourself of our verification service which
-                    brings together our field expert to help you know the status
-                    of the landed property you want to buy.
+                    Due to the prevalence of demolition, eviction, dispute and scam
+                    issues relating to landed properties, we set out to help
+                    individuals and corporate investors to verify and clear their
+                    subject of interest either before paying for the new found property
+                    or for already existing property against government acquisition,
+                    title issues, ownership issues, Omo-Onile wahala, uses issues,
+                    dispute, third party claimants, structural defects etc.
+                    This we achieve by taking such properties through our systemised verification checklist.
                   </p>
                 </div>
 
@@ -221,12 +235,14 @@ const Home = () => {
                 <div className='word'>
                   <h4>Complete Property Buyer Services</h4>
                   <p>
-                    Do you need to buy your choice property at your choice
-                    location, or you just need property services like Survey,
-                    Valuation, Documentation, Sourcing, Negotiation, Payment . .
-                    . then engage this Service at 100% done for you. This
-                    service caters for both individuals, corporate
-                    organizations, within Nigeria and in Diaspora.
+                    Our property acquisition team is always available and ready to
+                    help prospective property buyers handle their property purchase
+                    from start to finish at 100% done-for-you either land or building,
+                    within Estate or with Omo-Onile, for individual or corporate large
+                    expanse across Nigeria. This involves supervising and executing
+                    property transactions through all the 7 stages of property purchase:
+                    Sourcing, Verification, Valuation, Negotiation, Payment, Survey, and Documentation.
+
                   </p>
                 </div>
 
@@ -278,20 +294,27 @@ const Home = () => {
               <div className='col-sm'>
                 <h4>PURPOSE</h4>
                 <h2>our promise to you</h2>
-                <ul>
+                <h5>We help you prevent real estate losses by;</h5>
+                {/* <br/> */}
+                <ol>
                   <li className='noB'>
-                    Providing 100% done-for-you real estate services to existing
-                    and aspiring property investors.
+                    Running end-to-end property verification on every
+                    subject property before you pay for them,
+                    one property at a time.
+
                   </li>
                   <li className='noB'>
-                    Delivering simplified quality information to the mobile
-                    phones of every property investor using technology.
+                    Providing 100% done-for-you real estate and property development
+                    services to existing and aspiring property investors.
                   </li>
                   <li className='noB'>
-                    Engaging green architecture that revitalizes every soul
-                    occupying the space.
+                    Making verified and futuristic properties accessible to every individual and corporate investors.
                   </li>
-                </ul>
+                  <li className='noB'>
+                    Delivering simplified quality information to the
+                    mobile phones of every property investor using technology.
+                  </li>
+                </ol>
                 <button type='button' className='custom-btn btn btn-lg'>
                   Learn More...
                 </button>

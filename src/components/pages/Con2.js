@@ -10,7 +10,7 @@ const Con2 = () => {
                 </div>
                 <div className='col-sm col2'>
                     <h2>
-                        18 Real Estate Mistakes That Make People Lose Money In Property
+                        21 Real Estate Mistakes That Make People Lose Money In Property
                         Investment.
               </h2>
                     <p>

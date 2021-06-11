@@ -422,7 +422,8 @@ div.con3>div>h2 {
 }
 
 .con3 div.col-sm {
-  overflow: hidden;
+  /* overflow: hidden; commented to fix overflow in in larger word counts */
+  overflow: auto;
   height: auto;
   border: 1px solid #eeeeee;
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);

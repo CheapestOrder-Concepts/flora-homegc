@@ -11,19 +11,12 @@ import workers from '../assets/workers.jpg';
 import '../../css/Product.css'
 import { Link } from 'react-router-dom';
 import Con2 from './Con2';
+import PageTitle from '../layouts/PageTitle';
 
 const Product = () => {
     return (
         <div>
-            <section className="page-title">
-                <div className="auto-container">
-                    <h1>Our Products</h1>
-                    <ul className="bread-crumb clearfix">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to='/about'>About Us</Link></li>
-                    </ul>
-                </div>
-            </section>
+             <PageTitle pageTitle="Our Products" pageLink="product"/>
 
 
             <section className="news-section alternate">
@@ -33,10 +26,10 @@ const Product = () => {
                         <div className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
                             <div className="inner-box">
                                 <div className="image-box">
-                                    <figure className="image"><Link to="#noWhere"><img src={verification} alt="verification" /></Link></figure>
+                                    <figure className="image"><Link to="/verification"><img src={verification} alt="verification" /></Link></figure>
                                 </div>
                                 <div className="lower-content">
-                                    <h4><Link to="#noWhere">Verification Services</Link></h4>
+                                    <h4><Link to="/verification">Verification Services</Link></h4>
                                     <p> Due to the prevalence of demolition, eviction, dispute and scam issues relating to landed properties, we set out to help individuals and corporate investors to verify and clear their subject of interest either before paying for the new found property or for already existing property against government acquisition...</p>
                                     <div className="custom-btn btn btn-lg"><Link to="#noWhere" className="read-more">View Now</Link></div>
                                 </div>
@@ -46,10 +39,10 @@ const Product = () => {
                         <div className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
                             <div className="inner-box">
                                 <div className="image-box">
-                                    <figure className="image"><Link to="#noWhere"><img src={cpbs} alt="service" /></Link></figure>
+                                    <figure className="image"><Link to="/cpbs"><img src={cpbs} alt="service" /></Link></figure>
                                 </div>
                                 <div className="lower-content">
-                                    <h4><Link to="#noWhere"> Complete Property Buyer Service</Link></h4>
+                                    <h4><Link to="/cpbs"> Complete Property Buyer Service</Link></h4>
                                     <p>Our property acquisition team is always available and ready to help prospective property buyers handle their property purchase from start to finish at 100% done-for-you either land or building, within Estate or with Omo-Onile, for individual or corporate large expanse across Nigeria...</p>
                                     <div className="custom-btn btn btn-lg"><Link to="#noWhere" className="read-more">View Now</Link></div>
                                 </div>

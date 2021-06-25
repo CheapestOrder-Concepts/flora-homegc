@@ -37,7 +37,7 @@ const Footer = () => {
                                         <ul className="user-links">
                                             <li><a href="index.php">Home</a></li>
                                             <li><a href="blog">Blogs</a></li>
-                                            <li><a href="contact">Contact Us</a></li>
+                                            <li><a href="/contact">Contact Us</a></li>
                                             <li><a href="university">University</a></li>
                                             <li><a href="links">Quick Links</a></li>
                                         </ul>

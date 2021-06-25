@@ -92,11 +92,11 @@ const Nav = () => {
                         <span className='dropdown-toggle' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-chevron-circle-down"></i></span>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Verification Service</Link>
-                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Complete Property Buyer Service</Link>
+                            <Link className="dropdown-item" to='/verification' data-toggle="collapse" data-target="#navbarSupportedContent">Verification Service</Link>
+                            <Link className="dropdown-item" to='/cpbs' data-toggle="collapse" data-target="#navbarSupportedContent">Complete Property Buyer Service</Link>
                             <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Floracity</Link>
                             <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Bulk And Purchase</Link>
-                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Design, Build And Manage</Link>
+                            <Link className="dropdown-item" to='/dbm' data-toggle="collapse" data-target="#navbarSupportedContent">Design, Build And Manage</Link>
                             <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Books</Link>
                             <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Professional Advisory</Link>
                             <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">Investment Management</Link>

@@ -15,7 +15,23 @@ import Fade from 'react-reveal/Fade';
 import HeadShake from 'react-reveal/HeadShake';
 import Con2 from './Con2';
 
+
+ 
+const listStyle = {
+  listStyleType:"decimal"
+
+}
+
+const cutomTextStyle = {
+  color:"white"
+} 
+ 
+
 const Home = () => {
+
+
+
+
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -50,11 +66,13 @@ const Home = () => {
                 <div className='carousel-item active'>
                   <div>
                     <HeadShake>
-                      <h3>We are</h3>
+                      <h3 style={{color:cutomTextStyle.color}}>We are</h3>
                     </HeadShake>
                     <Fade bottom>
-                      <h2>FloraHomes GC,</h2>
-                      <p>
+                      <h2 style={{color:cutomTextStyle.color}}>FloraHomes GC,</h2>
+                      <p
+                      style={{color:cutomTextStyle.color}}
+                       >
                         Foremost Online Property Verification & Real Estate
                         Investment Company.
                       </p>
@@ -68,11 +86,11 @@ const Home = () => {
                 <div className='carousel-item'>
                   <div>
                     <HeadShake>
-                      <h3>Welcome to the world of</h3>
+                      <h3 style={{color:cutomTextStyle.color}} >Welcome to the world of</h3>
                     </HeadShake>
                     <Fade bottom>
-                      <h2>SECURE, STERLING &amp; SEAMLESS</h2>
-                      <p>Services In Real Estate & Property Development</p>
+                      <h2 style={{color:cutomTextStyle.color}}>SECURE, STERLING &amp; SEAMLESS</h2>
+                      <p style={{color:cutomTextStyle.color}}>Services In Real Estate & Property Development</p>
                       <button type='button' className='custom-btn btn btn-lg'>
                         Our Services
                       </button>
@@ -296,21 +314,21 @@ const Home = () => {
                 <h2>our promise to you</h2>
                 <h5>We help you prevent real estate losses by;</h5>
                 {/* <br/> */}
-                <ol>
-                  <li className='noB'>
+                <ol >
+                  <li className='noB' style={{listStyleType:listStyle.listStyleType}}>
                     Running end-to-end property verification on every
                     subject property before you pay for them,
                     one property at a time.
 
                   </li>
-                  <li className='noB'>
+                  <li className='noB' style={{listStyleType:listStyle.listStyleType}}>
                     Providing 100% done-for-you real estate and property development
                     services to existing and aspiring property investors.
                   </li>
-                  <li className='noB'>
+                  <li className='noB' style={{listStyleType:listStyle.listStyleType}}>
                     Making verified and futuristic properties accessible to every individual and corporate investors.
                   </li>
-                  <li className='noB'>
+                  <li className='noB'style={{listStyleType:listStyle.listStyleType}}>
                     Delivering simplified quality information to the
                     mobile phones of every property investor using technology.
                   </li>

@@ -23,6 +23,12 @@ body {
   overflow-x: hidden;
 }
 
+ul, li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
 /* body.noverflow {
   overflow: hidden;
 } */

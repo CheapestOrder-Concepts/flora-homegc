@@ -539,7 +539,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='sec6'></div>
+        {/* <div className='sec6'></div> */}
       </div>
 
       <LorR />

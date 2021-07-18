@@ -11,7 +11,7 @@
 # files
 .history
 .vscode
-public
+
 
 # production
 /build

@@ -1,0 +1,29 @@
+div.img.verification {
+    width: 90vw;
+    height: 150px;
+    margin: 30px auto 100px;
+    padding-bottom: 55px;
+    background: var(--primary-color);
+    position: relative;
+    top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(0 0 0 / 30%);
+}
+
+@media (max-width: 700px){
+div.img.verification{
+   right: 15px;
+    top: 20px;
+    width: 100vw;
+    height: 130px;
+    margin-bottom: 100px;
+}}
+@media (max-width: 990px){
+div.img.verification {
+    top: 80px;
+    width: 100%;
+    justify-content: center;
+    margin-left: 10px;
+    margin-bottom: 200px;
+}}
+

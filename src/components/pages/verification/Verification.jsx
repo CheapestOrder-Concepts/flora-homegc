@@ -1,17 +1,21 @@
 import React from 'react';
 
 import "./style.css"
-import partner from '../../assets/partn.png';
+import partner from '../../assets/logo.png';
 import optin_bg from "../../assets/optin-bg.jpg"
 import verification from "../../assets/verification.png"
 import background from "../../assets/background.jpg"
 import price from "../../assets/price.png"
+import iconShape from '../../assets/icon-shape.png';
+import verification_video from "../../assets/videos/verification.mp4"
+import PaymentDetails from '../PaymentDetails';
+import LandingPageOptinForm from '../LandingPageOptinForm';
 
 const Verification = () => {
-    return (
-        <>
-                  <section className="banner-meetup">
-        <div className="bg-pattern" style={{backgroundImage: `url(${optin_bg})`}} />
+  return (
+    <>
+      <section className="banner-meetup">
+        <div className="bg-pattern" style={{ backgroundImage: `url(${optin_bg})` }} />
         {/* <div class="layer-outer">
 
                     <div class="gradient-layer"></div>
@@ -33,9 +37,9 @@ const Verification = () => {
 
       <section className="about-section-two">
         <div className="anim-icons full-width">
-          <span className="icon icon-circle-blue wow fadeIn animated" style={{visibility: 'visible', animationName: 'fa-spin'}} />
-          <span className="icon icon-dots wow fadeInleft animated" style={{visibility: 'visible'}} />
-          <span className="icon icon-circle-1 wow zoomIn animated" style={{visibility: 'visible', animationName: 'zoomIn'}} />
+          <span className="icon icon-circle-blue wow fadeIn animated" style={{ visibility: 'visible', animationName: 'fa-spin' }} />
+          <span className="icon icon-dots wow fadeInleft animated" style={{ visibility: 'visible' }} />
+          <span className="icon icon-circle-1 wow zoomIn animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
         </div>
         <div className="container">
           <div className="row">
@@ -43,20 +47,20 @@ const Verification = () => {
             <div className="content-column col-lg-12 col-md-12 col-sm-12 order-2">
               <div className="inner-column">
                 <div className="sec-title">
-                  <h2 style={{marginBottom: '15px'}}>Don't Lose Your Money! Let Us Help You Verify Your Real Estate Investment Before You Pay For Them.</h2>
+                  <h2 style={{ marginBottom: '15px' }}>Don't Lose Your Money, Let Us Help You Verify Your Real Estate Investment.</h2>
                   {/* <h4 style={{fontWeight: 600, marginBottom: '15px'}}>Don't be a victim of property scam, demolition, eviction, 3rd party claimants, and other Real Estate related losses!</h4>
  
                   <p style={{marginBottom: '15px', fontSize: '20px'}}>Let's help you verify your Real Estate investments opportunities before you pay for them.</p> */}
                 </div>
                 <div className="text">
-                  <ul className="list-style-two">
+                  {/* <ul className="list-style-two">
                     <li>
-                    Are you buying from within an Estate or from the Omo-Onile?
+                      Are you buying from within an Estate or from the Omo-Onile?
                     </li>
                     <li>
-                    Are you an Individual property investor, developer company or corporate investor?
+                      Are you an Individual property investor, developer company or corporate investor?
                     </li>
-                    {/* <li>
+                   <li>
                       The estate land or building you want to buy…
                     </li>
                     <li>
@@ -73,67 +77,98 @@ const Verification = () => {
                     </li>
                     <li>
                       Are you sure you've not been scammed?
-                    </li> */}
+                    </li> 
                   </ul>
-                  <p>
-                  Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…
+                  */}
+                  <p style={{ fontSize: "18px", fontWeight: "bold" }}>
+                    We would be responsible for any demolition issues, fake estate developers, Omo-Onile wahala, government acquisition, structural defects or potential scams of your investments for the next 50yrs.
 
                   </p>
 
-                  <br />
 
-                    <div>
-                  <h4>
-                  <span className="font-weight-bolder"> <u> With just N150,000 only,</u></span> you can totally avoid losing millions of Naira by getting your interest property completely verified before paying for it or before spending more on it in case you've already purchased the property.
-                  </h4>
-                  <br />
-                  <button className="btn theme-btn btn-style-three pop_up_form_simple">GET A FREE CONSULTATION NOW</button>
-                  </div>
+
+                  {/* <div>
+                <h4>
+                      <span className="font-weight-bolder"> <u> With just N150,000 only,</u></span> you can totally avoid losing millions of Naira by getting your interest property completely verified before paying for it or before spending more on it in case you've already purchased the property.
+                    </h4> 
+                    <br />
+                    <button className="theme-btn btn-style-three"><span className="btn-title">GET A FREE CONSULTATION NOW</span></button>
+                  </div>*/}
                   <div className='img verification'>
-          <h4 className='text-center'>Affiliated Professional Bodies</h4>
-          <img id='firstP' src={partner} alt='partners' />
-        </div>
-                  <div className="vidBox">
-                    <video src="assets/images/raa.mp4" width="100%" height="auto" type="video/mp4" controls />
+                    <h4 className='text-center'>Affiliated Professional Bodies</h4>
+                    <img id='firstP' src={partner} alt='partners' />
                   </div>
+                  {/* <div className="vidBox">
+                    <video src={verification_video} width="100%" height="auto" type="video/mp4" controls />
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
           <div className="row">
             <div className=" content-column col-lg-8">
-              <p style={{fontWeight: 'bold', marginTop: '80px'}}>
-                Or do you think verification is just about…
+              <p style={{ fontWeight: 'bold', fontSize: "20px", marginTop: '80px' }}>
+                How it works
               </p>
               <ul className="list-style-two">
-                <li>Taking a surveyor to the land? No</li>
-                <li>Sending documents to a lawyer? No.</li>
-                <li>Seeing several developments and buildings around the property? No</li>
-                <li>The fence and beautiful gatehouse on the estate? No</li>
-                <li>The promises of good returns? No</li>
-                <li>When the property has C of O, Gazette or Governor's Consent as a title? No</li>
-                <li>The document they send to you? No</li>
-                <li>Being scared of land and so deciding to be buying just buildings? No.</li>
+                <li>Our verification team made up of professionals: Estate Surveyors, Land Surveyors,  Property Lawyers, Town Planners, Civil Engineers, Investigative Journalist,  Architects,  Builders, Quantity Surveyors,  etc are set to help individuals and corporate investors to verify their land and building of interest before making payment for it. </li>
+                <li>When you allow us to carry out your Real Estate verification, you have our assurance for the next 50 years. And, if there is any matter that arises after our verification between this period. We would refund your investment capital.</li>
               </ul>
-              <p style={{fontWeight: 'bold'}}>
+
+              <div class="btn-box" ><button data-toggle="modal"  data-target="#landingModal" class="theme-btn btn-style-four mb-4 mt-3"><span class="btn-title">
+                Book Your Free Consultation
+              </span></button></div>
+              {/* <p style={{ fontWeight: 'bold' }}>
                 So how exactly do you know the genuinity of a property?
-              </p>
+              </p> */}
             </div>
             <div className="col-lg-4">
               <div className="image-box veriBox">
                 <img src={verification} alt="Overview" className="veriBox-img" />
+                <img src={iconShape} alt='' className='bmw2 verif' />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="affiliate-section" style={{backgroundImage: `url(${background})`}}>
+      <section className="" style={{ backgroundImage: `url(${background})` }}>
         <div className="auto-container">
-          <div className="content-column">
+          <p style={{ fontWeight: 'bold', color: "#ed6c11", fontSize: "20px", paddingTop: '30px' }}>
+            Our property verification includes but not limited to the following:
+          </p>
+
+          <ul className="list-style-two ul-text-white" style={{ color: "white" }}>
+            <li>Physical land inspection with our land experts for picking Coordinates, and engaging in other field research.</li>
+            <li>Correlating the document data with the actual site location data and determining the actual status of the land.</li>
+            <li>Competitive analysis of similar adjoining Properties.</li>
+            <li>Coordinate Charting at Surveyor General's office for updated information.</li>
+            <li>A comprehensive examination of all documents</li>
+            <li>Confirming other government Property requirements</li>
+            <li>Authentication of the claimed title.</li>
+            <li>Authenticating the property ownership</li>
+            <li>Unveiling any possible third-party ownership claims.</li>
+            <li>Unraveling the property history.</li>
+            <li>Root of title research</li>
+            <li>Checking of taxes or collateral issues</li>
+            <li>Checking any internal dispute.</li>
+            <li>Examining the Structural state of the interest building.</li>
+            <li>Flooding susceptibility check.</li>
+            <li>Confirming all documents in relation to the structure.</li>
+            <li>Ensure interest land use tally with existing use</li>
+            <li>Confirming the site plan is in conformity with approved layout plan</li>
+            <li>Confirming all planning tallies with the state master plan.</li>
+            <li>Etc</li>
+          </ul>
+
+          <div class="btn-box" ><button data-toggle="modal"  data-target="#landingModal" class="theme-btn btn-style-four mb-4 mt-3"><span class="btn-title">CLICK HERE TO SCHEDULE YOUR 15 FREE CONSULTATION </span></button></div>
+
+
+
+          {/* <div className="content-column">
             <div className="inner-column">
               <div className="row">
-                {/* Bullet Listing Column */}
+                a comment: Bullet Listing Column 
                 <div className="affiliate-block col-lg-12 col-md-12">
                   <div className="sec-title">
                     <h2 className="text text-light">ONLY WHEN EVERY REQUIRED LANDED PROPERTY PROFESSIONALS COME TOGETHER TO TAKE EVERY SINGLE PROPERTY THROUGH PROPER VERIFICATION PROCESSES…
@@ -144,7 +179,7 @@ const Verification = () => {
                   </div>
                 </div>
               </div>
-              {/*  <div class="row">
+             a coment start: <div class="row">
 
                             <div class="container">
 
@@ -156,18 +191,19 @@ const Verification = () => {
 
                             </div>
 
-                        </div>
- */}
+                       ends: </div>
+
             </div>
-          </div>
+          </div> */}
+
         </div>
       </section>
-
+      {/*       
       <section>
         <div className="auto-container">
           <div className="row">
             <div className="col-lg-12 mt-5 mb-5">
-              {/* sana */}
+              comment: sana 
               <p>
                 Due to the prevalence of demolition, eviction, dispute, collapse and scam issues relating to landed properties, our verification team which include but not limited to Estate Surveyors, Land Surveyors, Property Lawyers, Town-Planners, Civil Engineers, Architects, Researchers etc set out to help individuals and corporate investors to verify and clear their subject of interest either before paying for the new found property or for already existing property against government acquisition, title issues, ownership issues, Omo-Onile wahala, uses issues, dispute, third party claimants, structural defects etc. This we achieve by taking such properties through our systemised verification checklist.
               </p>
@@ -224,116 +260,108 @@ const Verification = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section style={{backgroundImage: `url(${background})`}}>
+      {/* <section style={{ backgroundImage: `url(${background})` }}> */}
+      <section>
         <div className="auto-container">
           <div className="row">
             <div className="col-lg-12 pt-5 pb-5 text-white">
-              <p style={{color: 'white'}}> You're still waiting…
-              </p>
-              <p style={{color: 'white'}}>
+              {/* <p style={{ color: 'white' }}> You're still waiting…
+              </p> */}
+              {/* <p style={{ color: 'white' }}>
                 We say
                 Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…
-              </p>
-              <h5 style={{color: 'white'}}><b>BENEFITS OF ENGAGING THIS SERVICE
-                </b>
+              </p> */}
+              <h5 style={{ color: 'black' }}><b>Benefits And Pricing:
+              </b>
               </h5>
               <br />
-              <ul className="list-style-two">
-                <li style={{color: 'white'}}> We ensure that any property to be traded has a perfect title that can be easily processed and perfected to our client's credentials at the appropriate ministry to prevent any 3rd party claimants, disputes, eviction, or any other related losses.
+              <ul className="list-style-two ul-text-dark">
+                <li>It protects you against scam, eviction, encumbrance, demolition or any kind of property losses.</li>
+                <li>You get peace of mind on your property as you do not stand any risk of property losses.</li>
+                <li>Services are executed and delivered between 5-10 working days and hence enabling you to make your transaction decisions on time.</li>
+                <li>
+                  We deploy only qualified property professionals to handle our clients' projects so you have no fear of losses due to quackery.
                 </li>
-                <li style={{color: 'white'}}> It protect you against scam, eviction, encumbrance, demolition or any kind of property losses
-                </li>
-                <li style={{color: 'white'}}> You get peace of mind on your property as you do not stand any risk of property losses.
-                </li>
-                <li style={{color: 'white'}}> Services executed and delivered between 14-21 working days while VIP delivery of 5-10 working days and hence enabling you to make your transaction decisions on time.
-                </li>
-                <li style={{color: 'white'}}> We engage video inspection that gives the client a convenient overview of the job being carried out.
-                </li>
-                <li style={{color: 'white'}}> We give you a perfect understanding of the true status of your interest property to create for you a good basis for negotiation.
-                </li>
-                <li style={{color: 'white'}}> We deploy only qualified property professionals to handle our clients project so you have no fear of losses due to quackery.
-                </li>
-                <li style={{color: 'white'}}> Everything is done on your behalf 100% .
-                </li>
-                <li style={{color: 'white'}}>
+                <li>Everything is done on your behalf 100%</li>
+                <li>
                   We produce and execute the pre-purchase agreement and documentation.
                 </li>
-                <li style={{color: 'white'}}>
-                  We produce and execute all post-acquisition documentation to prevent any future losses.
-                </li>
-                <li style={{color: 'white'}}>
+                <li>
                   You enjoy stress-free, great value for less stress and you have more time to focus on other things that matter to you.
                 </li>
+                <li>
+                  We give you a perfect understanding of the true status of your interest property to create for you a good basis for negotiation
+                </li>
+
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="about-section">
-        <div className="auto-container">
-        <section className="schedule-section">
-              <div className="anim-icons">
-                <span className="icon icon-circle-4 wow zoomIn animated animated" style={{visibility: 'visible', animationName: 'zoomIn'}} />
-                <span className="icon icon-circle-3 wow zoomIn animated animated" style={{visibility: 'visible', animationName: 'zoomIn'}} />
+      {/* <section className="about-section"> */}
+      {/* <div className="auto-container"> */}
+      {/* <section className="schedule-section">
+            <div className="anim-icons">
+              <span className="icon icon-circle-4 wow zoomIn animated animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
+              <span className="icon icon-circle-3 wow zoomIn animated animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
+            </div>
+            <div className="auto-container" style={{ overflowX: 'visible !important' }}>
+              <div className="sec-title text-center" style={{ overflowX: "visible !important" }}>
+                <span className="title">HOW TO</span>
+                <h2>Engage Our Verification Service</h2>
               </div>
-              <div className="auto-container" style={{overflowX: 'visible !important'}}>
-                <div className="sec-title text-center" style={{overflowX:"visible !important"}}>
-                  <span className="title">HOW TO</span>
-                  <h2>Engage Our Verification Service</h2>
-                </div>
-                <div className="schedule-tabs tabs-box" style={{overflowX:"visible !important"}}>
-                  <div className="tabs-content" style={{overflowX:"visible !important"}}>
-                    {/*Tab*/}
-                    <div className="tab active-tab" id="tab-1" style={{overflowX:"visible !important"}}>
-                      <div className="schedule-timeline" style={{overflowX:"visible !important"}}>
-                        {/* schedule Block */}
-                        <div className="schedule-block" style={{overflowX:"visible !important"}}>
-                          <div className="inner-box" style={{overflowX:"visible !important"}}>
-                            <div className="inner" style={{overflowX:"visible !important"}}>
-                              <div className="date" style={{overflowX:"visible !important"}}>1ST <br /> STEP</div>
-                              {/*   <h4>Click Button</h4> */}
-                              {/*   <div class="text" style="color: #000000">Enter your correct information <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style="text-decoration: underline;">here</a> with all the necessary documents
+              <div className="schedule-tabs tabs-box" style={{ overflowX: "visible !important" }}>
+                <div className="tabs-content" style={{ overflowX: "visible !important" }}>
+                  {Tab}
+                  <div className="tab active-tab" id="tab-1" style={{ overflowX: "visible !important" }}>
+                    <div className="schedule-timeline" style={{ overflowX: "visible !important" }}>
+                      { schedule Block }
+                      <div className="schedule-block" style={{ overflowX: "visible !important" }}>
+                        <div className="inner-box" style={{ overflowX: "visible !important" }}>
+                          <div className="inner" style={{ overflowX: "visible !important" }}>
+                            <div className="date" style={{ overflowX: "visible !important" }}>1ST <br /> STEP</div>
+                            {   <h4>Click Button</h4> }
+                            {   <div class="text" style="color: #000000">Enter your correct information <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style="text-decoration: underline;">here</a> with all the necessary documents
 
-                                            </div> */}
-                              <button className="btn theme-btn btn-style-three pop_up_form_simple">Get Your Free Consultation</button> 
-                              {/*  <div class="text" style="color: #000000; cursor: pointer !important;" ><strong id="form_caller">Get Your Free Consultation</strong>
-                                            </div> */}
-                            </div>
+                                            </div> }
+                            <button className="theme-btn btn-style-three"><span className="btn-title">Get Your Free Consultation</span></button>
+                            {  <div class="text" style="color: #000000; cursor: pointer !important;" ><strong id="form_caller">Get Your Free Consultation</strong>
+                                            </div> }
                           </div>
                         </div>
-                        {/* schedule Block */}
-                        <div className="schedule-block even">
-                          <div className="inner-box">
-                            <div className="inner">
-                              <div className="date">2ND <br /> STEP</div>
-                              {/* <h4>Payment</h4> */}
-                              <div className="text" style={{color: '#000000'}}>Make Payment.</div>
-                            </div>
+                      </div>
+                      schedule Block 
+                      <div className="schedule-block even">
+                        <div className="inner-box">
+                          <div className="inner">
+                            <div className="date">2ND <br /> STEP</div>
+                           <h4>Payment</h4> 
+                            <div className="text" style={{ color: '#000000' }}>Make Payment.</div>
                           </div>
                         </div>
-                        {/* schedule Block */}
-                        <div className="schedule-block">
-                          <div className="inner-box">
-                            <div className="inner">
-                              <div className="date">3RD <br /> STEP</div>
-                              {/*    <h4>Service Information</h4> */}
-                              {/*  <div class="text" style="color: #000000">Submit Service Information.</div> */}
-                              <a className="btn theme-btn btn-style-three" href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style={{textDecoration: 'none'}}>Submit Service Information.</a> 
-                            </div>
+                      </div>
+                    schedule are comment ...schedule Block 
+                      <div className="schedule-block">
+                        <div className="inner-box">
+                          <div className="inner">
+                            <div className="date">3RD <br /> STEP</div>
+                              comment starts... <h4>Service Information</h4>
+                           <div class="text" style="color: #000000">Submit Service Information.</div>... comment ends
+                            <a className="theme-btn btn-style-three" href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style={{ textDecoration: 'none' }}><span className="btn-title">Submit Service Information.</span></a>
                           </div>
                         </div>
-                        {/* schedule Block */}
-                        <div className="schedule-block even">
-                          <div className="inner-box">
-                            <div className="inner">
-                              <div className="date">4TH <br /> STEP</div>
-                              {/* <h4>Customer Care</h4> */}
-                              <div className="text" style={{color: '#000000'}}>
-                                Connect with Your Personal Manager.
-                              </div>
+                      </div>
+                      schedule Block= a comment
+                      <div className="schedule-block even">
+                        <div className="inner-box">
+                          <div className="inner">
+                            <div className="date">4TH <br /> STEP</div>
+                             comment...<h4>Customer Care</h4> 
+                            <div className="text" style={{ color: '#000000' }}>
+                              Connect with Your Personal Manager.
                             </div>
                           </div>
                         </div>
@@ -341,8 +369,9 @@ const Verification = () => {
                     </div>
                   </div>
                 </div>
-                {/* <br><br> */}
-                {/* <div class="row">
+              </div>
+              *comment start here...<br><br> 
+              <div class="row">
 
                     <div class="container">
 
@@ -358,14 +387,74 @@ const Verification = () => {
                     </div>
 
                 </div>
- */}
-                <div className="text-center">
-                  <h5 style={{marginTop: '5px', color: '#3A005F !important'}}><b>NOW IT'S TIME TO TAKE YOUR FIRST STEP</b></h5>
-                  <div className="btn-box"><button id className="theme-btn btn-style-four pop_up_form_simple" style={{}}><span className="btn-title">CLICK HERE TO SCHEDULE YOUR 15 MINUTES FREE CONSULTATION NOW</span></button></div>
+ *comment ends
+              <div className="text-center">
+                <h5 style={{ marginTop: '5px', color: '#3A005F !important' }}><b>NOW IT'S TIME TO TAKE YOUR FIRST STEP</b></h5>
+                <div className="btn-box"><button id className="theme-btn btn-style-four pop_up_form_simple" style={{}}><span className="btn-title">CLICK HERE TO SCHEDULE YOUR 15 MINUTES FREE CONSULTATION NOW</span></button></div>
+              </div>
+            </div>
+          </section> */}
+
+      <section className>
+        <div className="auto-container">
+          <h5 style={{ color: 'black', fontSize: "30px" }}><b>Half done verification or No verification is usually a disaster.
+          </b>
+          </h5>
+          <p style={{ fontWeight: 'bold', color: "black", fontSize: "20px", marginTop: "20px" }}>Verification is not just about</p>
+          <ul className="list-style-two ul-text-dark" style={{ color: "white" }}>
+            <li>Taking a surveyor to the land.</li>
+            <li>Sending documents to a lawyer.</li>
+            <li>Seeing several developments and buildings around the property.</li>
+            <li>The fence and beautiful gatehouse on the estate.</li>
+            <li>The promises of good returns</li>
+            <li>The property has C of O, Gazette or Governor's Consent as a title.</li>
+            <li>The house is beautiful.</li>
+            <li>Being scared of land and so deciding on just buying buildings.</li>
+          </ul>
+          <br />
+          <p style={{ fontWeight: "bold", fontSize: "18px" }}>Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…</p>
+          <br />
+          <p style={{ fontWeight: "bold", fontSize: "18px" }}>
+            Let us run a complete property verification for your Real Estate Investments irrespective of your location and get up to 50 years warranty for your property.
+          </p>
+
+
+          {/* <div className="content-column">
+            <div className="inner-column">
+              <div className="row">
+                a comment: Bullet Listing Column 
+                <div className="affiliate-block col-lg-12 col-md-12">
+                  <div className="sec-title">
+                    <h2 className="text text-light">ONLY WHEN EVERY REQUIRED LANDED PROPERTY PROFESSIONALS COME TOGETHER TO TAKE EVERY SINGLE PROPERTY THROUGH PROPER VERIFICATION PROCESSES…
+                    </h2>
+                    <h2 className="text text-light">
+                      But Wait, Who are these professionals and What does the process entail?
+                    </h2>
+                  </div>
                 </div>
               </div>
-            </section>
-            <br />
+             a coment start: <div class="row">
+
+                            <div class="container">
+
+                                <div class="text-center">
+
+                                    <div class="btn-box"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" class="theme-btn btn-style-four"><span class="btn-title">Engage Service</span></a></div>
+
+                                </div>
+
+                            </div>
+
+                       ends: </div>
+
+            </div>
+          </div> */}
+
+        </div>
+      </section>
+
+      <section className="about-section">
+        <div className="auto-container">
           <div className="sec-title text-center">
             <span className="title">PROFESSIONAL FEE
             </span>
@@ -373,10 +462,10 @@ const Verification = () => {
           <div className="outer-box">
             <figure id="verification-img-v" className="verification-img-v">
               <img src={price} alt="Professional Charge" width="100%" height="100%" />
-            </figure> 
+            </figure>
             <div className="table-responsive" id="verification-table">
               <table className="table table-bordered table-center">
-                <thead style={{backgroundColor: '#448414', color: '#ffffff'}}>
+                <thead style={{ backgroundColor: '#448414', color: '#ffffff' }}>
                   <tr>
                     <th scope="col">Size</th>
                     <th scope="col">Service Charge</th>
@@ -425,13 +514,13 @@ const Verification = () => {
                 </tbody>
               </table>
             </div>
-            <ul style={{margin: '0px 20px'}} className="list-style-two">
+            <ul style={{ margin: '0px 20px' }} className="list-style-two">
               <li>The legal fee is for vetting of closure documents, production of Deed of Transfer, execution of the deed, processing of the title document in client's name and monitoring it until eventually granted.
               </li>
               <li>Client pays all government statutory fees as well as other ancillary charges relating to Survey and documentation.
               </li>
             </ul>
-         
+
             {/*    <br><br> */}
             {/* 
                     <div>
@@ -446,16 +535,16 @@ const Verification = () => {
             {/*  <br><br> */}
             <br />
             <br />
-            <hr style={{border: '1px solid red', marginBottom: '10px !important'}} id="horizontal_line" />
+            <hr style={{ border: '1px solid red', marginBottom: '10px !important' }} id="horizontal_line" />
             <div style={{}}>
-              <h5 style={{color: '#541484 !important'}}><b> WHO WE ARE</b></h5>
+              <h5 style={{ color: '#541484 !important' }}><b> WHO WE ARE</b></h5>
               <p>
                 We are Nigeria's No. 1 Property Verification and Real Estate Investment company that gives professional end to end Real Estate and Property Development services across Nigeria through our experienced and ethical team of professionals which includes but not limited to; Land Surveyors, Estate Surveyors, Town Planners, Property Lawyers, Quantity Surveyors, Civil Engineers, Architects, Researchers. . .
               </p>
             </div>
             <br /><br />
             <div>
-              <h5 style={{color: '#541484 !important'}}><b> WE ARE KNOWN FOR:</b></h5>
+              <h5 style={{ color: '#541484 !important' }}><b> WE ARE KNOWN FOR:</b></h5>
               <ul className="list-style-two">
                 <li>
                   Leading at providing the best real estate verification services across Nigeria that indemnifies buyers against both present and future losses of any kind.
@@ -511,9 +600,12 @@ const Verification = () => {
  */}
           </div>
         </div>
+
       </section>
-        </>
-    );
+      <PaymentDetails />
+      <LandingPageOptinForm/>
+    </>
+  );
 }
 
 export default Verification;

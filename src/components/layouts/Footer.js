@@ -22,11 +22,11 @@ const Footer = () => {
                                             <p>The foremost online property verification and Real Estate investment company that helps clients to acquire verified properties and invest in verified deals.</p>
                                         </div>
                                         <ul className="social-icon-one social-icon-colored">
-                                            <li><a href="https://www.facebook.com/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="https://www.twitter.com/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-twitter"></i></a></li>
-                                            <li><a href="https://www.instagram.com/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-instagram"></i></a></li>
-                                            <li><a href="https://www.youtube.com/c/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-youtube"></i></a></li>
-                                            <li><a href="https://www.linkedin.com/in/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-linkedin"></i></a></li>
+                                            <li><a href = "https://www.facebook.com/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-facebook-f"></i></a></li>
+                                            <li><a href = "https://www.twitter.com/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-twitter"></i></a></li>
+                                            <li><a href = "https://www.instagram.com/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-instagram"></i></a></li>
+                                            <li><a href = "https://www.youtube.com/c/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-youtube"></i></a></li>
+                                            <li><a href = "https://www.linkedin.com/in/florahomesgc" target="_blank" rel='noreferrer'><i className="fab fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -35,11 +35,11 @@ const Footer = () => {
                                     <div className="footer-widget useful-links">
                                         <h2 className="widget-title">Useful Links</h2>
                                         <ul className="user-links">
-                                            <li><a href="/">Home</a></li>
-                                            <li><a href="/blog">Blogs</a></li>
-                                            <li><a href="/contact">Contact Us</a></li>
-                                            <li><a href="/university">University</a></li>
-                                            <li><a href="/links">Quick Links</a></li>
+                                            <li><Link to="/">Home</Link></li>
+                                            <li><Link to="/blog">Blogs</Link></li>
+                                            <li><Link to="/contact">Contact Us</Link></li>
+                                            <li><Link to="/university">University</Link></li>
+                                            <li><Link to="/links">Quick Links</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -81,8 +81,8 @@ const Footer = () => {
                                     <div className="footer-widget useful-links">
                                         <h2 className="widget-title">T&C's</h2>
                                         <ul className="user-links">
-                                            <li><a href="404.php">Privacy Policy</a></li>
-                                            <li><a href="404.php">Terms and Conditions</a></li>
+                                            <li><Link to="/">Privacy Policy</Link></li>
+                                            <li><Link to="/">Terms and Conditions</Link></li>
                                         </ul>
                                     </div>
                                 </div>

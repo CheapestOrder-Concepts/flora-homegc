@@ -65,7 +65,7 @@ const Nav = () => {
         <nav ref={Nav} className={`navbar navbar-expand-lg sticky-top ${navScroll ? 'shadow' : 'inherit'} ${notHome ? 'navColorBlack' : 'inherit'}`}>
             <div id='logo' onClick={logoClick}>
                 <Link className="navbar-brand" to="/">
-                    <img style={{ width: '150px' }} src={logo} alt="logo" />
+                    <img style={{ width: '150px', height:'40px' }} src={logo} alt="logo" />
                 </Link>
             </div>
 
@@ -110,8 +110,9 @@ const Nav = () => {
                         </Link>
                         <span className='dropdown-toggle' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-chevron-circle-down"></i></span>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">The Fern Island</Link>
-                            <Link className="dropdown-item" to='/#' data-toggle="collapse" data-target="#navbarSupportedContent">The Hive</Link>
+                            <Link className="dropdown-item" to='/fern-island' data-toggle="collapse" data-target="#navbarSupportedContent">The Fern Island</Link>
+                            <Link className="dropdown-item" to='/the-hive' data-toggle="collapse" data-target="#navbarSupportedContent">The Hive</Link>
+                            <Link className="dropdown-item" to='/floracity-ecopolis' data-toggle="collapse" data-target="#navbarSupportedContent">FloraCity Ecopolis</Link>
                         </div>
                     </li>
                     <li className="nav-item mr-4">
@@ -127,13 +128,11 @@ const Nav = () => {
                 </div>
 
                 <div className="d-flex justify-content-end">
-                    {
-                        notHome ? <Link to='/login-register'>
+                
+                         <Link to='/login-register'>
                             <button type="button" className="custom-btn btn btn-lg">Register/Login</button>
-                        </Link> : <ScrollLink to='signUp' spy={true} smooth={true}>
-                                <button type="button" className="custom-btn btn btn-lg">Register/Login</button>
-                            </ScrollLink>
-                    }
+                        </Link> 
+                    
                 </div>
             </div>
         </nav>

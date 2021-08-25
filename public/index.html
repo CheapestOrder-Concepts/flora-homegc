@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <link rel="icon" href="./FHGClogo.png" sizes="16x16" type='image' />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Foremost Online Property Verification & Real Estate
   Investment Company." />
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
+    
     <link rel="stylesheet" href="%PUBLIC_URL%/css/loader/bootstrap.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/loader/style.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/loader/larry.css">
@@ -74,7 +75,13 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <script>
+    
+document.querySelector("#datetimepicker3").datetimepicker({
+   format:"LT"
+})
 
+    </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
@@ -84,6 +91,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
+
 </body>
 
 </html>

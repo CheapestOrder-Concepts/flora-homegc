@@ -3,6 +3,8 @@ import React from 'react';
 import cpbs from "../assets/productAssets/cpbs.png"
 import background from "../assets/background.jpg"
 import price_table from "../assets/price_table.png"
+import PaymentDetails from './PaymentDetails';
+import LandingPageOptinForm from './LandingPageOptinForm';
 const CompleteBuyer = () => {
     return (
         <>
@@ -343,9 +345,9 @@ This is why there's Complete Property Buyer Service which involves full executio
                       <div className="inner">
                         <div className="date">1ST <br /> STEP</div>
                         {/* <h4>Click Button</h4> */}
-                        <div className="text" style={{color: '#000000', display: 'none'}}>Enter your correct information <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style={{textDecoration: 'underline'}}>here</a> with all the necessary documents
-                        </div>
-                        <button className="btn theme-btn btn-style-three pop_up_form_simple" id="form_caller">Get Your Free Consultation</button>
+                        {/* <div className="text" style={{color: '#000000', display: 'none'}}>Enter your correct information <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style={{textDecoration: 'underline'}}>here</a> with all the necessary documents
+                        </div> */}
+                        <button className="theme-btn btn-style-three" data-toggle="modal"  data-target="#landingModal" id="form_caller"><span className="btn-title">Get Your Free Consultation</span></button>
                       </div>
                     </div>
                   </div>
@@ -366,7 +368,7 @@ This is why there's Complete Property Buyer Service which involves full executio
                         <div className="date">3RD <br /> STEP</div>
                         {/* <h4>Payment</h4> */}
                         {/* <div class="text" style="color: #000000">Submit Service Information.</div> */}
-                        <a className="btn theme-btn btn-style-three" href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style={{textDecoration: 'none'}}>Submit Service Information.</a> 
+                        <a className="theme-btn btn-style-three"  href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style={{textDecoration: 'none'}}><span className="btn-title">Submit Service Information.</span></a> 
                       </div>
                     </div>
                   </div>
@@ -383,7 +385,7 @@ This is why there's Complete Property Buyer Service which involves full executio
                   </div>
                   <div className="text-center" style={{marginTop: '10px'}}>
                     <h5 style={{marginTop: '5px', color: '#3A005F !important'}}><b>NOW IT'S TIME TO TAKE YOUR FIRST STEP</b></h5>
-                    <div className="btn-box"><button id className="theme-btn btn-style-four pop_up_form_simple"><span className="btn-title">CLICK HERE TO SCHEDULE YOUR 15 MINUTES FREE CONSULTATION NOW</span></button></div>
+                    <div className="btn-box"><button id className="theme-btn btn-style-four pop_up_form_simple" data-toggle="modal"  data-target="#landingModal"><span className="btn-title">CLICK HERE TO SCHEDULE YOUR 15 MINUTES FREE CONSULTATION NOW</span></button></div>
                   </div>
                 </div>
               </div>
@@ -408,6 +410,8 @@ This is why there's Complete Property Buyer Service which involves full executio
           <li>Ensuring confidentiality and security that protects us and our customers from danger through exposure.</li>
         </ul>
       </div>
+      <PaymentDetails/>
+      <LandingPageOptinForm/>
         </>
     );
 }

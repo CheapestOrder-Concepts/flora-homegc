@@ -1,12 +1,12 @@
 import React from 'react'
-import mock from '../assets/app-mockup.png';
+import mock from '../assets/mock-up.png';
 
 const Con2 = () => {
     return (
         <div className='container-fluid con2'>
             <div className='row'>
                 <div className='col-sm'>
-                    <img src={mock} alt='mock' />
+                    <img src={mock} alt='mock'  />
                 </div>
                 <div className='col-sm col2'>
                     <h2 className="text-light">

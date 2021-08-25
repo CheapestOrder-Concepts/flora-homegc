@@ -1,27 +1,32 @@
 import React, { useState, Fragment } from 'react';
-import partner from '../assets/partn.png';
+import {Link, useHistory } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
+import HeadShake from 'react-reveal/HeadShake';
+
+import partner from '../assets/logo.png';
 import workers from '../assets/workers.jpg';
 import cardImg1 from '../assets/blog1.jpg';
 import cardImg12 from '../assets/blog2.jpg';
 import cardImg3 from '../assets/blog3.jpg';
 import surv from '../assets/land-verification.jpg';
 import iconShape from '../assets/icon-shape.png';
+import mdspeech1 from '../assets/mdspeech1.jpg';
+import homevideo from '../assets/videos/home_video.mp4';
+import Footer from '../layouts/Footer';
 
-import LorR from './LorR';
 
+// import LorR from './LorR';
 import { SliderData as slides } from './sliderData';
-
-import Fade from 'react-reveal/Fade';
-import HeadShake from 'react-reveal/HeadShake';
 import Con2 from './Con2';
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
+  const history = useHistory()
 
   setTimeout(() => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-  }, 10000);
+  }, 1000000);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -58,7 +63,7 @@ const Home = () => {
                         Foremost Online Property Verification & Real Estate
                         Investment Company.
                       </p>
-                      <button type='button' className='btn-1 custom-btn btn btn-lg'>
+                      <button onClick={()=> history.push("/about")} type='button' className='btn-1 custom-btn btn btn-lg'>
                         About Us
                       </button>
                     </Fade>
@@ -73,7 +78,7 @@ const Home = () => {
                     <Fade bottom>
                       <h2 className="text-light font-weight-bolder">SECURE, STERLING &amp; SEAMLESS</h2>
                       <p className="text-light">Services In Real Estate & Property Development</p>
-                      <button type='button' className='custom-btn btn btn-lg'>
+                      <button type='button' onClick={()=>history.push("/product")} className='custom-btn btn btn-lg'>
                         Our Services
                       </button>
                     </Fade>
@@ -181,11 +186,12 @@ const Home = () => {
                 <div className='word'>
                   <h4 className="text-center">Verification Service</h4>
                   <p>
-                    Due to the prevalence of demolition, eviction, dispute and scam issues relating to landed properties, we set out to help individuals and corporate investors to verify and clear their subject of interest either before paying for the new found property or for already existing property against government...
+                    Due to the prevalence of demolition, eviction, dispute and scam issues relating to landed properties, we set out to help individuals and corporate investors to verify and clear their subject of interest either before paying for the new found property...
                   </p>
                 </div>
 
                 <div className='chevron'>
+                  <Link to="/verification">
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'
@@ -199,11 +205,11 @@ const Home = () => {
                       d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'
                     />
                   </svg>
+                  </Link>
                 </div>
               </div>
 
               <div className='col-sm'>
-
                 <div className='svg'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -229,11 +235,12 @@ const Home = () => {
                 <div className='word'>
                   <h4 className="text-center">Complete Property Buyer Services</h4>
                   <p>
-                  Our property acquisition team is always available and ready to help prospective property buyers handle their property purchase from start to finish at 100% done-for-you either land or building, within Estate or with Omo-Onile, for individual or corporate large expanse across Nigeria.
+                  Our property acquisition team is always available and ready to help prospective property buyers handle their property purchase from start to finish at 100% done-for-you either land or building, within Estate or with Omo-Onile, for individual or corporate large expanse across Nigeria...
                   </p>
                 </div>
 
                 <div className='chevron'>
+                  <Link to ="/cpbs">
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'
@@ -247,17 +254,20 @@ const Home = () => {
                       d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'
                     />
                   </svg>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            <a href="/products" type='button' className='custom-btn cuz btn btn-lg'  style={{background:"#541484"}}>
+            <Link to="/products" type='button' className='custom-btn cuz btn btn-lg'  style={{background:"#541484", boxShadow:"none"}}>
            View All Products
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div className='sec2'>
+        
+
+        {/* <div className='sec2'>
           <h2 className='text-center'>WHAT WE STAND FOR</h2>
           <div className='embed-responsive embed-responsive-16by9'>
             <iframe
@@ -273,7 +283,7 @@ const Home = () => {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             ></iframe>
           </div>
-        </div>
+        </div> */}
 
         {/* <div className='sec3'>
           <div className='container'>
@@ -310,6 +320,20 @@ const Home = () => {
           </div>
         </div> */}
 
+<section className="video-section" style={{backgroundImage: `url(${mdspeech1})`}}>
+        <div className="auto-container">
+          <div className="content-box">
+         
+            <h2 className="mb-4">WHAT WE STAND FOR</h2>
+ 
+            <video id="player"  controls  src={homevideo}  style={{plyrColorMain: '#541484'}}/>
+              {/* <source src="assets/movies/home_video.mp4" type="video/mp4" ></source> */}
+    
+          </div>
+          </div>
+       
+      </section>
+
 <section className="about-section">
         <div className="anim-icons full-width">
           <span className="icon icon-circle-blue wow fadeIn animated" style={{visibility: 'visible', animationName: 'fa-spin'}} />
@@ -335,7 +359,7 @@ const Home = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="btn-box"><a href="/about" className="theme-btn btn-style-three"><span className="btn-title">Learn more...</span></a></div>
+                <div className="btn-box"><Link to="/about" className="theme-btn btn-style-three"><span className="btn-title">Learn more...</span></Link></div>
               </div>
             </div>
             {/* Image Column */}
@@ -408,12 +432,14 @@ const Home = () => {
         </div>
 
         <div className='sec5'>
+          <div className="auto-container">
           <div className='text-center'>
             <h4>BLOGS</h4>
             <h2>Eye-Opening Content</h2>
           </div>
           <div className='card-deck'>
             <div className='card'>
+            <Link to ="/blog:1">
               <div className='secImg'>
                 <img
                   id='sec5Img'
@@ -423,6 +449,7 @@ const Home = () => {
                 />
               </div>
               <div className='card-body'>
+                
                 <h5 className='card-title'>
                   <p>
                     <i
@@ -446,6 +473,7 @@ const Home = () => {
                 <p className='card-text font-weight-bold'>
                   Lagos Set To Go Digital in Land Related Services Come 2021
                 </p>
+                
               </div>
               <div className='card-footer'>
                 {/* <small className="text-muted">Last updated 3 mins ago</small> */}
@@ -453,6 +481,7 @@ const Home = () => {
                   Read More...
                 </button>
               </div>
+              </Link>
             </div>
             <div className='card'>
               <div className='secImg'>
@@ -537,12 +566,22 @@ const Home = () => {
               </div>
             </div>
           </div>
+          </div>
         </div>
 
         {/* <div className='sec6'></div> */}
       </div>
+    <div className="registeration_login">
+      <p className="lorCaption text-center">
+                Join <strong>millions</strong>  of real estate investors, buyers, developers, professionals, realtors, contractors, organisations and other stakeholders that are getting ahead in their investment knowledge, profitability, security and networking.
+            </p>
 
-      <LorR />
+  
+            <div className="btn-box mt-3"><Link to="/login-register" className="theme-btn btn-style-three"><span className="btn-title">Register/Login</span></Link></div>
+
+            </div>
+      {/* <LorR /> */}
+      <Footer/>
     </Fragment>
   );
 };

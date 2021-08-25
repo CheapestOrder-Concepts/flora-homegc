@@ -19,7 +19,7 @@ Last Change:    12/9/2019
 6. Social Icons
 7. Scroll To Top style
 8. Page Title
-9. Section Title
+9.  Title
 10. Main Header / Two / Three
 11. Mobile Menu
 12. Banner Section
@@ -3118,7 +3118,7 @@ img {
 
 .feature-block-three {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 4px;
 }
 
 .feature-block-three .inner-box {
@@ -4593,6 +4593,10 @@ img {
 .veriBox-img {
   width: 100%;
   height: auto;
+  position: relative;
+  left: 50px;
+  top: 150px
+
 }
 
 .vidBox {
@@ -6955,6 +6959,7 @@ img {
 .video-section .content-box {
   position: relative;
   text-align: center;
+  z-index: 1000;
 }
 
 .video-section .content-box .text {
@@ -7191,7 +7196,7 @@ section .content-box .text {
   position: relative;
   float: left;
   width: 20%;
-  /* background-image: url(../images/form-bg.png); */
+  background-image: url(../../assets/form-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -7417,7 +7422,7 @@ section .content-box .text {
 
 .contact-page-section .contact-column {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 300px;
 }
 
 .contact-page-section .contact-info {

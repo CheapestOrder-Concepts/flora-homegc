@@ -4,8 +4,10 @@ import React from 'react';
 import LorR from './LorR';
 import bg from "../assets/productAssets/about-bg.jpg"
 
+import Footer from '../layouts/Footer';
 const Contact = () => {
     return (
+      <>
         <div>
              <section className="page-title" style={{backgroundImage: `url(${bg})`}}>
         <div className="auto-container">
@@ -66,6 +68,8 @@ const Contact = () => {
         </div>
       </section>
         </div>
+        <Footer/>
+        </>
     );
 }
 

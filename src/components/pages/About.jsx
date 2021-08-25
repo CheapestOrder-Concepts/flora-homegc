@@ -3,8 +3,12 @@ import React from 'react';
 import background from "../assets/productAssets/about-bg.jpg"
 import workers from '../assets/workers.jpg';
 import mdspeech1 from '../assets/mdspeech1.jpg';
+
+import Footer from '../layouts/Footer';
+
 const About = () => {
     return (
+      <>
         <div>
              <section className="page-title" style={{backgroundImage: `url(${background})`}}>
         <div className="auto-container">
@@ -86,6 +90,8 @@ RC number 1536444
 
      
         </div>
+        <Footer/>
+        </>
     );
 }
 

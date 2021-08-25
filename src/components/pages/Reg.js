@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Reg = ({ showReg }) => {
+const Reg = ({ showReg, SocialWidget }) => {
     const [regDetails, setRegDetails] = useState({
         firstName: '',
         lastName: '',
@@ -33,12 +33,12 @@ const Reg = ({ showReg }) => {
             <input onChange={onChange} name='whatsAppNumber' type='number' placeholder="WhatsApp Number" value={whatsAppNumber} />
             <select name='category' value={category} className="mdb-select md-form" searchable="Search here.." onChange={onChange}>
                 <option value="" disabled defaultValue>Select your category</option>
-                <option value="Individual buyer/Investors">Individual buyer/Investors</option>
-                <option value="Property professionals and contractors ">Property professionals and contractors </option>
-                <option value="Realtor, Agents, Marketers, Consultants">Realtor, Agents, Marketers, Consultants</option>
-                <option value="Group of individuals, Developers, Organizations (Corporate, Club, Religious, NGO)">Group of individuals, Developers, Organizations (Corporate, Club, Religious, NGO)</option>
+                <option value="Individual buyer/Investors/Owner">Individual buyer/Investors/Owner</option>
+                <option value="Property professionals and contractors ">Agent/Marketer/Realtor/Consultants </option>
+                <option value="Realtor, Agents, Marketers, Consultants">Developer Company/Corporate Organization</option>
+                <option value="Group of individuals, Developers, Organizations (Corporate, Club, Religious, NGO)">Group of Individual/family/club</option>
                 <option value="Individual and Group property OWNER(family, club, corporate, religious)
-">Individual and Group property OWNER(family, club, corporate, religious)
+">Property professionals and contractors
                 </option>
             </select>
 
@@ -59,7 +59,10 @@ const Reg = ({ showReg }) => {
 
             <textarea name="message" value={message} id="message" placeholder='Any message? (how you want us to help)' onChange={onChange} />
 
-            <input type='submit' value='Register' className="lr-submit" onClick={onSubmit} />
+            {/* <input type='submit' value='Register' className="theme-btn btn-style-three" onClick={onSubmit} /> */}
+
+            <div className="btn-box mt-3" ><button style={{width:"100%", fontSize:"20px"}} type="submit" className="theme-btn btn-style-three" value="Register"  onClick={onSubmit}><span className="btn-title">Register</span></button></div>
+            <SocialWidget/>
         </form>
     )
 }

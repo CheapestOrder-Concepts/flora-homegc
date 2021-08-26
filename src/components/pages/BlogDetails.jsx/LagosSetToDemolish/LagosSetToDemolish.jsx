@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 import blog1 from "../../../assets/blog1.jpg"
 import blogheader from "../../../assets/blogheader.png"
-import Comment from '../Comments/Comment';
-import CommentForm from '../Comments/CommentForm';
+import Comment from '../Components/Comments/Comment';
+import CommentForm from '../Components/Comments/CommentForm';
+import Disclaimer from '../Components/Disclaimer';
+import WhoWeAre from '../Components/WhoWeAre';
 import Sidebar from '../Sidebar/Sidebar';
-const LagosSetToDemolish = () => {
+const LagosSetToDigitalize = () => {
     return (
         <>
             <section className="page-title" style={{ backgroundImage: `url(${blogheader})` }}>
@@ -90,70 +92,9 @@ const LagosSetToDemolish = () => {
 
                                             </p>
                                         </div>
-                                        <div className="content">
-                                            <hr className="bg-primary pt-1" />
-                                            <h2 className="mt-3" style={{ color: '#551584' }}>WHO WE ARE AND SERVICES WE OFFER!</h2>
-                                            <p style={{ color: 'black' }}>
-                                                We are FloraHomes Global Consult Ltd., a Property Verification and Real Estate Investment company that gives professional end
-                                                to end Real Estate and Property Development services as seen below. Our team include but not limited to; Land Surveyors,
-                                                Estate Surveyors, Town Planners, Property Lawyers, Quantity Surveyors, Civil Engineers, Architects . . .
-                                            </p>
-                                            <Link  to ="/about" type="button" className="theme-btn btn-style-four mt-3 investment_modal_btn mb-4"> <span className="btn-title">To know more about us, continue reading</span> </Link>
-                                            <hr className="bg-primary" />
-
-                                            {/* point 10 */}
-                                            <div className="our-servies mt-1 pb-4">
-                                                <div className="sec-title py-3">
-                                                    <h2 style={{ marginBottom: '0px' }}>ARE YOU READY TO GET OUR SERVICE? </h2>
-                                                </div>
-                                                <ul className="list-style-one">
-                                                    <p className="text" style={{ marginLeft: '10px' }}>
-                                                        If you would like to talk to us online or book a physical meeting appointment based on any of our product options
-                                                        available OR PERHAPS you have a customized service request, fill in the short brief below to allow our team to contact you
-                                                        for further discussion.
-                                                    </p>
-                                                    <br />
-                                                    <a style={{ marginLeft: '10px' }} className="btn-hover color-6" href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform?usp=pp_url">Custom
-                                                        service request</a>
-                                                    <br />
-                                                    <blockquote className="newbq" style={{ marginLeft: '10px' }}>
-                                                        We will listen to your brief and let you access the best property service care you can get.
-                                                        <br />
-                                                        Click the link below to book a call/meeting and we will be right with you within a short period.
-                                                    </blockquote>
-                                                    <br />
-                                                    <a style={{ marginLeft: '10px' }} className="btn-hover color-6" href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform?usp=pp_url">Book
-                                                        a call/meeting</a>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                       <WhoWeAre/>
                                         <hr className="bg-primary" />
-                                        <div className="mt-4">
-                                            <div className="card mb-4">
-                                                <div className="card-header border-0">
-                                                    <h6>DISCLAIMER</h6>
-                                                </div>
-                                                <div className="card-body">
-                                                    <p className="text">This information is part of the "Preventing Real Estate Losses" project By FloraHomes Global Consult Limited
-                                                        professional team. <br />They're reliable and very valuable, created with utmost simplicity to educate and enlighten the
-                                                        public on how not to fall into property loss of any kind. We specifically disclaim any liability that is incurred from the
-                                                        misuse, misinterpretation or wrong application of this content and any other information found on this platform.<br />Also,
-                                                        comments expressed here do not reflect the opinions of FloraHomesGC.com or any employee thereof.</p>
-                                                </div>
-                                            </div>
-                                            <div className="card">
-                                                <div className="card-header border-0">
-                                                    <h6>COPYRIGHT</h6>
-                                                </div>
-                                                <div className="card-body">
-                                                    <p className="text">We highly encourage sharing and educating others with this content. However, you must do so by always giving
-                                                        copyright ownership to FloraHomesGC.com </p>
-                                                    <p className="text">ALL RIGHTS RESERVED. THIS CONTENT AND ANY OTHERS ON THIS PLATFORM SHOULD NOT BE PLAGIARIZED, WHETHER PARTLY,
-                                                        WHOLLY, LINES, PHRASES, PARAGRAPHS… DIGITALLY, PRINT OR IN ANY FORM, EXCEPT BY ACCREDITING THE COPYRIGHT TO
-                                                        FLORAHOMESGC.COM</p>
-                                                </div>
-                                            </div>
-                                        </div>                          </div>
+                                    <Disclaimer/>                        </div>
                                 </div>
                                 <div className="comments-area" id="comment-view">
         <div className="comment-form my-4">
@@ -176,4 +117,4 @@ const LagosSetToDemolish = () => {
     );
 }
 
-export default LagosSetToDemolish;
+export default LagosSetToDigitalize;

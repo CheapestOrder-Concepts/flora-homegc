@@ -18,12 +18,19 @@ import TheHive from './components/pages/FloraCity/TheHive';
 import FloraEcopolis from './components/pages/FloraCity/FloraEcopolis';
 import OurEstates from './components/pages/OurEstates';
 import OptinForm from './components/pages/FloraCity/OptinForm';
-import LagosSetToDemolish from './components/pages/BlogDetails.jsx/LagosSetToDemolish/LagosSetToDemolish';
+import LagosSetToDigitalize from './components/pages/BlogDetails.jsx/LagosSetToDemolish/LagosSetToDemolish';
+import KnowYourLandSize from './components/pages/BlogDetails.jsx/KnowYourLandSize/KnowYourLandSize';
+import KnowYourPropertyTitle from './components/pages/BlogDetails.jsx/KnowYourPropertyTitle/KnowYourTitle';
+import Blogs from './components/pages/BlogDetails.jsx/Blogs';
+import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
+import QuickLinks from './components/pages/QuickLinks';
+import RealEstateMistakes from './components/pages/BlogDetails.jsx/RealEstateMistakes/RealEstateMistakes';
 function App() {
 
   return (
     <div className="App">
       <Router>
+        <scrollToTop>
         <SearchModal />
         <Nav />
         <Switch>
@@ -40,9 +47,16 @@ function App() {
           <Route path='/floracity-ecopolis' children={<FloraEcopolis />} />
           <Route path='/our-estate' children={<OurEstates />} />
           <Route path='/optin' children={<OptinForm />} />
-          <Route path='/blog:1' children={<LagosSetToDemolish />} />
+          <Route path='/blog-1' children={<LagosSetToDigitalize />} />
+          <Route path='/blog-2' children={<KnowYourLandSize />} />
+          <Route path='/blog-3' children={<KnowYourPropertyTitle />} />
+          <Route path='/blog-3' children={<KnowYourPropertyTitle />} />
+          <Route path='/blogs' children={<Blogs/>} />
+          <Route path='/real-estate-mistakes' children={<RealEstateMistakes />} />
+          <Route path='/quicklinks' children={<QuickLinks />} />
         </Switch>
         {/* <Footer /> */}
+        </scrollToTop>
       </Router>
     </div>
   );

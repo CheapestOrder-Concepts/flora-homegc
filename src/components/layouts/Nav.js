@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Link as ScrollLink } from 'react-scroll'
 import logo from '../assets/FHGC weblogo.png';
 
 
@@ -116,7 +115,7 @@ const Nav = () => {
                         </div>
                     </li>
                     <li className="nav-item mr-4">
-                        <Link className="nav-link" to='/blog' data-toggle="collapse" data-target="#navbarSupportedContent">Blog</Link>
+                        <Link className="nav-link" to='/blogs' data-toggle="collapse" data-target="#navbarSupportedContent">Blog</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to='/login-register' data-toggle="collapse" data-target="#navbarSupportedContent">Register/Login</Link>

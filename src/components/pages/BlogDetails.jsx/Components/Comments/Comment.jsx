@@ -1,6 +1,6 @@
 import React from 'react';
-import unlike from "../../../assets/unlike.png"
-import unlove from "../../../assets/unlove.png"
+import unlike from "../../../../assets/unlike.png"
+import unlove from "../../../../assets/unlove.png"
 const Comment = ({user, message}) => {
     return (
         <>

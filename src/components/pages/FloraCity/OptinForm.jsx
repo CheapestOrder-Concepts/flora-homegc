@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React, { useState } from 'react'
+import ReactDOM  from 'react-dom'
 import "./modal.css"
 const OptinForm = ({ showReg = true, handleClose }) => {
   const [regDetails, setRegDetails] = useState({
@@ -26,7 +27,8 @@ const focus = (e) => {
     handleClose()
   }
 
-  return (<>
+  return ReactDOM.createPortal(
+  <>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{ marginTop: "15px" }}>
       <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -168,7 +170,7 @@ const focus = (e) => {
       </div>
     </div>
 
-  </>
+  </>, document.getElementById("portal")
   )
 }
 

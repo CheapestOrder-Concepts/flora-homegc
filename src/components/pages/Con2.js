@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import mock from '../assets/mock-up.png';
 
 const Con2 = () => {
@@ -17,9 +18,9 @@ const Con2 = () => {
                         Don't fall victim to landed property scam, demolition, third
                         party claimant and other losses in Nigeria Real Estate.
               </p>
-                    <button type='button' className='custom-btn btn btn-lg'>
+                    <Link to="/real-estate-mistakes"  className='custom-btn btn btn-lg'>
                         Access Now
-              </button>
+              </Link>
                 </div>
             </div>
         </div>

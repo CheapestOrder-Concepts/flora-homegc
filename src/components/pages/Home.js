@@ -18,6 +18,7 @@ import Footer from '../layouts/Footer';
 // import LorR from './LorR';
 import { SliderData as slides } from './sliderData';
 import Con2 from './Con2';
+import BlogCard from './BlogDetails.jsx/BlogCard';
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
@@ -26,7 +27,7 @@ const Home = () => {
 
   setTimeout(() => {
     setCurrent(current === length - 1 ? 0 : current + 1);
-  }, 1000000);
+  }, 10000);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -438,133 +439,9 @@ const Home = () => {
             <h2>Eye-Opening Content</h2>
           </div>
           <div className='card-deck'>
-            <div className='card'>
-            <Link to ="/blog:1">
-              <div className='secImg'>
-                <img
-                  id='sec5Img'
-                  className='card-img-top'
-                  src={cardImg1}
-                  alt='Card cap'
-                />
-              </div>
-              <div className='card-body'>
-                
-                <h5 className='card-title'>
-                  <p>
-                    <i
-                      className='fas fa-user-alt'
-                      style={{ marginRight: '10px' }}
-                    ></i>
-                    FLORAHOMES ADMIN
-                    <span className='calender' style={{ float: 'right' }}>
-                      <i className='fas fa-calendar-check'></i>{' '}
-                      <span className='text-muted'>2020-12-14</span>
-                    </span>
-                  </p>
-                  <span>
-                    <i
-                      className='fas fa-tags'
-                      style={{ marginRight: '10px' }}
-                    ></i>
-                    <small className='text-muted'>Property Documentation</small>
-                  </span>
-                </h5>
-                <p className='card-text font-weight-bold'>
-                  Lagos Set To Go Digital in Land Related Services Come 2021
-                </p>
-                
-              </div>
-              <div className='card-footer'>
-                {/* <small className="text-muted">Last updated 3 mins ago</small> */}
-                <button type='button' className='custom-btn btn btn-lg'>
-                  Read More...
-                </button>
-              </div>
-              </Link>
-            </div>
-            <div className='card'>
-              <div className='secImg'>
-                <img
-                  id='sec5Img'
-                  className='card-img-top'
-                  src={cardImg12}
-                  alt='Card cap'
-                />
-              </div>
-
-              <div className='card-body'>
-                <h5 className='card-title'>
-                  <p>
-                    <i
-                      className='fas fa-user-alt'
-                      style={{ marginRight: '10px' }}
-                    ></i>
-                    FLORAHOMESGC
-                    <span className='calender' style={{ float: 'right' }}>
-                      <i className='fas fa-calendar-check'></i>{' '}
-                      <span className='text-muted'>2020-10-07</span>
-                    </span>
-                  </p>
-                  <span>
-                    <i
-                      className='fas fa-tags'
-                      style={{ marginRight: '10px' }}
-                    ></i>
-                    <small className='text-muted'>Real Estate Investment</small>
-                  </span>
-                </h5>
-                <p className='card-text font-weight-bold'>Know Your Land Size</p>
-              </div>
-              <div className='card-footer'>
-                {/* <small className="text-muted">Last updated 3 mins ago</small> */}
-                <button type='button' className='custom-btn btn btn-lg'>
-                  Read More...
-                </button>
-              </div>
-            </div>
-            <div className='card'>
-              <div className='secImg'>
-                <img
-                  id='sec5Img'
-                  className='card-img-top'
-                  src={cardImg3}
-                  alt='Card cap'
-                />
-              </div>
-
-              <div className='card-body'>
-                <h5 className='card-title'>
-                  <p>
-                    <i
-                      className='fas fa-user-alt'
-                      style={{ marginRight: '10px' }}
-                    ></i>
-                    FLORAHOMESGC
-                    <span className='calender' style={{ float: 'right' }}>
-                      <i className='fas fa-calendar-check'></i>{' '}
-                      <span className='text-muted'>2020-05-07</span>
-                    </span>
-                  </p>
-                  <span>
-                    <i
-                      className='fas fa-tags'
-                      style={{ marginRight: '10px' }}
-                    ></i>
-                    <small className='text-muted'>
-                      Property Authentication & Verification
-                    </small>
-                  </span>
-                </h5>
-                <p className='card-text font-weight-bold'>Know Your Property Title</p>
-              </div>
-              <div className='card-footer'>
-                {/* <small className="text-muted">Last updated 3 mins ago</small> */}
-                <button type='button' className='custom-btn btn btn-lg'>
-                  Read More...
-                </button>
-              </div>
-            </div>
+            <BlogCard title='Lagos Set To Go Digital in Land Related Services Come 2021' category='Property Documentation' date='2020-12-14' link='/blog-1' image={cardImg1}/>
+            <BlogCard title='Know Your Land Size' category='Real Estate Investment' date='2020-10-07' link='/blog-2' image={cardImg12}/>
+            <BlogCard title='Know Your Property Title' category='  Property Authentication & Verification' date='2020-05-07' link='/blog-3' image={cardImg3}/>
           </div>
           </div>
         </div>

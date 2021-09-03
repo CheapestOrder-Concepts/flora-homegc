@@ -1,148 +1,170 @@
-import React from 'react';
+import React from "react";
 
-import "./style.css"
-import partner from '../../assets/logo.png';
-import optin_bg from "../../assets/optin-bg.jpg"
-import verification from "../../assets/verification.png"
-import background from "../../assets/background.jpg"
-import price from "../../assets/price.png"
-import iconShape from '../../assets/icon-shape.png';
-import verification_video from "../../assets/videos/verification.mp4"
-import PaymentDetails from '../PaymentDetails';
-import LandingPageOptinForm from '../LandingPageOptinForm';
+import "./style.css";
+import partner from "../../assets/partner2.jpg";
+// import optin_bg from "../../assets/optin-bg.jpg"
+// import verification from "../../assets/verification.png";
+import background from "../../assets/background.jpg";
+import price from "../../assets/price.png";
+// import iconShape from "../../assets/icon-shape.png";
+import PaymentDetails from "../../SharedComponents/PaymentDetails";
+import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
+import EngageInService from "../../SharedComponents/EngageInService";
 
 const Verification = () => {
   return (
     <>
-      <section className="banner-meetup">
+      {/* <section className="banner-meetup">
         <div className="bg-pattern" style={{ backgroundImage: `url(${optin_bg})` }} />
-        {/* <div class="layer-outer">
+        /* <div class="layer-outer">
 
                     <div class="gradient-layer"></div>
 
-                </div> */}
+                </div> 
         <div className="auto-container">
           <div className="content-box">
             <div className="address" />
             <h2>VERIFICATION SERVICE PAGE
             </h2>
           </div>
-          {/* <div class="btn-box">
+          <div class="btn-box">
 
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" class="theme-btn btn-style-two"><span class="btn-title">Engage service</span></a>
 
-                    </div> */}
+                    </div> 
         </div>
+      </section> */}
+
+      <section style={{ background: "#41036E" }}>
+        <div className="heading-container">
+          <h1>
+            Don't Lose Your Money, Let Us Help You Verify Your Real Estate
+            Investment.
+          </h1>
+        </div>
+        <div className="heading-paragraph">
+          <p>
+            {" "}
+            We would be responsible for any demolition issues, fake estate
+            developers, Omo-Onile wahala, government acquisition, structural
+            defects or potential scams of your investments for the next{" "}
+            <span style={{ fontWeight: "bold" }}> 50years.</span>
+          </p>
+        </div>
+        <div
+          class="btn-box veriff-first"
+          style={{
+            display: "block",
+            // marginRight: "10px",
+            textAlign: "center",
+          }}
+        >
+          <button
+            data-toggle="modal"
+            data-target="#landingModal"
+            class="theme-btn btn-style-four mb-4 mt-3"
+          >
+            <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
+          </button>
+        </div>
+        <div
+          className="phone-number"
+          style={{
+            color: "white",
+            textAlign: "center",
+            display: "block",
+          }}
+        >
+          Or Call +2348094442019
+        </div>
+        {/* <div className="img verification"> */}
+        <h4
+          className="text-center"
+          style={{ marginBottom: "20px", color: "white" }}
+        >
+          Affiliated Professional Bodies
+        </h4>
+        <img id="firstP" src={partner} alt="partners" />
+        {/* </div> */}
       </section>
-
-      <section className="about-section-two">
-        <div className="anim-icons full-width">
-          <span className="icon icon-circle-blue wow fadeIn animated" style={{ visibility: 'visible', animationName: 'fa-spin' }} />
-          <span className="icon icon-dots wow fadeInleft animated" style={{ visibility: 'visible' }} />
-          <span className="icon icon-circle-1 wow zoomIn animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
-        </div>
-        <div className="container">
-          <div className="row">
-            {/* Content Column */}
-            <div className="content-column col-lg-12 col-md-12 col-sm-12 order-2">
-              <div className="inner-column">
-                <div className="sec-title">
-                  <h2 style={{ marginBottom: '15px' }}>Don't Lose Your Money, Let Us Help You Verify Your Real Estate Investment.</h2>
-                  {/* <h4 style={{fontWeight: 600, marginBottom: '15px'}}>Don't be a victim of property scam, demolition, eviction, 3rd party claimants, and other Real Estate related losses!</h4>
- 
-                  <p style={{marginBottom: '15px', fontSize: '20px'}}>Let's help you verify your Real Estate investments opportunities before you pay for them.</p> */}
-                </div>
-                <div className="text">
-                  {/* <ul className="list-style-two">
-                    <li>
-                      Are you buying from within an Estate or from the Omo-Onile?
-                    </li>
-                    <li>
-                      Are you an Individual property investor, developer company or corporate investor?
-                    </li>
-                   <li>
-                      The estate land or building you want to buy…
-                    </li>
-                    <li>
-                      The community or individual property you want to buy…
-                    </li>
-                    <li>
-                      The property you already purchased…
-                    </li>
-                    <li>
-                      Whether newly bought or even several year's old…
-                    </li>
-                    <li>
-                      Are you sure that you're not about to lose all your investments?
-                    </li>
-                    <li>
-                      Are you sure you've not been scammed?
-                    </li> 
-                  </ul>
-                  */}
-                  <p style={{ fontSize: "18px", fontWeight: "bold" }}>
-                    We would be responsible for any demolition issues, fake estate developers, Omo-Onile wahala, government acquisition, structural defects or potential scams of your investments for the next 50yrs.
-
-                  </p>
-
-
-
-                  {/* <div>
-                <h4>
-                      <span className="font-weight-bolder"> <u> With just N150,000 only,</u></span> you can totally avoid losing millions of Naira by getting your interest property completely verified before paying for it or before spending more on it in case you've already purchased the property.
-                    </h4> 
-                    <br />
-                    <button className="theme-btn btn-style-three"><span className="btn-title">GET A FREE CONSULTATION NOW</span></button>
-                  </div>*/}
-                  <div className='img verification'>
-                    <h4 className='text-center'>Affiliated Professional Bodies</h4>
-                    <img id='firstP' src={partner} alt='partners' />
-                  </div>
-                  {/* <div className="vidBox">
-                    <video src={verification_video} width="100%" height="auto" type="video/mp4" controls />
-                  </div> */}
-                </div>
+      <section>
+        <div className=" content-column col-lg-12">
+          <p>How it works</p>
+          <ul className="list-style-decimal">
+            <li>
+              Our verification team made up of professionals: Estate Surveyors,
+              Land Surveyors, Property Lawyers, Town Planners, Civil Engineers,
+              Investigative Journalist, Architects, Builders, Quantity
+              Surveyors, etc are set to help individuals and corporate investors
+              to verify their land and building of interest before making
+              payment for it.{" "}
+            </li>
+            <li>
+              When you allow us to carry out your Real Estate verification, you
+              have our assurance for the next 50 years. And, if there is any
+              matter that arises after our verification between this period. We
+              would refund your investment capital.
+            </li>
+            <li>
+              <div
+                class="btn-box"
+                style={{ display: "inline", marginRight: "10px" }}
+              >
+                <button
+                  data-toggle="modal"
+                  data-target="#landingModal"
+                  class="theme-btn btn-style-four mb-4 mt-3"
+                >
+                  <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
+                </button>
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className=" content-column col-lg-8">
-              <p style={{ fontWeight: 'bold', fontSize: "20px", marginTop: '80px' }}>
-                How it works
-              </p>
-              <ul className="list-style-two">
-                <li>Our verification team made up of professionals: Estate Surveyors, Land Surveyors,  Property Lawyers, Town Planners, Civil Engineers, Investigative Journalist,  Architects,  Builders, Quantity Surveyors,  etc are set to help individuals and corporate investors to verify their land and building of interest before making payment for it. </li>
-                <li>When you allow us to carry out your Real Estate verification, you have our assurance for the next 50 years. And, if there is any matter that arises after our verification between this period. We would refund your investment capital.</li>
-              </ul>
+              <div
+                className="phone-number"
+                style={{
+                  color: "#ed6c11",
+                }}
+              >
+                Or Call +2348094442019
+              </div>
+            </li>
+          </ul>
 
-              <div class="btn-box" ><button data-toggle="modal"  data-target="#landingModal" class="theme-btn btn-style-four mb-4 mt-3"><span class="btn-title">
-                Book Your Free Consultation
-              </span></button></div>
-              {/* <p style={{ fontWeight: 'bold' }}>
+          {/* <p style={{ fontWeight: 'bold' }}>
                 So how exactly do you know the genuinity of a property?
               </p> */}
-            </div>
-            <div className="col-lg-4">
-              <div className="image-box veriBox">
-                <img src={verification} alt="Overview" className="veriBox-img" />
-                <img src={iconShape} alt='' className='bmw2 verif' />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       <section className="" style={{ backgroundImage: `url(${background})` }}>
         <div className="auto-container">
-          <p style={{ fontWeight: 'bold', color: "#ed6c11", fontSize: "20px", paddingTop: '30px' }}>
+          <p
+            style={{
+              fontWeight: "bold",
+              color: "#ed6c11",
+              fontSize: "20px",
+              paddingTop: "30px",
+            }}
+          >
             Our property verification includes but not limited to the following:
           </p>
 
-          <ul className="list-style-two ul-text-white" style={{ color: "white" }}>
-            <li>Physical land inspection with our land experts for picking Coordinates, and engaging in other field research.</li>
-            <li>Correlating the document data with the actual site location data and determining the actual status of the land.</li>
+          <ul
+            className="list-style-two ul-text-white"
+            style={{ color: "white" }}
+          >
+            <li>
+              Physical land inspection with our land experts for picking
+              Coordinates, and engaging in other field research.
+            </li>
+            <li>
+              Correlating the document data with the actual site location data
+              and determining the actual status of the land.
+            </li>
             <li>Competitive analysis of similar adjoining Properties.</li>
-            <li>Coordinate Charting at Surveyor General's office for updated information.</li>
+            <li>
+              Coordinate Charting at Surveyor General's office for updated
+              information.
+            </li>
             <li>A comprehensive examination of all documents</li>
             <li>Confirming other government Property requirements</li>
             <li>Authentication of the claimed title.</li>
@@ -156,14 +178,36 @@ const Verification = () => {
             <li>Flooding susceptibility check.</li>
             <li>Confirming all documents in relation to the structure.</li>
             <li>Ensure interest land use tally with existing use</li>
-            <li>Confirming the site plan is in conformity with approved layout plan</li>
+            <li>
+              Confirming the site plan is in conformity with approved layout
+              plan
+            </li>
             <li>Confirming all planning tallies with the state master plan.</li>
             <li>Etc</li>
           </ul>
 
-          <div class="btn-box" ><button data-toggle="modal"  data-target="#landingModal" class="theme-btn btn-style-four mb-4 mt-3"><span class="btn-title">CLICK HERE TO SCHEDULE YOUR 15 FREE CONSULTATION </span></button></div>
-
-
+          <div
+            class="btn-box"
+            style={{ display: "inline", marginRight: "10px" }}
+          >
+            <button
+              data-toggle="modal"
+              data-target="#landingModal"
+              class="theme-btn btn-style-four mb-4 mt-3"
+            >
+              <span class="btn-title">
+                CLICK HERE TO SCHEDULE YOUR 15 FREE CONSULTATION{" "}
+              </span>
+            </button>
+          </div>
+          <div
+            className="phone-number"
+            style={{
+              color: "white",
+            }}
+          >
+            Or Call +2348094442019
+          </div>
 
           {/* <div className="content-column">
             <div className="inner-column">
@@ -195,7 +239,6 @@ const Verification = () => {
 
             </div>
           </div> */}
-
         </div>
       </section>
       {/*       
@@ -273,28 +316,43 @@ const Verification = () => {
                 We say
                 Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…
               </p> */}
-              <h5 style={{ color: 'black' }}><b>Benefits And Pricing:
-              </b>
+              <h5 style={{ color: "black" }}>
+                <b>Benefits And Pricing:</b>
               </h5>
               <br />
               <ul className="list-style-two ul-text-dark">
-                <li>It protects you against scam, eviction, encumbrance, demolition or any kind of property losses.</li>
-                <li>You get peace of mind on your property as you do not stand any risk of property losses.</li>
-                <li>Services are executed and delivered between 5-10 working days and hence enabling you to make your transaction decisions on time.</li>
                 <li>
-                  We deploy only qualified property professionals to handle our clients' projects so you have no fear of losses due to quackery.
+                  It protects you against scam, eviction, encumbrance,
+                  demolition or any kind of property losses.
+                </li>
+                <li>
+                  You get peace of mind on your property as you do not stand any
+                  risk of property losses.
+                </li>
+                <li>
+                  Services are executed and delivered between 5-10 working days
+                  and hence enabling you to make your transaction decisions on
+                  time.
+                </li>
+                <li>
+                  We deploy only qualified property professionals to handle our
+                  clients' projects so you have no fear of losses due to
+                  quackery.
                 </li>
                 <li>Everything is done on your behalf 100%</li>
                 <li>
-                  We produce and execute the pre-purchase agreement and documentation.
+                  We produce and execute the pre-purchase agreement and
+                  documentation.
                 </li>
                 <li>
-                  You enjoy stress-free, great value for less stress and you have more time to focus on other things that matter to you.
+                  You enjoy stress-free, great value for less stress and you
+                  have more time to focus on other things that matter to you.
                 </li>
                 <li>
-                  We give you a perfect understanding of the true status of your interest property to create for you a good basis for negotiation
+                  We give you a perfect understanding of the true status of your
+                  interest property to create for you a good basis for
+                  negotiation
                 </li>
-
               </ul>
             </div>
           </div>
@@ -397,27 +455,57 @@ const Verification = () => {
 
       <section className>
         <div className="auto-container">
-          <h5 style={{ color: 'black', fontSize: "30px" }}><b>Half done verification or No verification is usually a disaster.
-          </b>
+          <h5 style={{ color: "black", fontSize: "30px" }}>
+            <b>
+              Half done verification or No verification is usually a disaster.
+            </b>
           </h5>
-          <p style={{ fontWeight: 'bold', color: "black", fontSize: "20px", marginTop: "20px" }}>Verification is not just about</p>
-          <ul className="list-style-two ul-text-dark" style={{ color: "white" }}>
+          <p
+            style={{
+              fontWeight: "bold",
+              color: "black",
+              fontSize: "20px",
+              marginTop: "20px",
+            }}
+          >
+            Verification is not just about
+          </p>
+          <ul
+            className="list-style-two ul-text-dark"
+            style={{ color: "white" }}
+          >
             <li>Taking a surveyor to the land.</li>
             <li>Sending documents to a lawyer.</li>
-            <li>Seeing several developments and buildings around the property.</li>
+            <li>
+              Seeing several developments and buildings around the property.
+            </li>
             <li>The fence and beautiful gatehouse on the estate.</li>
             <li>The promises of good returns</li>
-            <li>The property has C of O, Gazette or Governor's Consent as a title.</li>
+            <li>
+              The property has C of O, Gazette or Governor's Consent as a title.
+            </li>
             <li>The house is beautiful.</li>
-            <li>Being scared of land and so deciding on just buying buildings.</li>
+            <li>
+              Being scared of land and so deciding on just buying buildings.
+            </li>
           </ul>
           <br />
-          <p style={{ fontWeight: "bold", fontSize: "18px" }}>Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…</p>
+          <p style={{ fontWeight: "bold", fontSize: "18px" }}>
+            Don't be a victim of fake C of O, fake Excision, fake Allocation,
+            encumbered property, internal and external disputes, committed
+            acquisition, property encroaching road, wrong uses, incomplete
+            documentation, fake "title under processing", price extortion,
+            building with defective structure, property that is susceptible to
+            flooding, untruthful professionals, dubious agents, dubious
+            developers, greedy Omo-Onile, property with multiple owners and many
+            other issues…
+          </p>
           <br />
           <p style={{ fontWeight: "bold", fontSize: "18px" }}>
-            Let us run a complete property verification for your Real Estate Investments irrespective of your location and get up to 50 years warranty for your property.
+            Let us run a complete property verification for your Real Estate
+            Investments irrespective of your location and get up to 50 years
+            warranty for your property.
           </p>
-
 
           {/* <div className="content-column">
             <div className="inner-column">
@@ -449,77 +537,69 @@ const Verification = () => {
 
             </div>
           </div> */}
-
         </div>
       </section>
 
       <section className="about-section">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <span className="title">PROFESSIONAL FEE
-            </span>
+            <span className="title">PROFESSIONAL FEE</span>
           </div>
           <div className="outer-box">
             <figure id="verification-img-v" className="verification-img-v">
-              <img src={price} alt="Professional Charge" width="100%" height="100%" />
+              <img
+                src={price}
+                alt="Professional Charge"
+                width="100%"
+                height="100%"
+              />
             </figure>
             <div className="table-responsive" id="verification-table">
               <table className="table table-bordered table-center">
-                <thead style={{ backgroundColor: '#448414', color: '#ffffff' }}>
+                <thead style={{ backgroundColor: "#448414", color: "#ffffff" }}>
                   <tr>
                     <th scope="col">Size</th>
                     <th scope="col">Service Charge</th>
-                    <th scope="col">
-                      VIP Charge
-                    </th>
-                    <th scope="col">
-                      Legal Fee</th>
+                    <th scope="col">VIP Charge</th>
+                    <th scope="col">Legal Fee</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="text">
-                      1 Plot
-                    </td>
-                    <td className="text">
-                      N150,000 / $400
-                    </td>
+                    <td className="text">1 Plot</td>
+                    <td className="text">N150,000 / $400</td>
                     <td className="text">N200,000 / $520</td>
-                    <td className="text">
-                      5% property purchase fee
-                    </td>
+                    <td className="text">5% property purchase fee</td>
                   </tr>
                   <tr>
-                    <td className="text">
-                      With Viable Structure
-                    </td>
-                    <td className="text">
-                      +N50,000/building
-                    </td>
-                    <td className="text">
-                      +N70,000/building
-                    </td>
+                    <td className="text">With Viable Structure</td>
+                    <td className="text">+N50,000/building</td>
+                    <td className="text">+N70,000/building</td>
                     <td className="text" />
                   </tr>
                   <tr>
-                    <td className="text">
-                      Above 1 acre
-                    </td>
-                    <td className="text">
-                      +N20,000/$55 Per Every Extra Acre
-                    </td>
+                    <td className="text">Above 1 acre</td>
+                    <td className="text">+N20,000/$55 Per Every Extra Acre</td>
                     <td className="text">+N30,000/$80 Per Every Extra Acre</td>
                     <td className="text" />
                   </tr>
                 </tbody>
               </table>
             </div>
-            <ul style={{ margin: '0px 20px' }} className="list-style-two">
-              <li>The legal fee is for vetting of closure documents, production of Deed of Transfer, execution of the deed, processing of the title document in client's name and monitoring it until eventually granted.
+            <ul style={{ margin: "0px 20px" }} className="list-style-two">
+              <li>
+                The legal fee is for vetting of closure documents, production of
+                Deed of Transfer, execution of the deed, processing of the title
+                document in client's name and monitoring it until eventually
+                granted.
               </li>
-              <li>Client pays all government statutory fees as well as other ancillary charges relating to Survey and documentation.
+              <li>
+                Client pays all government statutory fees as well as other
+                ancillary charges relating to Survey and documentation.
               </li>
             </ul>
+
+            <EngageInService />
 
             {/*    <br><br> */}
             {/* 
@@ -534,51 +614,110 @@ const Verification = () => {
                     </div> */}
             {/*  <br><br> */}
             <br />
+
+            <div
+              class="btn-box"
+              style={{
+                display: "block",
+                marginRight: "10px",
+                textAlign: "center",
+              }}
+            >
+              <button
+                data-toggle="modal"
+                data-target="#landingModal"
+                class="theme-btn btn-style-four mb-4 mt-3"
+              >
+                <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
+              </button>
+            </div>
+            <div
+              className="phone-number"
+              style={{
+                color: "#ed6c11",
+                textAlign: "center",
+                display: "block",
+              }}
+            >
+              Or Call +2348094442019
+            </div>
             <br />
-            <hr style={{ border: '1px solid red', marginBottom: '10px !important' }} id="horizontal_line" />
+            <hr
+              style={{
+                border: "1px solid red",
+                marginBottom: "10px !important",
+              }}
+              id="horizontal_line"
+            />
             <div style={{}}>
-              <h5 style={{ color: '#541484 !important' }}><b> WHO WE ARE</b></h5>
+              <h5 style={{ color: "#541484 !important" }}>
+                <b> WHO WE ARE</b>
+              </h5>
               <p>
-                We are Nigeria's No. 1 Property Verification and Real Estate Investment company that gives professional end to end Real Estate and Property Development services across Nigeria through our experienced and ethical team of professionals which includes but not limited to; Land Surveyors, Estate Surveyors, Town Planners, Property Lawyers, Quantity Surveyors, Civil Engineers, Architects, Researchers. . .
+                We are Nigeria's No. 1 Property Verification and Real Estate
+                Investment company that gives professional end to end Real
+                Estate and Property Development services across Nigeria through
+                our experienced and ethical team of professionals which includes
+                but not limited to; Land Surveyors, Estate Surveyors, Town
+                Planners, Property Lawyers, Quantity Surveyors, Civil Engineers,
+                Architects, Researchers. . .
               </p>
             </div>
-            <br /><br />
+            <br />
+            <br />
             <div>
-              <h5 style={{ color: '#541484 !important' }}><b> WE ARE KNOWN FOR:</b></h5>
+              <h5 style={{ color: "#541484 !important" }}>
+                <b> WE ARE KNOWN FOR:</b>
+              </h5>
               <ul className="list-style-two">
                 <li>
-                  Leading at providing the best real estate verification services across Nigeria that indemnifies buyers against both present and future losses of any kind.
+                  Leading at providing the best real estate verification
+                  services across Nigeria that indemnifies buyers against both
+                  present and future losses of any kind.
                 </li>
                 <li>
-                  Offering end to end 100% done-for-you real estate and property development services to existing and aspiring stakeholders be it individuals, developers, organisations, clubs, groups.
+                  Offering end to end 100% done-for-you real estate and property
+                  development services to existing and aspiring stakeholders be
+                  it individuals, developers, organisations, clubs, groups.
                 </li>
                 <li>
-                  Delivering simplified quality information to the mobile phones of every property investor using technology.
+                  Delivering simplified quality information to the mobile phones
+                  of every property investor using technology.
                 </li>
                 <li>
-                  Engaging in community and town planning that protect against life and property loss.
+                  Engaging in community and town planning that protect against
+                  life and property loss.
                 </li>
                 <li>
-                  Engaging green architecture that revitalizes every soul occupying the space.
+                  Engaging green architecture that revitalizes every soul
+                  occupying the space.
                 </li>
                 <li>
-                  Ensuring all properties to be traded or to be developed go through a thorough Verification process so as to replace loss and fear with trust and peace in the minds of stakeholders.
+                  Ensuring all properties to be traded or to be developed go
+                  through a thorough Verification process so as to replace loss
+                  and fear with trust and peace in the minds of stakeholders.
                 </li>
                 <li>
-                  Giving excellent service and quality of materials that ensure all investments are aimed at futuristic sustainability and not just for short term advantage.
+                  Giving excellent service and quality of materials that ensure
+                  all investments are aimed at futuristic sustainability and not
+                  just for short term advantage.
                 </li>
                 <li>
-                  Ensuring timely delivery that produces optimum return on fund input.
+                  Ensuring timely delivery that produces optimum return on fund
+                  input.
                 </li>
                 <li>
-                  Delivering excellent physical equivalents in any of our models.
+                  Delivering excellent physical equivalents in any of our
+                  models.
                 </li>
                 <li>
-                  Ensuring confidentiality and security that protects us and our customers from danger through exposure.
+                  Ensuring confidentiality and security that protects us and our
+                  customers from danger through exposure.
                 </li>
               </ul>
             </div>
-            <br /><br />
+            <br />
+            <br />
             {/*   <div class="row">
 
 
@@ -600,12 +739,11 @@ const Verification = () => {
  */}
           </div>
         </div>
-
       </section>
       <PaymentDetails />
-      <LandingPageOptinForm/>
+      <LandingPageOptinForm />
     </>
   );
-}
+};
 
 export default Verification;

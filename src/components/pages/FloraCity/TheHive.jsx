@@ -1,34 +1,35 @@
 /* eslint-disable react/jsx-pascal-case */
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import thehive_header from "../../assets/thehive-header.jpg"
-import Elevation1 from "../../assets/Elevation1.jpg"
-import background from "../../assets/background.jpg"
-import map from "../../assets/map.png"
-import map1 from "../../assets/map1.png"
-import map2 from "../../assets/map2.png"
-import card_2 from "../../assets/card-2.jpg"
-import card_3 from "../../assets/card-3.jpg"
-import card_4 from "../../assets/card-4.jpg"
-import card_5 from "../../assets/card-5.jpg"
-import rocket from "../../assets/rocket.svg"
-import handleAccordion from '.';
-import { Link } from 'react-router-dom';
-import Optin_Trigger from './Optin_Trigger';
-import PaymentDetails from '../PaymentDetails';
-import OptinForm from './OptinForm';
+import thehive_header from "../../assets/thehive-header.jpg";
+import Elevation1 from "../../assets/Elevation1.jpg";
+import background from "../../assets/background.jpg";
+import map from "../../assets/map.png";
+import map1 from "../../assets/map1.png";
+import map2 from "../../assets/map2.png";
+import card_2 from "../../assets/card-2.jpg";
+import card_3 from "../../assets/card-3.jpg";
+import card_4 from "../../assets/card-4.jpg";
+import card_5 from "../../assets/card-5.jpg";
+import rocket from "../../assets/rocket.svg";
+import handleAccordion from ".";
+import Optin_Trigger from "./Optin_Trigger";
+import PaymentDetails from "../../SharedComponents/PaymentDetails";
+import OptinForm from "./OptinForm";
+import OptinModal from "../../SharedComponents/OptinModal";
 // import card_6 from "../../assets/card-6.jpg"
 const TheHive = () => {
-
   useEffect(() => {
     handleAccordion();
-
   }, []);
 
   return (
     <>
       <section className="banner-meetup">
-        <div className="bg-pattern" style={{ backgroundImage: `url(${thehive_header})` }} />
+        <div
+          className="bg-pattern"
+          style={{ backgroundImage: `url(${thehive_header})` }}
+        />
         <div className="layer-outer">
           <div className="gradient-layer" />
         </div>
@@ -45,36 +46,48 @@ const TheHive = () => {
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9tp_xEJnKY2yitoCzRp7t6oj9yKF_Y2M6uzQ7nvoFzu6GHw/viewform" className="theme-btn btn-style-two"><span className="btn-title">Reserve Now</span></a>
           </div> */}
           <div className="btn-box">
-            <button  data-toggle="modal"  data-target="#exampleModal" className="theme-btn btn-style-two"><span className="btn-title">For Enquiry, inspection or reservation, click here to fill the form</span></button>
+            <button
+              data-toggle="modal"
+              data-target="#optinForm"
+              className="theme-btn btn-style-two"
+            >
+              <span className="btn-title">
+                For Enquiry, inspection or reservation, click here to fill the
+                form
+              </span>
+            </button>
           </div>
-          <h3 className="call-enquiry-first">Or call  +2348024421356</h3>
+          <h3 className="call-enquiry-first">Or call +2348024421356</h3>
         </div>
       </section>
-
 
       <section id="2box " className="my-5">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div className="boxes p-5">
-                <h5>Make up to 15% Annual Rental Income from
-                  these luxury residential apartments,
-                  townhouses and villas in the fastest-growing
-                  industrial upspring in Nigeria.</h5>
-              </div>{/* /.boxes */}
-            </div>{/* /.col-md-6 */}
+                <h5>
+                  Make up to 15% Annual Rental Income from these luxury
+                  residential apartments, townhouses and villas in the
+                  fastest-growing industrial upspring in Nigeria.
+                </h5>
+              </div>
+              {/* /.boxes */}
+            </div>
+            {/* /.col-md-6 */}
             <div className="col-md-6">
               <div className="boxes p-5">
-                <h5>For Build-To-Live-In Owners or Investors who
-                  wish to be landlords of the thousands of
-                  workers within the Dangote Refinery and the
-                  Lekki Free Trade Zone industrial boom.</h5>
+                <h5>
+                  For Build-To-Live-In Owners or Investors who wish to be
+                  landlords of the thousands of workers within the Dangote
+                  Refinery and the Lekki Free Trade Zone industrial boom.
+                </h5>
               </div>
-            </div>{/* /.col-md-6 */}
+            </div>
+            {/* /.col-md-6 */}
           </div>
         </div>
       </section>
-
 
       <section className="vid-section my-5">
         <div className="container">
@@ -82,8 +95,18 @@ const TheHive = () => {
             <div className="col-md-12 vid-con">
               {/* <video src="upload/the-Hive -Animation.mp4" class="fernvid" id="fernd" controls autoplay width="100%"
               height="auto"></video> */}
-              <video controls autoPlay className="fernvid" id="fernd" width="100%" height="auto">
-                <source src="assets/upload/the-Hive -Animation.mp4" type="video/mp4" />
+              <video
+                controls
+                autoPlay
+                className="fernvid"
+                id="fernd"
+                width="100%"
+                height="auto"
+              >
+                <source
+                  src="assets/upload/the-Hive -Animation.mp4"
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -91,12 +114,20 @@ const TheHive = () => {
         </div>
       </section>
 
-
       <section className="about-section-two">
         <div className="anim-icons full-width">
-          <span className="icon icon-circle-blue wow fadeIn animated" style={{ visibility: 'visible', animationName: 'fa-spin' }} />
-          <span className="icon icon-dots wow fadeInleft animated" style={{ visibility: 'visible' }} />
-          <span className="icon icon-circle-1 wow zoomIn animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
+          <span
+            className="icon icon-circle-blue wow fadeIn animated"
+            style={{ visibility: "visible", animationName: "fa-spin" }}
+          />
+          <span
+            className="icon icon-dots wow fadeInleft animated"
+            style={{ visibility: "visible" }}
+          />
+          <span
+            className="icon icon-circle-1 wow zoomIn animated"
+            style={{ visibility: "visible", animationName: "zoomIn" }}
+          />
         </div>
         <div className="auto-container">
           <div className="row">
@@ -105,50 +136,71 @@ const TheHive = () => {
               <div className="inner-column">
                 <div className="sec-title">
                   <span className="title">DEVELOPING</span>
-                  <h2> Description of Estate, location and proximity to available landmarks/development</h2>
-                  <div className="text">The Hive is a close-knitted luxury residential environment
+                  <h2>
+                    {" "}
+                    Description of Estate, location and proximity to available
+                    landmarks/development
+                  </h2>
+                  <div className="text">
+                    The Hive is a close-knitted luxury residential environment
                     visualized to combine lifestyle, beauty and an eco-friendly
                     ambiance for homeowners and residents. This location is
-                    targeted for either build to live-in or for investors who would like
-                    to be landlords to the expatriate and workers of the close-by
-                    industries like Dangote Refinery, Lekki Free Trade Zone,
-                    Seaport, and others.
+                    targeted for either build to live-in or for investors who
+                    would like to be landlords to the expatriate and workers of
+                    the close-by industries like Dangote Refinery, Lekki Free
+                    Trade Zone, Seaport, and others.
                     <p>
-                      It is located in Akodo, along the LFTZ road, Ibeju-Lekki, Lagos.
-                      It's within 2 minutes drive to the Lekki Free Trade Zone. Other
-                      major developments in the neighborhood include the Dangote
-                      Refinery, The Lekki Seaport, and many others.
+                      It is located in Akodo, along the LFTZ road, Ibeju-Lekki,
+                      Lagos. It's within 2 minutes drive to the Lekki Free Trade
+                      Zone. Other major developments in the neighborhood include
+                      the Dangote Refinery, The Lekki Seaport, and many others.
                     </p>
                   </div>
                 </div>
                 <div className="row">
                   <div className="about-block col-lg-6 col-md-6 col-sm-12">
                     <div className="inner-box">
-                      <h4><span className="icon fa fa-file" /> Title</h4>
+                      <h4>
+                        <span className="icon fa fa-file" /> Title
+                      </h4>
                       <div className="text">Gazette</div>
                     </div>
                   </div>
                   <div className="about-block col-lg-6 col-md-6 col-sm-12">
                     <div className="inner-box">
-                      <h4><span className="icon fa fa-map-marker-alt" />Location</h4>
+                      <h4>
+                        <span className="icon fa fa-map-marker-alt" />
+                        Location
+                      </h4>
                       <div className="text">Akodo, Ibeju-Lekki</div>
                     </div>
                   </div>
                 </div>
-                <div className="btn-box"><button data-toggle="modal"  data-target="#exampleModal"  className="theme-btn btn-style-three"><span className="btn-title">Book Reservation</span></button></div>
+                <div className="btn-box">
+                  <button
+                    data-toggle="modal"
+                    data-target="#optinForm"
+                    className="theme-btn btn-style-three"
+                  >
+                    <span className="btn-title">Book Reservation</span>
+                  </button>
+                </div>
               </div>
             </div>
             {/* Image Column */}
             <div className="image-column col-lg-6 col-md-12 col-sm-12">
               <div className="image-box">
-                <figure className="image wow fadeIn animated" style={{ visibility: 'visible', animationName: 'fadeIn' }}><img src={Elevation1} alt="Overview" /></figure>
+                <figure
+                  className="image wow fadeIn animated"
+                  style={{ visibility: "visible", animationName: "fadeIn" }}
+                >
+                  <img src={Elevation1} alt="Overview" />
+                </figure>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-
 
       <section>
         <section className="features-section-three no-pd-top">
@@ -169,15 +221,42 @@ const TheHive = () => {
                 <ul className="list-style-one">
                   <li> Potential market for rentals within the axis</li>
                   <ul>
-                    <li> <i className="fa fa-arrow-right" aria-hidden="true" style={{ color: '#4C046E' }} /> Number of existing workers:
-                      30,000 </li>
-                    <li><i className="fa fa-arrow-right" aria-hidden="true" style={{ color: '#4C046E' }} /> Projected number of workers in
-                      5 years: &gt;200,000 </li>
-                    <li><i className="fa fa-arrow-right" aria-hidden="true" style={{ color: '#4C046E' }} /> Projected number of workers in
-                      10 years: &gt;800,000 </li>
+                    <li>
+                      {" "}
+                      <i
+                        className="fa fa-arrow-right"
+                        aria-hidden="true"
+                        style={{ color: "#4C046E" }}
+                      />{" "}
+                      Number of existing workers: 30,000{" "}
+                    </li>
+                    <li>
+                      <i
+                        className="fa fa-arrow-right"
+                        aria-hidden="true"
+                        style={{ color: "#4C046E" }}
+                      />{" "}
+                      Projected number of workers in 5 years: &gt;200,000{" "}
+                    </li>
+                    <li>
+                      <i
+                        className="fa fa-arrow-right"
+                        aria-hidden="true"
+                        style={{ color: "#4C046E" }}
+                      />{" "}
+                      Projected number of workers in 10 years: &gt;800,000{" "}
+                    </li>
                   </ul>
-                  <li> Projected rate of property value appreciation in 5 years: 30-150% </li>
-                  <li> Projected rate of property value appreciation in 10 years: 200-300%</li>
+                  <li>
+                    {" "}
+                    Projected rate of property value appreciation in 5 years:
+                    30-150%{" "}
+                  </li>
+                  <li>
+                    {" "}
+                    Projected rate of property value appreciation in 10 years:
+                    200-300%
+                  </li>
                   <li>Instant Allocation </li>
                   <li> Home owner and resident in the Free Zone axis. </li>
                   <li>Become Landlords to industry workers</li>
@@ -201,24 +280,35 @@ const TheHive = () => {
         </section>
       </section>
 
-
       <section className="fluid-section-one">
         <div className="outer-box clearfix">
           {/* Content Column */}
-          <div className="content-column style-two" style={{ backgroundImage: `url(${background})` }}>
+          <div
+            className="content-column style-two"
+            style={{ backgroundImage: `url(${background})` }}
+          >
             <div className="inner-column">
               <h3>Land Information</h3>
               <div className="text">Title: Gazette</div>
-              <h4><span className="icon fa fa-map" /> Gazette Number: </h4>
-              <div className="text">Gazette Number: No.38 Vol.27, 27th Oct. 1994</div>
+              <h4>
+                <span className="icon fa fa-map" /> Gazette Number:{" "}
+              </h4>
+              <div className="text">
+                Gazette Number: No.38 Vol.27, 27th Oct. 1994
+              </div>
               {/* <h4><span class="icon fa fa-arrows-alt"></span> Approved Layout Status:</h4>
             <div class="text"> Processing</div> */}
             </div>
           </div>
           {/* Image Column */}
-          <div className="image-column" style={{ backgroundImage: `url(${map})` }}>
+          <div
+            className="image-column"
+            style={{ backgroundImage: `url(${map})` }}
+          >
             <div className="image-box">
-              <figure className="image"><img src={map} alt="" /></figure>
+              <figure className="image">
+                <img src={map} alt="" />
+              </figure>
             </div>
           </div>
         </div>
@@ -229,23 +319,30 @@ const TheHive = () => {
           <div className="row">
             <div className="col-md-6">
               <img src={map1} className="img-fluid" alt="" />
-            </div>{/* /.col-md-6 */}
+            </div>
+            {/* /.col-md-6 */}
             <div className="col-md-6">
               <img src={map2} className="img-fluid" alt="" />
-            </div>{/* /.col-md-6 */}
-          </div>{/* /.row */}
-        </div>{/* /.container */}
+            </div>
+            {/* /.col-md-6 */}
+          </div>
+          {/* /.row */}
+        </div>
+        {/* /.container */}
       </section>
 
-
-      <section className="affiliate-section" style={{ backgroundImage: `url(${background})` }}>
+      <section
+        className="affiliate-section"
+        style={{ backgroundImage: `url(${background})` }}
+      >
         <div className="auto-container">
           <div className="content-column">
             <div className="inner-column">
               <div className="sec-title">
-                <div className="text">Packages available, amenity, terms and prices</div>
-                <h2>BUILDING
-                </h2>
+                <div className="text">
+                  Packages available, amenity, terms and prices
+                </div>
+                <h2>BUILDING</h2>
               </div>
               <div className="row">
                 {/* Bullet Listing Column */}
@@ -275,7 +372,15 @@ const TheHive = () => {
               <div className="row">
                 <div className="container">
                   <div className="text-center">
-                    <div className="btn-box"><button data-toggle="modal"  data-target="#exampleModal" className="theme-btn btn-style-four"><span className="btn-title">Reserve Now</span></button></div>
+                    <div className="btn-box">
+                      <button
+                        data-toggle="modal"
+                        data-target="#optinForm"
+                        className="theme-btn btn-style-four"
+                      >
+                        <span className="btn-title">Reserve Now</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -283,8 +388,6 @@ const TheHive = () => {
           </div>
         </div>
       </section>
-
-
 
       <section className="subplan-section">
         <div className="auto-container">
@@ -294,11 +397,17 @@ const TheHive = () => {
           <div className="outer-box">
             <div className="row justify-content-between">
               {/* subplan Block */}
-              <div className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+              <div
+                className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated"
+                style={{ visibility: "visible", animationName: "fadeInUp" }}
+              >
                 <div className="inner-box ">
                   <div className="subplan-box">
                     <h4 className="subplan">4 bedrooms</h4>
-                    <h6>Fully Detached, Box Duplexes, Exterior and InteriorFinished.</h6>
+                    <h6>
+                      Fully Detached, Box Duplexes, Exterior and
+                      InteriorFinished.
+                    </h6>
                   </div>
                   <div>
                     <img src={Elevation1} className="img-fluid my-2" alt="" />
@@ -321,7 +430,10 @@ const TheHive = () => {
                 </div>
               </div>
               {/* subplan Block */}
-              <div className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+              <div
+                className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated"
+                style={{ visibility: "visible", animationName: "fadeInUp" }}
+              >
                 <div className="inner-box ">
                   <div className="subplan-box">
                     <h4 className="subplan">4 bedrooms</h4>
@@ -353,8 +465,6 @@ const TheHive = () => {
         </div>
       </section>
 
-
-
       <section className="subplan-section">
         <div className="auto-container">
           <div className="sec-title text-center">
@@ -363,7 +473,10 @@ const TheHive = () => {
           <div className="outer-box">
             <div className="row">
               {/* subplan Block */}
-              <div className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+              <div
+                className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated"
+                style={{ visibility: "visible", animationName: "fadeInUp" }}
+              >
                 <div className="inner-box ">
                   <div className="subplan-box">
                     <h4 className="subplan">2 bedrooms flat</h4>
@@ -388,7 +501,10 @@ const TheHive = () => {
                 </div>
               </div>
               {/* subplan Block */}
-              <div className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+              <div
+                className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated"
+                style={{ visibility: "visible", animationName: "fadeInUp" }}
+              >
                 <div className="inner-box ">
                   <div className="subplan-box">
                     <h4 className="subplan">Miniflat</h4>
@@ -413,7 +529,10 @@ const TheHive = () => {
                 </div>
               </div>
               {/* subplan Block */}
-              <div className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+              <div
+                className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated"
+                style={{ visibility: "visible", animationName: "fadeInUp" }}
+              >
                 <div className="inner-box ">
                   <div className="subplan-box">
                     <h4 className="subplan">Studio apartment</h4>
@@ -443,7 +562,6 @@ const TheHive = () => {
         </div>
       </section>
 
-
       <section className="subplan-section">
         <div className="auto-container">
           <div className="sec-title text-center">
@@ -452,10 +570,15 @@ const TheHive = () => {
           <div className="outer-box">
             <div className="row justify-content-between">
               {/* subplan Block */}
-              <div className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+              <div
+                className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated"
+                style={{ visibility: "visible", animationName: "fadeInUp" }}
+              >
                 <div className="inner-box ">
                   <div className="subplan-box">
-                    <h4 className="subplan">Non-Serviced Plots (OGBENI VILLA)</h4>
+                    <h4 className="subplan">
+                      Non-Serviced Plots (OGBENI VILLA)
+                    </h4>
                   </div>
                   <div>
                     <img src={card_5} className="img-fluid my-2" alt="" />
@@ -479,10 +602,16 @@ const TheHive = () => {
                 </div>
               </div>
               {/* subplan Block */}
-              <div className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+              <div
+                className="subplan-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp animated"
+                style={{ visibility: "visible", animationName: "fadeInUp" }}
+              >
                 <div className="inner-box ">
                   <div className="subplan-box">
-                    <h4 className="subplan"> Serviced Plots (The Hive: OGBENI VILLA) </h4>
+                    <h4 className="subplan">
+                      {" "}
+                      Serviced Plots (The Hive: OGBENI VILLA){" "}
+                    </h4>
                   </div>
                   <div>
                     <img src="" className="img-fluid my-2" alt="" />
@@ -517,16 +646,20 @@ const TheHive = () => {
         </div>
       </section>
 
-
       <section className="schedule-section">
         <div className="anim-icons">
-          <span className="icon icon-circle-4 wow zoomIn animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
-          <span className="icon icon-circle-3 wow zoomIn animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
+          <span
+            className="icon icon-circle-4 wow zoomIn animated"
+            style={{ visibility: "visible", animationName: "zoomIn" }}
+          />
+          <span
+            className="icon icon-circle-3 wow zoomIn animated"
+            style={{ visibility: "visible", animationName: "zoomIn" }}
+          />
         </div>
         <div className="auto-container">
           <div className="sec-title text-center">
-            <span className="title">PROCESS TO BUY OUR ESTATE,
-            </span>
+            <span className="title">PROCESS TO BUY OUR ESTATE,</span>
             <h2>Own Property in TheHive</h2>
           </div>
           <div className="schedule-tabs tabs-box">
@@ -538,7 +671,9 @@ const TheHive = () => {
                   <div className="schedule-block">
                     <div className="inner-box">
                       <div className="inner">
-                        <div className="date">1ST <br /> STEP</div>
+                        <div className="date">
+                          1ST <br /> STEP
+                        </div>
                         <div className="text">Reserve your slot</div>
                       </div>
                     </div>
@@ -547,10 +682,14 @@ const TheHive = () => {
                   <div className="schedule-block even">
                     <div className="inner-box">
                       <div className="inner">
-                        <div className="date">2ND <br /> STEP</div>
+                        <div className="date">
+                          2ND <br /> STEP
+                        </div>
                         <div className="text">
-                          Receive your invoice within 24hours after form submission. If not received, please send a follow-up mail
-                          to hello.florahomesgc@gmail.com to confirm plot availability.
+                          Receive your invoice within 24hours after form
+                          submission. If not received, please send a follow-up
+                          mail to hello.florahomesgc@gmail.com to confirm plot
+                          availability.
                         </div>
                       </div>
                     </div>
@@ -559,8 +698,13 @@ const TheHive = () => {
                   <div className="schedule-block">
                     <div className="inner-box">
                       <div className="inner">
-                        <div className="date">3RD <br /> STEP</div>
-                        <div className="text"> Make Payment according to your chosen payment plan </div>
+                        <div className="date">
+                          3RD <br /> STEP
+                        </div>
+                        <div className="text">
+                          {" "}
+                          Make Payment according to your chosen payment plan{" "}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -568,9 +712,12 @@ const TheHive = () => {
                   <div className="schedule-block even">
                     <div className="inner-box">
                       <div className="inner">
-                        <div className="date">4TH <br /> STEP</div>
+                        <div className="date">
+                          4TH <br /> STEP
+                        </div>
                         <div className="text">
-                          For installment payment: Receipt, Contract of Sale, and Provisional Allocation Letter.
+                          For installment payment: Receipt, Contract of Sale,
+                          and Provisional Allocation Letter.
                         </div>
                       </div>
                     </div>
@@ -579,9 +726,12 @@ const TheHive = () => {
                   <div className="schedule-block">
                     <div className="inner-box">
                       <div className="inner">
-                        <div className="date">5TH <br /> STEP</div>
+                        <div className="date">
+                          5TH <br /> STEP
+                        </div>
                         <div className="text">
-                          For Full payment, Deed of Assignments, Receipt, Allocation Letter
+                          For Full payment, Deed of Assignments, Receipt,
+                          Allocation Letter
                         </div>
                       </div>
                     </div>
@@ -590,9 +740,12 @@ const TheHive = () => {
                   <div className="schedule-block even">
                     <div className="inner-box">
                       <div className="inner">
-                        <div className="date">6TH <br /> STEP</div>
+                        <div className="date">
+                          6TH <br /> STEP
+                        </div>
                         <div className="text">
-                          For house: Get handover of keys and Documents after a maximum of 12 months of full payment.
+                          For house: Get handover of keys and Documents after a
+                          maximum of 12 months of full payment.
                         </div>
                       </div>
                     </div>
@@ -603,8 +756,6 @@ const TheHive = () => {
           </div>
         </div>
       </section>
-
-
 
       <section className="faq-section">
         <div className="auto-container">
@@ -620,24 +771,35 @@ const TheHive = () => {
                 {/*Accordian Box*/}
                 <ul className="accordion-box">
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div> Where is THE HIVE: OGBENI
-                      VILLA Located?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>{" "}
+                      Where is THE HIVE: OGBENI VILLA Located?
                     </div>
                     <div className="acc-content">
                       <div className="content">
                         <div className="text">
-                          It is located in Akodo, at about 3 minutes drive to the Dangote Refinery, Ibeju-Lekki.
+                          It is located in Akodo, at about 3 minutes drive to
+                          the Dangote Refinery, Ibeju-Lekki.
                         </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div> What kind of property is
-                      on The HIVE
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>{" "}
+                      What kind of property is on The HIVE
                     </div>
                     <div className="acc-content">
                       <div className="content">
@@ -655,79 +817,125 @@ const TheHive = () => {
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div>What Infrastructure will
-                      the Developer Provide?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>
+                      What Infrastructure will the Developer Provide?
                     </div>
                     <div className="acc-content">
                       <div className="content">
                         <div className="text">
-                          Secured community, good road network, drainage system, electricity, recreational facilities and many more.
+                          Secured community, good road network, drainage system,
+                          electricity, recreational facilities and many more.
                         </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div> : Does Your Company Do
-                      Design &amp; Building Construction?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>{" "}
+                      : Does Your Company Do Design &amp; Building Construction?
                     </div>
                     <div className="acc-content">
                       <div className="content">
                         <div className="text">
-                          Yes. To engage our Design-Build and Manage Service, talk to our customer care.
+                          Yes. To engage our Design-Build and Manage Service,
+                          talk to our customer care.
                         </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block active-block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block active-block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn active">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div> What is the Land Title?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>{" "}
+                      What is the Land Title?
                     </div>
                     <div className="acc-content current">
                       <div className="content">
                         <div className="text">
-                          Gazette which allows you to process your governor's consent immediately
+                          Gazette which allows you to process your governor's
+                          consent immediately
                         </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div>Is the Estate Location
-                      Already Habitable for Those Who Want to Build Immediately?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>
+                      Is the Estate Location Already Habitable for Those Who
+                      Want to Build Immediately?
                     </div>
                     <div className="acc-content">
                       <div className="content">
-                        <div className="text"> All the area is already habitable.</div>
+                        <div className="text">
+                          {" "}
+                          All the area is already habitable.
+                        </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div> How Much are The
-                      Properties?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>{" "}
+                      How Much are The Properties?
                     </div>
                     <div className="acc-content">
                       <div className="content">
-                        <div className="text"> Please refer to the price chart above. </div>
+                        <div className="text">
+                          {" "}
+                          Please refer to the price chart above.{" "}
+                        </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block active-block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block active-block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn active">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div>Who is the Developer?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>
+                      Who is the Developer?
                     </div>
                     <div className="acc-content current">
                       <div className="content">
-                        <div className="text"> The developer is FloraHomes Global Consult Limited. Oﬃce address is at 32, East Lake
-                          Drive, Adiva Plainﬁelds, inside Beechwood Estate, Ibeju-Lekki.</div>
+                        <div className="text">
+                          {" "}
+                          The developer is FloraHomes Global Consult Limited.
+                          Oﬃce address is at 32, East Lake Drive, Adiva
+                          Plainﬁelds, inside Beechwood Estate, Ibeju-Lekki.
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -740,84 +948,155 @@ const TheHive = () => {
                 {/*Accordian Box*/}
                 <ul className="accordion-box">
                   {/*Block*/}
-                  <li className="accordion block active-block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block active-block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn active">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div>Can My Property Be Resold?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>
+                      Can My Property Be Resold?
                     </div>
                     <div className="acc-content current">
                       <div className="content">
-                        <div className="text">Yes. But a written notice of transfer should be given to FloraHomes Global Consult
-                          Limited.
+                        <div className="text">
+                          Yes. But a written notice of transfer should be given
+                          to FloraHomes Global Consult Limited.
                         </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div>Can I Pay to Your
-                      Consultant / Marketer?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>
+                      Can I Pay to Your Consultant / Marketer?
                     </div>
                     <div className="acc-content">
                       <div className="content">
                         <div className="text">
-                          NO! All payments must be made only to our company official account.
+                          NO! All payments must be made only to our company
+                          official account.
                           <br />
                           <ul>
-                            <li>Acc name:<b>FloraHomes Global Consult Ltd</b></li>
-                            <li> <b> </b>○ Sterling Bank Plc.</li>
-                            <li>i. Investment Funds: <b> 0501420184</b></li>
-                            <li>ii. Property Sales: <b> 0501420146</b></li>
-                            <li>iii. Other Company Service:<b> 0501420218</b></li>
-                            <li>iv. Dollar:<b>0501467363 </b></li>
-                            <li> <b>Bank name: </b>GT bank</li>
-                            <li>i. Naira: <b>0449454858 </b></li>
-                            <li>ii. Dollar:<b>0449454865 </b></li>
-                            <li>iii. Pound:<b>0512841941 </b></li>
-                            <li>iv. Euro:<b>0512841800 </b></li>
+                            <li>
+                              Acc name:<b>FloraHomes Global Consult Ltd</b>
+                            </li>
+                            <li>
+                              {" "}
+                              <b> </b>○ Sterling Bank Plc.
+                            </li>
+                            <li>
+                              i. Investment Funds: <b> 0501420184</b>
+                            </li>
+                            <li>
+                              ii. Property Sales: <b> 0501420146</b>
+                            </li>
+                            <li>
+                              iii. Other Company Service:<b> 0501420218</b>
+                            </li>
+                            <li>
+                              iv. Dollar:<b>0501467363 </b>
+                            </li>
+                            <li>
+                              {" "}
+                              <b>Bank name: </b>GT bank
+                            </li>
+                            <li>
+                              i. Naira: <b>0449454858 </b>
+                            </li>
+                            <li>
+                              ii. Dollar:<b>0449454865 </b>
+                            </li>
+                            <li>
+                              iii. Pound:<b>0512841941 </b>
+                            </li>
+                            <li>
+                              iv. Euro:<b>0512841800 </b>
+                            </li>
                           </ul>
                         </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div> Can I Do Installment
-                      Payment?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>{" "}
+                      Can I Do Installment Payment?
                     </div>
                     <div className="acc-content">
                       <div className="content">
-                        <div className="text">Yes, please refer to the price chart above.</div>
+                        <div className="text">
+                          Yes, please refer to the price chart above.
+                        </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div>What documents will I get?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>
+                      What documents will I get?
                     </div>
                     <div className="acc-content">
                       <div className="content">
                         <div className="text">
                           <ul>
-                            <li> For installment payment: Receipt, Contract of Sale, and Provisional Allocation Letter. </li>
-                            <li> For Full payment, Deed of Assignments, Receipt, Allocation Letter </li>
-                            <li>For house: Get handover of keys and Documents after a maximum of 12 months of full payment.</li>
+                            <li>
+                              {" "}
+                              For installment payment: Receipt, Contract of
+                              Sale, and Provisional Allocation Letter.{" "}
+                            </li>
+                            <li>
+                              {" "}
+                              For Full payment, Deed of Assignments, Receipt,
+                              Allocation Letter{" "}
+                            </li>
+                            <li>
+                              For house: Get handover of keys and Documents
+                              after a maximum of 12 months of full payment.
+                            </li>
                           </ul>
                         </div>
                       </div>
                     </div>
                   </li>
                   {/*Block*/}
-                  <li className="accordion block wow fadeInUp animated" style={{ visibility: 'visible', animationName: 'fadeInUp' }}>
+                  <li
+                    className="accordion block wow fadeInUp animated"
+                    style={{ visibility: "visible", animationName: "fadeInUp" }}
+                  >
                     <div className="acc-btn">
-                      <div className="icon-outer"><span className="icon icon-plus fa fa-angle-down" /> </div>Are There Other Fees?
+                      <div className="icon-outer">
+                        <span className="icon icon-plus fa fa-angle-down" />{" "}
+                      </div>
+                      Are There Other Fees?
                     </div>
                     <div className="acc-content">
                       <div className="content">
-                        <div className="text"> None. No extra fees other than what has been stated on each of the property. </div>
+                        <div className="text">
+                          {" "}
+                          None. No extra fees other than what has been stated on
+                          each of the property.{" "}
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -832,7 +1111,10 @@ const TheHive = () => {
       <section className="register-section" id="reserve">
         <div className="auto-container">
           <div className="anim-icons full-width">
-            <span className="icon icon-circle-3 wow zoomIn animated animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
+            <span
+              className="icon icon-circle-3 wow zoomIn animated animated"
+              style={{ visibility: "visible", animationName: "zoomIn" }}
+            />
           </div>
           <div className="outer-box">
             <div className="row no-gutters align-items-center">
@@ -841,10 +1123,20 @@ const TheHive = () => {
                   <div className="sec-title light">
                     <div className="icon-box">
                       {/* <span className="icon flaticon-rocket-ship" /> */}
-                      <figure><img style={{ objectFit: "contain", width: "100px" }} src={rocket} alt="" /></figure></div>
+                      <figure>
+                        <img
+                          style={{ objectFit: "contain", width: "100px" }}
+                          src={rocket}
+                          alt=""
+                        />
+                      </figure>
+                    </div>
                     <span className="title">Few Plots Remaining...</span>
                     <h2>Reserve Now!!!</h2>
-                    <div className="text">Fill and Submit the form to reserve plot(s) of land or building.</div>
+                    <div className="text">
+                      Fill and Submit the form to reserve plot(s) of land or
+                      building.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -859,8 +1151,8 @@ const TheHive = () => {
                 </div> */}
 
                 <div className="form-inner text-center">
-                <Optin_Trigger/>
-                  <h3 className="call-enquiry">Or call  +2348024421356</h3>
+                  <Optin_Trigger />
+                  <h3 className="call-enquiry">Or call +2348024421356</h3>
                   {/* <div class="btn-box ml-3"></div> */}
                 </div>
               </div>
@@ -868,10 +1160,14 @@ const TheHive = () => {
           </div>
         </div>
       </section>
-      <PaymentDetails/>
-      <OptinForm/>
+      <PaymentDetails />
+      <OptinModal
+        componentId="optinForm"
+        title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
+        component={<OptinForm />}
+      />
     </>
   );
-}
+};
 
 export default TheHive;

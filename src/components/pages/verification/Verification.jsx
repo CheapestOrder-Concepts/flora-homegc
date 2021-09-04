@@ -35,7 +35,7 @@ const Verification = () => {
         </div>
       </section> */}
 
-      <section style={{ background: "#41036E" }}>
+      <section style={{ background: "#541484" }}>
         <div className="heading-container">
           <h1>
             Don't Lose Your Money, Let Us Help You Verify Your Real Estate
@@ -135,7 +135,7 @@ const Verification = () => {
         </div>
       </section>
 
-      <section className="" style={{ backgroundImage: `url(${background})` }}>
+      <section className="" style={{ background: "#541484" }}>
         <div className="auto-container">
           <p
             style={{

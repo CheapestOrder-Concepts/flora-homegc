@@ -128,7 +128,9 @@ const Home = () => {
         </div>
 
         <div className="img">
-          <h4 className="text-center">Affiliated Professional Bodies</h4>
+          {/* <h4 className="text-center" style={{ visibility: "hidden" }}>
+            Affiliated Professional Bodies
+          </h4> */}
           <img id="firstP" src={partner} alt="partners" />
         </div>
 

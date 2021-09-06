@@ -78,13 +78,19 @@ const Verification = () => {
           Or Call +2348094442019
         </div>
         {/* <div className="img verification"> */}
-        <h4
+        {/* <h4
           className="text-center"
           style={{ marginBottom: "20px", color: "white" }}
         >
           Affiliated Professional Bodies
-        </h4>
-        <img id="firstP" src={partner} alt="partners" />
+        </h4> */}
+        <img
+          id="firstP"
+          style={{ top: "-20px" }}
+          className="mt-4"
+          src={partner}
+          alt="partners"
+        />
         {/* </div> */}
       </section>
       <section>
@@ -626,7 +632,7 @@ const Verification = () => {
               <button
                 data-toggle="modal"
                 data-target="#landingModal"
-                class="theme-btn btn-style-four mb-4 mt-3"
+                class="theme-btn btn-style-three mb-4 mt-3"
               >
                 <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
               </button>

@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules
+/node_modules
 /.pnp
 .pnp.js
 
@@ -11,7 +11,11 @@ node_modules
 # files
 .history
 .vscode
+<<<<<<< HEAD
 public
+=======
+
+>>>>>>> cce85bb689481e12b566c30e64dbc6978d46a8f6
 
 # production
 /build

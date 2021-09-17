@@ -125,14 +125,15 @@ const Home = () => {
               <span className="sr-only">Next</span>
             </a>
           </div>
-        </div>
-
-        <div className="img">
-          {/* <h4 className="text-center" style={{ visibility: "hidden" }}>
-            Affiliated Professional Bodies
-          </h4> */}
           <img id="firstP" src={partner} alt="partners" />
         </div>
+
+        {/* <div className="img"> */}
+        {/* <h4 className="text-center" style={{ visibility: "hidden" }}>
+            Affiliated Professional Bodies
+          </h4> */}
+
+        {/* </div> */}
 
         <div className="container con1">
           <div className="row">

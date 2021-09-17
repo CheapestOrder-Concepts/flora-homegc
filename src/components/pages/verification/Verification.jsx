@@ -75,7 +75,7 @@ const Verification = () => {
             display: "block",
           }}
         >
-          Or Call +2348094442019
+          CLICK HERE TO CALL +2348094442019 
         </div>
         {/* <div className="img verification"> */}
         {/* <h4
@@ -202,7 +202,7 @@ const Verification = () => {
               class="theme-btn btn-style-four mb-4 mt-3"
             >
               <span class="btn-title">
-                CLICK HERE TO SCHEDULE YOUR 15 FREE CONSULTATION{" "}
+                CLICK HERE TO SCHEDULE YOUR 15 MINUTES FREE CONSULTATION{" "}
               </span>
             </button>
           </div>

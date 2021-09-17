@@ -35,7 +35,7 @@ function App() {
       <Router>
         <ScrollToTup />
         <SearchModal />
-        <Nav />
+        {/* <Nav /> */}
         <Switch>
           <Route exact path="/" children={<Home />} />
           <Route path="/login-register" children={<LorR />} />
@@ -59,7 +59,7 @@ function App() {
             path="/real-estate-mistakes"
             children={<RealEstateMistakes />}
           />
-          <Route path="/quicklinks" children={<QuickLinks />} />
+          <Route path="/links" children={<QuickLinks />} />
           <Route path="/sales-page" children={<Books />} />
         </Switch>
         {/* <Footer /> */}

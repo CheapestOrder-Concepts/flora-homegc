@@ -18,6 +18,7 @@ import Footer from "../../layouts/Footer";
 import { SliderData as slides } from "./sliderData";
 import Con2 from "./Con2";
 import BlogCard from "../BlogDetails.jsx/BlogCard";
+import Nav from "../../layouts/Nav";
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
@@ -41,7 +42,9 @@ const Home = () => {
   }
 
   return (
+    
     <Fragment>
+      <Nav/>
       <div className="newP">
         <div className="beginning">
           <div

@@ -57,7 +57,18 @@ const TheHive = () => {
               </span>
             </button>
           </div>
-          <h3 className="call-enquiry-first">Or call +2348024421356</h3>
+          <div>
+            <a
+              href="tel:+2348024421356 "
+              className="call-enquiry call-link-two"
+              style={{ fontSize: "25px" }}
+            >
+              <h3 className="text-center call-link-one">
+                {" "}
+                OR CLICK HERE TO CALL +2348024421356
+              </h3>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -1152,7 +1163,14 @@ const TheHive = () => {
 
                 <div className="form-inner text-center">
                   <Optin_Trigger />
-                  <h3 className="call-enquiry">Or call +2348024421356</h3>
+                  <a
+                    href="tel:+2348024421356 "
+                    className="call-enquiry call-link-three"
+                    style={{ fontSize: "25px" }}
+                  >
+                    {" "}
+                    OR CLICK HERE TO CALL +2348024421356{" "}
+                  </a>
                   {/* <div class="btn-box ml-3"></div> */}
                 </div>
               </div>

@@ -70,12 +70,14 @@ const Verification = () => {
         <div
           className="phone-number"
           style={{
-            color: "white",
             textAlign: "center",
             display: "block",
           }}
         >
-          CLICK HERE TO CALL +2348094442019 
+          <a href="tel:+2348094442019 " className="call-link-one">
+            {" "}
+            CLICK HERE TO CALL +2348094442019{" "}
+          </a>
         </div>
         {/* <div className="img verification"> */}
         {/* <h4
@@ -124,13 +126,11 @@ const Verification = () => {
                   <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
                 </button>
               </div>
-              <div
-                className="phone-number"
-                style={{
-                  color: "#ed6c11",
-                }}
-              >
-                Or Call +2348094442019
+              <div className="phone-number">
+                <a href="tel:+2348094442019 " className="call-link-two">
+                  {" "}
+                  OR CLICK HERE TO CALL +2348094442019{" "}
+                </a>
               </div>
             </li>
           </ul>
@@ -206,13 +206,11 @@ const Verification = () => {
               </span>
             </button>
           </div>
-          <div
-            className="phone-number"
-            style={{
-              color: "white",
-            }}
-          >
-            Or Call +2348094442019
+          <div className="phone-number">
+            <a href="tel:+2348094442019 " className="call-link-one">
+              {" "}
+              OR CLICK HERE TO CALL +2348094442019{" "}
+            </a>
           </div>
 
           {/* <div className="content-column">
@@ -645,7 +643,10 @@ const Verification = () => {
                 display: "block",
               }}
             >
-              Or Call +2348094442019
+              <a href="tel:+2348094442019 " className="call-link-two">
+                {" "}
+                OR CLICK HERE TO CALL +2348094442019{" "}
+              </a>
             </div>
             <br />
             <hr

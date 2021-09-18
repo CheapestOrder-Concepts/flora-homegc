@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./css/App.css";
 
-import Nav from "./components/layouts/Nav";
+// import Nav from "./components/layouts/Nav";
 import Home from "./components/pages/Home/Home";
 // import Footer from './components/layouts/Footer';
 import SearchModal from "./components/layouts/SearchModal";

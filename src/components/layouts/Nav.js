@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/FHGC weblogo.png";
 
-const Nav = () => {
+const Nai = () => {
   const [navScroll, setNavScroll] = useState(false);
   const [notHome, setNotHome] = useState(false);
 
@@ -301,4 +301,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Nai;

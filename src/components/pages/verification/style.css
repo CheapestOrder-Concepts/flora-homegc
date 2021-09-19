@@ -56,6 +56,24 @@ ul.list-style-decimal {
   display: inline-block;
   padding-bottom: 20px;
 }
+.call-link-one {
+  color: #fff;
+}
+.call-link-one:hover {
+  color: #ed6c11;
+}
+.call-link-two {
+  color: #ed6c11;
+}
+.call-link-two:hover {
+  color: #541484;
+}
+.call-link-three {
+  color: #541484;
+}
+.call-link-three:hover {
+  color: #ed6c11;
+}
 @media (max-width: 700px) {
   div.img.verification {
     right: 15px;

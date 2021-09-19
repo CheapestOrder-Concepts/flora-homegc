@@ -23,14 +23,14 @@ const QuickLinks = () => {
                     </h3>
                     <p className="text-light mb-4">
                       Preventing Real Estate Losses by running end-to-end
-                       verification on every subject property before you
-                      pay for them, one property at a time.
+                      verification on every subject property before you pay for
+                      them, one property at a time.
                     </p>
                   </div>
                   {/* /.text-center END */}
                   <div className="list-group quick-links">
                     <Link
-                      to="#"
+                      to="/real-estate-mistakes"
                       className="list-group-item px-3 py-2 list-group-item-action flex-column align-items-center"
                     >
                       <span className="d-flex w-100 justify-content-center">
@@ -58,7 +58,7 @@ const QuickLinks = () => {
                       </span>
                     </Link>
                     <Link
-                      to="#"
+                      to="sales-page"
                       className="list-group-item px-3 py-2 list-group-item-action flex-column align-items-center"
                     >
                       <span className="d-flex w-100 justify-content-center">

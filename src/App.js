@@ -1,7 +1,8 @@
+import { useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./css/App.css";
 
-import Nav from "./components/layouts/Nav";
+// import Nav from "./components/layouts/Nav";
 import Home from "./components/pages/Home/Home";
 // import Footer from './components/layouts/Footer';
 import SearchModal from "./components/layouts/SearchModal";
@@ -23,8 +24,9 @@ import Blogs from "./components/pages/BlogDetails.jsx/Blogs";
 import QuickLinks from "./components/pages/QuickLinks/QuickLinks";
 import RealEstateMistakes from "./components/pages/BlogDetails.jsx/RealEstateMistakes/RealEstateMistakes";
 import Books from "./components/pages/Books/Books";
-import { useEffect, useRef } from "react";
 import ScrollToTup from "./ScrollToTup";
+import NotFound from "./components/pages/404";
+import ThankYou from "./components/pages/ThankYou";
 function App() {
   const myRef = useRef();
   useEffect(() => {
@@ -61,6 +63,8 @@ function App() {
           />
           <Route path="/links" children={<QuickLinks />} />
           <Route path="/sales-page" children={<Books />} />
+          <Route path="/thank-you" children={<ThankYou />} />
+          <Route component={NotFound} />
         </Switch>
         {/* <Footer /> */}
       </Router>

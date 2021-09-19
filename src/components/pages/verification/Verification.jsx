@@ -4,7 +4,7 @@ import "./style.css";
 import partner from "../../assets/partner2.jpg";
 // import optin_bg from "../../assets/optin-bg.jpg"
 // import verification from "../../assets/verification.png";
-import background from "../../assets/background.jpg";
+// import background from "../../assets/background.jpg";
 import price from "../../assets/price.png";
 // import iconShape from "../../assets/icon-shape.png";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";

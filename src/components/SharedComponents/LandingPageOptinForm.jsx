@@ -18,10 +18,10 @@ const LandingPageOptinForm = ({ showReg = true, handleClose }) => {
     setRegDetails({ ...regDetails, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    handleClose();
-  };
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   handleClose();
+  // };
 
   return (
     <>

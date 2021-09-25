@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./style.css";
 import partner from "../../assets/partner2.jpg";
@@ -10,31 +10,43 @@ import price from "../../assets/price.png";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
 import EngageInService from "../../SharedComponents/EngageInService";
+import { useDispatch } from "react-redux";
+import makeConsultation from "../../../actions/verificationConsultation";
+import { useSelector } from "react-redux";
 
 const Verification = () => {
+  const [consultationDetails, setconsultationDetails] = useState({
+    full_name: "",
+    email: "",
+    phone_number: "",
+    category: "",
+    est_of_interest: "",
+    contact_me: "",
+    message: "",
+    how_you_hear_about_us: "",
+  });
+  const dispatch = useDispatch();
+  const { data, loading, error } = useSelector(
+    (state) => state.verificationConsultation
+  );
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    dispatch(makeConsultation(consultationDetails));
+    setconsultationDetails({
+      full_name: "",
+      email: "",
+      phone_number: "",
+      category: "",
+      est_of_interest: "",
+      contact_me: "",
+      message: "",
+      how_you_hear_about_us: "",
+    });
+  };
+
   return (
     <>
-      {/* <section className="banner-meetup">
-        <div className="bg-pattern" style={{ backgroundImage: `url(${optin_bg})` }} />
-        /* <div class="layer-outer">
-
-                    <div class="gradient-layer"></div>
-
-                </div> 
-        <div className="auto-container">
-          <div className="content-box">
-            <div className="address" />
-            <h2>VERIFICATION SERVICE PAGE
-            </h2>
-          </div>
-          <div class="btn-box">
-
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" class="theme-btn btn-style-two"><span class="btn-title">Engage service</span></a>
-
-                    </div> 
-        </div>
-      </section> */}
-
       <section style={{ background: "#541484" }}>
         <div className="heading-container">
           <h1>
@@ -748,7 +760,14 @@ const Verification = () => {
         </div>
       </section>
       <PaymentDetails />
-      <LandingPageOptinForm />
+      <LandingPageOptinForm
+        onSubmit={onSubmit}
+        consultationDetails={consultationDetails}
+        setconsultationDetails={setconsultationDetails}
+        data={data}
+        loading={loading}
+        error={error}
+      />
     </>
   );
 };

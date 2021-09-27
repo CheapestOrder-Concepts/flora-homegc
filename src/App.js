@@ -27,7 +27,8 @@ import Books from "./components/pages/Books/Books";
 import ScrollToTup from "./ScrollToTup";
 import NotFound from "./components/pages/404";
 import ThankYou from "./components/pages/ThankYou";
-function App() {
+
+const App = () => {
   const myRef = useRef();
   useEffect(() => {
     myRef.current.scrollTo(0, 0);
@@ -70,7 +71,7 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;
 

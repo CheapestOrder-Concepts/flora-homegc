@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import loginAction from "../../../actions/login";
+import ErrorMessage from "../../SharedComponents/Error";
+import LoadingComponent from "../../SharedComponents/Loading";
 
 const Login = ({ showLog, SocialWidget }) => {
+  const {loading, error} = useSelector((state)=>state.loginData)
   const [loginDetails, setLoginDetails] = useState({
     email: "",
     password: "",
@@ -63,9 +66,10 @@ const Login = ({ showLog, SocialWidget }) => {
             className="theme-btn btn-style-three"
             onClick={onSubmit}
           >
-            <span className="btn-title">Login</span>
+            <span className="btn-title">{loading?<LoadingComponent/>:"Login"}</span>
           </button>
         </div>
+        {error&&(<ErrorMessage errorMessage={error}/>)}
         <SocialWidget />
       </form>
     </>

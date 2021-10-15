@@ -1,4 +1,7 @@
 import * as api from "../api";
+
+// import { RequestMethod } from "../api";
+import { RequestMethod } from "../api";
 import {
   MAKE_CONSULTATION,
   MAKE_CONSULTATION_FAIL,
@@ -11,16 +14,15 @@ const makeConsultation = (consultationDetails) => async (dispatch) => {
     dispatch({
       type: MAKE_CONSULTATION_REQUEST,
     });
-    const { data } = await api.postConsultation(consultationDetails);
+    const { data } = await api.networkCall({method:RequestMethod.POST, requestBody:consultationDetails, path:'login'});
     dispatch({
       type: MAKE_CONSULTATION,
       payload: data,
     });
   } catch (error) {
-    console.log(error);
     dispatch({
       type: MAKE_CONSULTATION_FAIL,
-      payload: error.message,
+      payload: error.response.data.responseMessage || error.message,
     });
   }
 };

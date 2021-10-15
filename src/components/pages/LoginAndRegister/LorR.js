@@ -6,7 +6,7 @@ import "../../../css/LorR.css";
 import { useSelector } from "react-redux";
 
 const LorR = () => {
-  const { regData, loading, error } = useSelector((state) => state.regDetails);
+  const { loading, error } = useSelector((state) => state.regDetails);
 
   const [showReg, setShowReg] = useState(true);
   const [showLog, setShowLog] = useState(false);

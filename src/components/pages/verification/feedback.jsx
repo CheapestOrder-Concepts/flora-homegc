@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Feedback = ({ data }) => {
+  console.log(data);
   if (data?.success === true) {
     return (
       <h4 className="font-weight-bold text-center text-success">

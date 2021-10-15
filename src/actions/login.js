@@ -6,7 +6,8 @@ const loginAction = (loginDetails) => async (dispatch) => {
     dispatch({
       type: LOGIN_REQUEST,
     });
-    const { data } = await api.postLoginDetails(loginDetails);
+    const  data  = await api.postLoginDetails(loginDetails);
+    console.log(data)
     dispatch({
       type: LOGIN_SUCCESS,
       payload: data,

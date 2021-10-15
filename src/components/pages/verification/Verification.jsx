@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import tawkTo from "tawkto-react";
 import "./style.css";
 import partner from "../../assets/partner2.jpg";
 // import optin_bg from "../../assets/optin-bg.jpg"
@@ -15,6 +15,16 @@ import makeConsultation from "../../../actions/verificationConsultation";
 import { useSelector } from "react-redux";
 
 const Verification = () => {
+  const tawkToPropertyId = "5a9e51824b401e45400d70e9";
+
+  // Direct Chat Link
+  // https://tawk.to/chat/tawkToPropertyId/tawkToKey
+
+  const tawkToKey = "1cit1c3m8";
+
+  useEffect(() => {
+    tawkTo(tawkToPropertyId, tawkToKey);
+  }, []);
   const [consultationDetails, setconsultationDetails] = useState({
     full_name: "",
     email: "",
@@ -88,7 +98,7 @@ const Verification = () => {
         >
           <a href="tel:+2348094442019 " className="call-link-one">
             {" "}
-            CLICK HERE TO CALL +2348094442019{" "}
+            CLICK HERE TO CALL{" "}
           </a>
         </div>
         {/* <div className="img verification"> */}
@@ -141,7 +151,7 @@ const Verification = () => {
               <div className="phone-number">
                 <a href="tel:+2348094442019 " className="call-link-two">
                   {" "}
-                  OR CLICK HERE TO CALL +2348094442019{" "}
+                  OR CLICK HERE TO CALL{" "}
                 </a>
               </div>
             </li>
@@ -221,7 +231,7 @@ const Verification = () => {
           <div className="phone-number">
             <a href="tel:+2348094442019 " className="call-link-one">
               {" "}
-              OR CLICK HERE TO CALL +2348094442019{" "}
+              OR CLICK HERE TO CALL{" "}
             </a>
           </div>
 
@@ -657,7 +667,7 @@ const Verification = () => {
             >
               <a href="tel:+2348094442019 " className="call-link-two">
                 {" "}
-                OR CLICK HERE TO CALL +2348094442019{" "}
+                OR CLICK HERE TO CALL{" "}
               </a>
             </div>
             <br />

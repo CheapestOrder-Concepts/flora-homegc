@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "../../css/Modal.css";
 import { Feedback } from "../pages/verification/feedback";
+import ErrorMessage from "./Error";
+import LoadingComponent from "./Loading";
 const LandingPageOptinForm = ({
   onSubmit,
   setconsultationDetails,
@@ -43,6 +45,22 @@ const LandingPageOptinForm = ({
   console.log(setData);
   console.log(loading_value + " form");
   console.log(error_msg + " land");
+
+  // const LoadingComponent = () => (
+  //   <button class="btn btn-primary" type="button" disabled>
+  //     <span
+  //       class="spinner-grow spinner-grow-sm"
+  //       role="status"
+  //       aria-hidden="true"
+  //     ></span>
+  //     Sending...
+  //   </button>
+  // );
+
+  // const ErrorMessage = (error_msg) => (
+  //   <h4 className="font-weight-bold text-center text-danger">{error_msg}</h4>
+  // );
+
   return (
     <>
       <div
@@ -63,15 +81,9 @@ const LandingPageOptinForm = ({
                 color: "#fff",
               }}
             >
-              {loading_value ? (
-                <h4 className="font-weight-bold text-center text-white">
-                  submitting your reqest, please wait...
-                </h4>
-              ) : setData === null || !setData ? (
+              {setData === null || !setData ? (
                 error_msg ? (
-                  <h4 className="font-weight-bold text-center text-danger">
-                    {error_msg}
-                  </h4>
+                  <ErrorMessage errorMessage={error_msg} />
                 ) : (
                   <h4 className="font-weight-bold text-white text-center">
                     PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED
@@ -273,12 +285,13 @@ const LandingPageOptinForm = ({
                 </div>
                 <div className="form-group text-center">
                   <button
+                    disabled={loading ? true : false}
                     type="submit"
                     className="btn btn-primary btn-md"
                     name="submit_form_btn"
                     id="submit_form_btn"
                   >
-                    Send Details
+                    {loading ? <LoadingComponent /> : "Send Details"}
                   </button>
                 </div>
                 <div id="notification_div"></div>

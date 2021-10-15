@@ -1,7 +1,8 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import HeadShake from "react-reveal/HeadShake";
+import tawkTo from "tawkto-react";
 
 import partner from "../../assets/partner2.jpg";
 import workers from "../../assets/workers.jpg";
@@ -21,6 +22,17 @@ import BlogCard from "../BlogDetails.jsx/BlogCard";
 import Nav from "../../layouts/Nav";
 
 const Home = () => {
+  const tawkToPropertyId = "5a9e51824b401e45400d70e9";
+
+  // Direct Chat Link
+  // https://tawk.to/chat/tawkToPropertyId/tawkToKey
+
+  const tawkToKey = "1cit1c3m8";
+
+  useEffect(() => {
+    tawkTo(tawkToPropertyId, tawkToKey);
+  }, []);
+
   const [current, setCurrent] = useState(0);
   const length = slides.length;
   const history = useHistory();
@@ -42,9 +54,8 @@ const Home = () => {
   }
 
   return (
-    
     <Fragment>
-      <Nav/>
+      <Nav />
       <div className="newP">
         <div className="beginning">
           <div
@@ -552,6 +563,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
+
       {/* <LorR /> */}
       <Footer />
     </Fragment>

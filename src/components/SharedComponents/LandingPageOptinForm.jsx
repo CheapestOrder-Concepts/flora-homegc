@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "../../css/Modal.css";
 import { Feedback } from "../pages/verification/feedback";
+import ErrorMessage from "./Error";
+import LoadingComponent from "./Loading";
 const LandingPageOptinForm = ({
   onSubmit,
   setconsultationDetails,
@@ -44,20 +46,20 @@ const LandingPageOptinForm = ({
   console.log(loading_value + " form");
   console.log(error_msg + " land");
 
-  const LoadingComponent = () => (
-    <button class="btn btn-primary" type="button" disabled>
-      <span
-        class="spinner-grow spinner-grow-sm"
-        role="status"
-        aria-hidden="true"
-      ></span>
-      Sending...
-    </button>
-  );
+  // const LoadingComponent = () => (
+  //   <button class="btn btn-primary" type="button" disabled>
+  //     <span
+  //       class="spinner-grow spinner-grow-sm"
+  //       role="status"
+  //       aria-hidden="true"
+  //     ></span>
+  //     Sending...
+  //   </button>
+  // );
 
-  const ErrorMessage = () => (
-    <h4 className="font-weight-bold text-center text-danger">{error_msg}</h4>
-  );
+  // const ErrorMessage = (error_msg) => (
+  //   <h4 className="font-weight-bold text-center text-danger">{error_msg}</h4>
+  // );
 
   return (
     <>
@@ -81,7 +83,7 @@ const LandingPageOptinForm = ({
             >
               {setData === null || !setData ? (
                 error_msg ? (
-                  <ErrorMessage />
+                  <ErrorMessage errorMessage={error_msg} />
                 ) : (
                   <h4 className="font-weight-bold text-white text-center">
                     PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED

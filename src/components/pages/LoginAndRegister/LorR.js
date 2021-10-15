@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import Reg from "./Reg";
 import "../../../css/LorR.css";
+import { useSelector } from "react-redux";
 
 const LorR = () => {
+  const { regData, loading, error } = useSelector((state) => state.regDetails);
+
   const [showReg, setShowReg] = useState(true);
   const [showLog, setShowLog] = useState(false);
 
@@ -76,7 +79,13 @@ const LorR = () => {
           className="LorR mt-5"
           style={{ marginBottom: showLog ? "-400px" : "0" }}
         >
-          <Reg showReg={showReg} SocialWidget={SocialWidget} />
+          <Reg
+            showReg={showReg}
+            // data={regData}
+            loading={loading}
+            error={error}
+            SocialWidget={SocialWidget}
+          />
           <Login showLog={showLog} SocialWidget={SocialWidget} />
         </div>
 

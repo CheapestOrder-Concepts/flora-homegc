@@ -10,7 +10,7 @@ const Registration = (registrationDetails) => async (dispatch) => {
     dispatch({
       type: REGISTRATION_REQUEST,
     });
-    const { data } = await api.postRegistrationDetails(registrationDetails);
+    const { data } = await api.networkCall({method:api.RequestMethod.POST,path:'registration',requestBody:registrationDetails});
     dispatch({
       type: REGISTRATION_SUCCESS,
       payload: data,
@@ -18,7 +18,7 @@ const Registration = (registrationDetails) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: REGISTRATION_FAIL,
-      payload: error.message,
+      payload: error.response.data.responseMessage,
     });
   }
 };

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:9000/api/v1/client-api";
+const baseUrl = "http://api.florahomesgc.com/api/v1/client-api";
 
   export const RequestMethod={
     POST:'POST',

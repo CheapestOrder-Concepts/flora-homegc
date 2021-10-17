@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Registration from "../../../actions/registration";
 import ErrorMessage from "../../SharedComponents/Error";
+import { Feedback } from "../../SharedComponents/Feedback";
 import LoadingComponent from "../../SharedComponents/Loading";
 
-const Reg = ({ showReg, SocialWidget, loading, error }) => {
+const Reg = ({ showReg, SocialWidget, loading, error, regFeedback }) => {
   const [regDetails, setRegDetails] = useState({
     first_name: "",
     last_name: "",
@@ -38,7 +39,6 @@ const Reg = ({ showReg, SocialWidget, loading, error }) => {
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
-    console.log("submit");
     e.preventDefault();
 
     if (password !== password2) {
@@ -193,7 +193,7 @@ const Reg = ({ showReg, SocialWidget, loading, error }) => {
           )}
         </button>
       </div>
-      {error && <ErrorMessage errorMessage={error} />}
+      {error? <ErrorMessage errorMessage={error}/>:<Feedback regFeedback={regFeedback}/>}
       <SocialWidget />
     </form>
   );

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "../../css/Modal.css";
-import { Feedback } from "../pages/verification/feedback";
 import ErrorMessage from "./Error";
+import { Feedback } from "./Feedback";
 import LoadingComponent from "./Loading";
 const LandingPageOptinForm = ({
   onSubmit,

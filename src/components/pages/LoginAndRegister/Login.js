@@ -16,8 +16,7 @@ const Login = ({ showLog, SocialWidget }) => {
   const onChange = (e) => {
     setLoginDetails({ ...loginDetails, [e.target.name]: e.target.value });
   };
-  console.log(email.length);
-  console.log(password.length);
+
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {

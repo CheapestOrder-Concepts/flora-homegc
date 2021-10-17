@@ -19,7 +19,7 @@ const loginAction = (loginDetails) => async (dispatch) => {
     
     dispatch({
       type: LOGIN_FAIL,
-      payload: error.response.data.responseMessage,
+      payload: error?.response?.data?.responseMessage || error.message,
     });
   }
 };

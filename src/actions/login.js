@@ -15,7 +15,7 @@ const loginAction = (loginDetails) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: LOGIN_FAIL,
-      payload: error.message,
+      payload: error.response,
     });
   }
 };

@@ -86,7 +86,7 @@ const Verification = () => {
             data-target="#landingModal"
             class="theme-btn btn-style-four mb-4 mt-3"
           >
-            <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
+            <span class="btn-title">CONTACT US NOW</span>
           </button>
         </div>
         <div

@@ -14,7 +14,7 @@ const makeConsultation = (consultationDetails) => async (dispatch) => {
     dispatch({
       type: MAKE_CONSULTATION_REQUEST,
     });
-    const { data } = await api.networkCall({method:RequestMethod.POST, requestBody:consultationDetails, path:'login'});
+    const { data } = await api.networkCall({method:RequestMethod.POST, requestBody:consultationDetails, path:'verification'});
     dispatch({
       type: MAKE_CONSULTATION,
       payload: data,

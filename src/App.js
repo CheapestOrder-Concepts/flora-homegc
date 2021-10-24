@@ -2,9 +2,9 @@ import { useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./css/App.css";
 
-// import Nav from "./components/layouts/Nav";
+import Nav from "./components/layouts/Nav";
 import Home from "./components/pages/Home/Home";
-// import Footer from './components/layouts/Footer';
+import Footer from "./components/layouts/Footer";
 import SearchModal from "./components/layouts/SearchModal";
 import LorR from "./components/pages/LoginAndRegister/LorR";
 import Product from "./components/pages/Product/Product";
@@ -38,7 +38,7 @@ const App = () => {
       <Router>
         <ScrollToTup />
         <SearchModal />
-        {/* <Nav /> */}
+        <Nav />
         <Switch>
           <Route exact path="/" children={<Home />} />
           <Route path="/login-register" children={<LorR />} />
@@ -67,7 +67,7 @@ const App = () => {
           <Route path="/thank-you" children={<ThankYou />} />
           <Route component={NotFound} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );

@@ -43,14 +43,36 @@ const Reg = ({ showReg, SocialWidget, loading, error, regFeedback }) => {
 
     if (password !== password2) {
       alert("password don't match");
+      setRegDetails({
+        ...regDetails,
+        password: "",
+        password2: "",
+      });
       return;
     }
     if (!password || password.length < 6) {
       alert("password cannot  be less than 6 characters");
+      setRegDetails({
+        ...regDetails,
+        password: "",
+        password2: "",
+      });
       return;
     }
 
     dispatch(Registration(regDetails));
+    setRegDetails({
+      first_name: "",
+      last_name: "",
+      email: "",
+      call_number: "",
+      whatsapp_number: "",
+      client_category: "",
+      market_survey: "",
+      message: "",
+      password: "",
+      password2: "",
+    });
   };
 
   return (
@@ -193,7 +215,11 @@ const Reg = ({ showReg, SocialWidget, loading, error, regFeedback }) => {
           )}
         </button>
       </div>
-      {error? <ErrorMessage errorMessage={error}/>:<Feedback regFeedback={regFeedback}/>}
+      {error ? (
+        <ErrorMessage errorMessage={error} />
+      ) : (
+        <Feedback regFeedback={regFeedback} />
+      )}
       <SocialWidget />
     </form>
   );

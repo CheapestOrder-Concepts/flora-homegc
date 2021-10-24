@@ -4,7 +4,7 @@ import React from "react";
 import LorR from "../LoginAndRegister/LorR";
 import bg from "../../assets/productAssets/about-bg.jpg";
 
-import Footer from "../../layouts/Footer";
+// import Footer from "../../layouts/Footer";
 const Contact = () => {
   return (
     <>
@@ -122,7 +122,7 @@ const Contact = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

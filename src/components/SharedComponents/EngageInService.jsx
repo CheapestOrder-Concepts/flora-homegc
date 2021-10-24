@@ -30,7 +30,7 @@ export default function EngageInService() {
                         id="form_caller"
                       >
                         <span className="btn-title">
-                          Get Your Free Consultation
+                       Enter Your Detail Now To Request A Call-Back
                         </span>
                       </button>
                     </div>
@@ -59,15 +59,14 @@ export default function EngageInService() {
                       </div>
                       {/* <h4>Payment</h4> */}
                       {/* <div class="text" style="color: #000000">Submit Service Information.</div> */}
-                      <a
+                      <div
                         className="theme-btn btn-style-three"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform"
                         style={{ textDecoration: "none" }}
                       >
                         <span className="btn-title">
                           Submit Service Information.
                         </span>
-                      </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -107,6 +106,36 @@ export default function EngageInService() {
           </div>
         </div>
       </div>
+      
+      <div
+              class="btn-box"
+              style={{
+                display: "block",
+                marginRight: "10px",
+                textAlign: "center",
+              }}
+            >
+              <button
+                data-toggle="modal"
+                data-target="#landingModal"
+                class="theme-btn btn-style-three mb-4 mt-3"
+              >
+                <span class="btn-title">REQUEST A CALL-BACK NOW</span>
+              </button>
+            </div>
+            <div
+              className="phone-number"
+              style={{
+                color: "#ed6c11",
+                textAlign: "center",
+                display: "block",
+              }}
+            >
+              <a href="tel:+2348094442019 " className="call-link-two">
+                {" "}
+                OR CLICK HERE TO CALL{" "}
+              </a>
+            </div>
     </>
   );
 }

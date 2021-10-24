@@ -5,7 +5,7 @@ import ErrorMessage from "../../SharedComponents/Error";
 import LoadingComponent from "../../SharedComponents/Loading";
 
 const Login = ({ showLog, SocialWidget }) => {
-  const {loading, error} = useSelector((state)=>state.loginData)
+  const { loading, error } = useSelector((state) => state.loginData);
   const [loginDetails, setLoginDetails] = useState({
     email: "",
     password: "",
@@ -23,10 +23,18 @@ const Login = ({ showLog, SocialWidget }) => {
     e.preventDefault();
     if (email === "" || password === "") {
       alert("email and password must not be empty");
+      setLoginDetails({
+        email: "",
+        password: "",
+      });
       return;
     }
 
     dispatch(loginAction(loginDetails));
+    setLoginDetails({
+      email: "",
+      password: "",
+    });
   };
   return (
     <>
@@ -43,6 +51,7 @@ const Login = ({ showLog, SocialWidget }) => {
           type="text"
           placeholder="E-mail"
           value={email}
+          disabled={loading ? true : false}
           required
         />
         <input
@@ -52,6 +61,7 @@ const Login = ({ showLog, SocialWidget }) => {
           placeholder="Password"
           value={password}
           required
+          disabled={loading ? true : false}
         />
 
         {/* <input style={{ marginTop: '40px' }} type='submit' value='Login' id='logsub' className="lr-submit" onClick={onSubmit} /> */}
@@ -65,10 +75,12 @@ const Login = ({ showLog, SocialWidget }) => {
             className="theme-btn btn-style-three"
             onClick={onSubmit}
           >
-            <span className="btn-title">{loading?<LoadingComponent/>:"Login"}</span>
+            <span className="btn-title">
+              {loading ? <LoadingComponent /> : "Login"}
+            </span>
           </button>
         </div>
-        {error&&(<ErrorMessage errorMessage={error}/>)}
+        {error && <ErrorMessage errorMessage={error} />}
         <SocialWidget />
       </form>
     </>

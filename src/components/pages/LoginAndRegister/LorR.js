@@ -6,7 +6,7 @@ import "../../../css/LorR.css";
 import { useSelector } from "react-redux";
 
 const LorR = () => {
-  const { loading, error } = useSelector((state) => state.regDetails);
+  const { loading, error, regMessage } = useSelector((state) => state.regFeedback);
 
   const [showReg, setShowReg] = useState(true);
   const [showLog, setShowLog] = useState(false);
@@ -84,6 +84,7 @@ const LorR = () => {
             // data={regData}
             loading={loading}
             error={error}
+            regFeedback={regMessage}
             SocialWidget={SocialWidget}
           />
           <Login showLog={showLog} SocialWidget={SocialWidget} />

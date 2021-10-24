@@ -8,9 +8,9 @@ export default (loginData = {}, action) => {
     case LOGIN_SUCCESS:
       localStorage.setItem(
         "FloraLogin",
-        JSON.stringify(action.payload?.client_details)
+        JSON.stringify(action.payload?.data)
       );
-      return { loading: false, loginData: action.payload?.client_details };
+      return { loading: false, loginData: action.payload?.data };
     case LOGIN_FAIL:
       return { loading: false, error: action.payload };
     default:

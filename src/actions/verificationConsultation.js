@@ -14,7 +14,11 @@ const makeConsultation = (consultationDetails) => async (dispatch) => {
     dispatch({
       type: MAKE_CONSULTATION_REQUEST,
     });
-    const { data } = await api.networkCall({method:RequestMethod.POST, requestBody:consultationDetails, path:'verification'});
+    const { data } = await api.networkCall({
+      method: RequestMethod.POST,
+      requestBody: consultationDetails,
+      path: "verification",
+    });
     dispatch({
       type: MAKE_CONSULTATION,
       payload: data,
@@ -22,7 +26,7 @@ const makeConsultation = (consultationDetails) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: MAKE_CONSULTATION_FAIL,
-      payload: error.response.data.responseMessage || error.message,
+      payload: error?.response?.data?.responseMessage || error.message,
     });
   }
 };

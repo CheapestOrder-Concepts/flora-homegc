@@ -25,6 +25,8 @@ const Verification = () => {
   useEffect(() => {
     tawkTo(tawkToPropertyId, tawkToKey);
   }, []);
+
+
   const [consultationDetails, setconsultationDetails] = useState({
     full_name: "",
     email: "",
@@ -145,7 +147,7 @@ const Verification = () => {
                   data-target="#landingModal"
                   class="theme-btn btn-style-four mb-4 mt-3"
                 >
-                  <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
+                  <span class="btn-title">REQUEST A CALL-BACK NOW</span>
                 </button>
               </div>
               <div className="phone-number">
@@ -224,7 +226,7 @@ const Verification = () => {
               class="theme-btn btn-style-four mb-4 mt-3"
             >
               <span class="btn-title">
-                CLICK HERE TO SCHEDULE YOUR 15 MINUTES FREE CONSULTATION{" "}
+               CONTACT US NOW
               </span>
             </button>
           </div>
@@ -532,7 +534,24 @@ const Verification = () => {
             Investments irrespective of your location and get up to 50 years
             warranty for your property.
           </p>
-
+<br />
+          <p
+            style={{
+              fontWeight: "bold",
+              color: "black",
+              fontSize: "20px",
+              marginTop: "20px",
+            }}
+          >
+            PERIOD OF ENGAGEMENT
+          </p>
+          <ul
+            className="ul-text-dark"
+            style={{ color: "white", marginLeft:"20px" }}
+          >
+            <li style={{listStyleType:"decimal", marginBottom:"10px"}}>The Verification Service shall be executed and delivered between 14 - 21 working days of physical site inspection with client or client's representative.</li>
+            <li style={{listStyleType:"decimal"}}>VIP delivery of 5 - 10 working days of physical site inspection with client or client's representative.</li>
+</ul>
           {/* <div className="content-column">
             <div className="inner-column">
               <div className="row">
@@ -641,35 +660,6 @@ const Verification = () => {
             {/*  <br><br> */}
             <br />
 
-            <div
-              class="btn-box"
-              style={{
-                display: "block",
-                marginRight: "10px",
-                textAlign: "center",
-              }}
-            >
-              <button
-                data-toggle="modal"
-                data-target="#landingModal"
-                class="theme-btn btn-style-three mb-4 mt-3"
-              >
-                <span class="btn-title">BOOK YOUR FREE CONSULTATION</span>
-              </button>
-            </div>
-            <div
-              className="phone-number"
-              style={{
-                color: "#ed6c11",
-                textAlign: "center",
-                display: "block",
-              }}
-            >
-              <a href="tel:+2348094442019 " className="call-link-two">
-                {" "}
-                OR CLICK HERE TO CALL{" "}
-              </a>
-            </div>
             <br />
             <hr
               style={{

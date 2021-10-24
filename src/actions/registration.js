@@ -18,7 +18,7 @@ const Registration = (registrationDetails) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: REGISTRATION_FAIL,
-      payload: error.response.data.responseMessage,
+      payload: error?.response?.data?.responseMessage || error.message,
     });
   }
 };

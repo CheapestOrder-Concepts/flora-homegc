@@ -13,13 +13,13 @@ import surv from "../../assets/land-verification.jpg";
 import iconShape from "../../assets/icon-shape.png";
 import mdspeech1 from "../../assets/mdspeech1.jpg";
 import homevideo from "../../assets/videos/home_video.mp4";
-import Footer from "../../layouts/Footer";
+// import Footer from "../../layouts/Footer";
 
 // import LorR from './LorR';
 import { SliderData as slides } from "./sliderData";
 import Con2 from "./Con2";
 import BlogCard from "../BlogDetails.jsx/BlogCard";
-import Nav from "../../layouts/Nav";
+// import Nav from "../../layouts/Nav";
 
 const Home = () => {
   const tawkToPropertyId = "5a9e51824b401e45400d70e9";
@@ -55,7 +55,7 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Nav />
+      {/* <Nav /> */}
       <div className="newP">
         <div className="beginning">
           <div
@@ -565,7 +565,7 @@ const Home = () => {
       </div>
 
       {/* <LorR /> */}
-      <Footer />
+      {/* <Footer /> */}
     </Fragment>
   );
 };

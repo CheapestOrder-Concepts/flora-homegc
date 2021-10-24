@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Registration from "../../../actions/registration";
 import ErrorMessage from "../../SharedComponents/Error";
+import { Feedback } from "../../SharedComponents/Feedback";
 import LoadingComponent from "../../SharedComponents/Loading";
 
-const Reg = ({ showReg, SocialWidget, loading, error }) => {
+const Reg = ({ showReg, SocialWidget, loading, error, regFeedback }) => {
   const [regDetails, setRegDetails] = useState({
     first_name: "",
     last_name: "",
@@ -38,19 +39,40 @@ const Reg = ({ showReg, SocialWidget, loading, error }) => {
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
-    console.log("submit");
     e.preventDefault();
 
     if (password !== password2) {
       alert("password don't match");
+      setRegDetails({
+        ...regDetails,
+        password: "",
+        password2: "",
+      });
       return;
     }
     if (!password || password.length < 6) {
       alert("password cannot  be less than 6 characters");
+      setRegDetails({
+        ...regDetails,
+        password: "",
+        password2: "",
+      });
       return;
     }
 
     dispatch(Registration(regDetails));
+    setRegDetails({
+      first_name: "",
+      last_name: "",
+      email: "",
+      call_number: "",
+      whatsapp_number: "",
+      client_category: "",
+      market_survey: "",
+      message: "",
+      password: "",
+      password2: "",
+    });
   };
 
   return (
@@ -193,7 +215,11 @@ const Reg = ({ showReg, SocialWidget, loading, error }) => {
           )}
         </button>
       </div>
-      {error && <ErrorMessage errorMessage={error} />}
+      {error ? (
+        <ErrorMessage errorMessage={error} />
+      ) : (
+        <Feedback regFeedback={regFeedback} />
+      )}
       <SocialWidget />
     </form>
   );

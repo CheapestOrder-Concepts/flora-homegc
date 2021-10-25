@@ -59,13 +59,8 @@ export default function EngageInService() {
                       </div>
                       {/* <h4>Payment</h4> */}
                       {/* <div class="text" style="color: #000000">Submit Service Information.</div> */}
-                      <div
-                        className="theme-btn btn-style-three"
-                        style={{ textDecoration: "none" }}
-                      >
-                        <span className="btn-title">
-                          Submit Service Information.
-                        </span>
+                      <div className="text" style={{ color: "#000000" }}>
+                      Submit Service Information.
                       </div>
                     </div>
                   </div>

@@ -15,6 +15,7 @@ import gal4 from "../../assets/flora-images/flora-gal4.jpg";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import OptinForm from "./OptinForm";
 import OptinModal from "../../SharedComponents/OptinModal";
+// import Footer from "../../layouts/Footer";
 
 const FloraEcopolis = () => {
   return (
@@ -364,6 +365,7 @@ const FloraEcopolis = () => {
         component={<OptinForm />}
       />
       <PaymentDetails />
+      {/* <Footer/> */}
     </>
   );
 };

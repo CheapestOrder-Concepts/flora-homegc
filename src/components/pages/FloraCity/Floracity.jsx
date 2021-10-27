@@ -15,6 +15,7 @@ import Optin_Trigger from "./Optin_Trigger";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import OptinForm from "./OptinForm";
 import OptinModal from "../../SharedComponents/OptinModal";
+// import Footer from "../../layouts/Footer";
 
 const Floracity = () => {
   useEffect(() => {
@@ -1183,6 +1184,7 @@ const Floracity = () => {
         title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}
       />
+      {/* <Footer/> */}
     </>
   );
 };

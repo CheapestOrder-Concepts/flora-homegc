@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import bookvideo from "../../assets/videos/Book video.mp4";
 import background from "../../assets/background.jpg";
@@ -10,7 +10,53 @@ import OptinModal from "../../SharedComponents/OptinModal";
 import BookOptinForm from "./BookOptinForm";
 import "./books.css";
 import Counter from "../../SharedComponents/CountDown";
+import { useDispatch } from "react-redux";
+import booksAction from "../../../actions/books";
+import { useSelector } from "react-redux";
+// import { useHistory } from "react-router";
 export default function Books() {
+  const [formData, setformData] = useState({
+    full_name: "",
+    email: "",
+    phone_number: "",
+    whatsapp_number: "",
+  });
+
+  const [bookingDetail, setbookingDetail] = useState({
+    error_msg: null,
+    bookings_data: null
+  })
+
+
+const {loading, error , bookings} = useSelector((state) =>state.bookingData)
+
+
+useEffect(() => {
+ 
+   setbookingDetail({ error_msg:error, bookings_data:bookings})
+  
+  
+  }, [error,bookings])
+
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+   e.preventDefault();
+   if (formData.full_name === ""||formData.email === ""||formData.phone_number === ""||formData.whatsapp_number === "") {
+     alert("please fill all provided inputs")
+     return
+   }
+
+   dispatch(booksAction(formData));
+   setformData({
+    full_name: "",
+    email: "",
+    phone_number: "",
+    whatsapp_number: "",
+   })
+   bookings && (window.location.href = "https://www.florahomesgc.com/thank-you")
+
+ }
   return (
     <>
       <section style={{ backgroundImage: `url(${background})` }}>
@@ -874,9 +920,11 @@ export default function Books() {
         </div>
       </section>
       <OptinModal
+      error_msg={bookingDetail.error_msg}
+      setbookingDetail={setbookingDetail}
+      data={bookingDetail.bookings_data}
         componentId="bookOptin"
-        title="The Property Investment Checklist"
-        component={<BookOptinForm />}
+        component={<BookOptinForm loading={loading} formData={formData} setformData={setformData} handleSubmit={handleSubmit} />}
       />
     </>
   );

@@ -4,6 +4,7 @@ import estate_header from "../../assets/flora_header.jpg";
 import thehive_header from "../../assets/thehive-header.jpg";
 import fern_i1 from "../../assets/fern_i1.jpg";
 import floracity_2 from "../../assets/floracity_2.jpg";
+import Footer from "../../layouts/Footer";
 
 const OurEstates = () => {
   return (
@@ -124,6 +125,7 @@ const OurEstates = () => {
           </div>
         </div>
       </section>
+          <Footer/>
     </>
   );
 };

@@ -1,16 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import LoadingComponent from "../../SharedComponents/Loading";
 
-export default function BookOptinForm() {
-  const [formData, setformData] = useState({
-    full_name: "",
-    email: "",
-    phone_number: "",
-    whatsapp_number: "",
-  });
+
+export default function BookOptinForm({formData, setformData, handleSubmit, loading}) {
+
   return (
     <div>
-      <form method="POST" id="pricing_modal_form">
+      <form method="POST" id="pricing_modal_form" onSubmit={handleSubmit}>
         <div className="text-box col-lg-12 col-md-12 col-sm-12">
           <p className="text my-1">Congratulations for coming across this.</p>
           <p className="text my-1">
@@ -130,13 +126,17 @@ export default function BookOptinForm() {
 
         {/* Modal footer */}
         <div className="modal-footer">
-          <button
-            className="theme-btn btn-style-one"
-            type="submit"
-            name="submit-form"
-          >
-            <span className="btn-title">Submit Now</span>
-          </button>
+          {
+            loading ? <LoadingComponent/>:  <button
+            onClick={handleSubmit}
+              className="theme-btn btn-style-one"
+              type="submit"
+              name="submit-form"
+            >
+              <span className="btn-title">Submit Now</span>
+            </button>
+          }
+        
           {/* <button type="button" class="theme-btn btn-style-four" style=" pointer-events: none; cursor: pointer !important;" data-dismiss="modal">Close</button> */}
         </div>
       </form>

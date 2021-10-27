@@ -5,6 +5,7 @@ import BlogCard from './BlogCard';
 import cardImg3 from '../../assets/blog3.jpg'
 import cardImg1 from '../../assets/blog1.jpg'
 import cardImg12 from '../../assets/blog2.jpg'
+import Footer from '../../layouts/Footer';
 const Blogs = () => {
     return (
         <>
@@ -42,7 +43,7 @@ const Blogs = () => {
           </div></div></div></div>
 
       </section>
-            
+            <Footer/>
         </>
     );
 }

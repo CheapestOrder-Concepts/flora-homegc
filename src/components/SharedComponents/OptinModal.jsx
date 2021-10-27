@@ -1,24 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ErrorMessage from "./Error";
+import { Feedback } from "./Feedback";
 import "./optinmodal.css";
-export default function OptinModal({ title, componentId, component }) {
-  //   const handleMediaQuery = (media) => {
-  //     if (media.matches) {
-  //       if (componentId === "optinForm") {
-  //         console.log(modalContent);
-  //         modalContent.style.marginTop = "120px";
-  //       } else if (componentId === "bookOptin") {
-  //         modalContent.style.color = "blue";
-  //       }
-  //     }
+export default function OptinModal({setbookingDetail,componentId, component, error_msg, data }) {
 
-  //     return;
-  //   };
-
+ 
+  
   return ReactDOM.createPortal(
     <>
       <div
-        class="modal fade"
+        class="modal fade pt-2"
+        
         id={componentId}
         tabindex="-1"
         aria-labelledby={`${componentId}Label`}
@@ -35,14 +28,28 @@ export default function OptinModal({ title, componentId, component }) {
                 color: "#fff",
               }}
             >
-              <h4 className="font-weight-bold text-white text-center">
-                {title}
-              </h4>
+                {data === null || !data ? (
+error_msg ? (
+      <ErrorMessage errorMessage={error_msg} />
+    ) : (
+      <h4 className="font-weight-bold text-white text-center mt-4">
+      The Property Investment Checklist
+    </h4>
+    )
+  ) : (
+    <Feedback data={data} />
+  )}
+             
+             
+          
+             
               <button
+    
                 type="button"
-                className="close"
+                className={`close mt-2 text-white`}
                 data-dismiss="modal"
                 aria-label="Close"
+                onClick={()=>setbookingDetail({bookings_data:null, error_msg:null})}
               >
                 <span aria-hidden="true">&times;</span>
               </button>

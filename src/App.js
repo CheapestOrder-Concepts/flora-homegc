@@ -4,7 +4,7 @@ import "./css/App.css";
 
 import Nav from "./components/layouts/Nav";
 import Home from "./components/pages/Home/Home";
-import Footer from "./components/layouts/Footer";
+// import Footer from "./components/layouts/Footer";
 import SearchModal from "./components/layouts/SearchModal";
 import LorR from "./components/pages/LoginAndRegister/LorR";
 import Product from "./components/pages/Product/Product";
@@ -67,7 +67,7 @@ const App = () => {
           <Route path="/thank-you" children={<ThankYou />} />
           <Route component={NotFound} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

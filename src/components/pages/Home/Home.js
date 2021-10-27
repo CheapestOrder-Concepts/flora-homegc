@@ -13,7 +13,7 @@ import surv from "../../assets/land-verification.jpg";
 import iconShape from "../../assets/icon-shape.png";
 import mdspeech1 from "../../assets/mdspeech1.jpg";
 import homevideo from "../../assets/videos/home_video.mp4";
-// import Footer from "../../layouts/Footer";
+import Footer from "../../layouts/Footer";
 
 // import LorR from './LorR';
 import { SliderData as slides } from "./sliderData";
@@ -565,7 +565,7 @@ const Home = () => {
       </div>
 
       {/* <LorR /> */}
-      {/* <Footer /> */}
+      <Footer />
     </Fragment>
   );
 };

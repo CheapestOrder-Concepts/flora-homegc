@@ -3,7 +3,7 @@ import React from "react";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
-  const difference = +new Date(`${year}-10-1`) - +new Date();
+  const difference = +new Date(`${year}-12-31`) - +new Date();
   let timeLeft = {};
 
   if (difference > 0) {

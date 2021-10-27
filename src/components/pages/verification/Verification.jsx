@@ -13,6 +13,7 @@ import EngageInService from "../../SharedComponents/EngageInService";
 import { useDispatch } from "react-redux";
 import makeConsultation from "../../../actions/verificationConsultation";
 import { useSelector } from "react-redux";
+// import Footer from "../../layouts/Footer";
 
 const Verification = () => {
   const tawkToPropertyId = "5a9e51824b401e45400d70e9";
@@ -59,6 +60,7 @@ const Verification = () => {
 
   return (
     <>
+    
       <section style={{ background: "#541484" }}>
         <div className="heading-container">
           <h1>
@@ -765,6 +767,7 @@ const Verification = () => {
         loading={loading}
         error={error}
       />
+      {/* <Footer/> */}
     </>
   );
 };

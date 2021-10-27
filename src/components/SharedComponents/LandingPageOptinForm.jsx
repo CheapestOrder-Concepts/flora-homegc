@@ -32,7 +32,7 @@ const LandingPageOptinForm = ({
   const onFormClose = (data) => {
     setsetData(null);
     seterror_msg(null);
-    console.log(data);
+    
   };
   const [setData, setsetData] = useState(null);
   const [error_msg, seterror_msg] = useState(null);
@@ -42,9 +42,7 @@ const LandingPageOptinForm = ({
     seterror_msg(error);
     setloading_value(loading);
   }, [data, error, loading]);
-  console.log(setData);
-  console.log(loading_value + " form");
-  console.log(error_msg + " land");
+ 
 
   // const LoadingComponent = () => (
   //   <button class="btn btn-primary" type="button" disabled>
@@ -285,13 +283,13 @@ const LandingPageOptinForm = ({
                 </div>
                 <div className="form-group text-center">
                   <button
-                    disabled={loading ? true : false}
+                    disabled={loading_value ? true : false}
                     type="submit"
                     className="btn btn-primary btn-md"
                     name="submit_form_btn"
                     id="submit_form_btn"
                   >
-                    {loading ? <LoadingComponent /> : "Send Details"}
+                    {loading_value ? <LoadingComponent /> : "Send Details"}
                   </button>
                 </div>
                 <div id="notification_div"></div>

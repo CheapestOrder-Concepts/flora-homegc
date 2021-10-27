@@ -17,6 +17,7 @@ import Optin_Trigger from "./Optin_Trigger";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import OptinForm from "./OptinForm";
 import OptinModal from "../../SharedComponents/OptinModal";
+// import Footer from "../../layouts/Footer";
 // import card_6 from "../../assets/card-6.jpg"
 const TheHive = () => {
   useEffect(() => {
@@ -1184,6 +1185,7 @@ const TheHive = () => {
         title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}
       />
+      {/* <Footer/> */}
     </>
   );
 };

@@ -4,7 +4,7 @@ import background from "../../assets/productAssets/about-bg.jpg";
 import workers from "../../assets/workers.jpg";
 import mdspeech1 from "../../assets/mdspeech1.jpg";
 
-// import Footer from "../../layouts/Footer";
+import Footer from "../../layouts/Footer";
 
 const About = () => {
   return (
@@ -146,7 +146,7 @@ const About = () => {
           </div>
         </section>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

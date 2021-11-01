@@ -46,7 +46,7 @@ useEffect(() => {
      alert("please fill all provided inputs")
      return
    }
-
+  //  console.log(formData);
    dispatch(booksAction(formData));
    setformData({
     full_name: "",

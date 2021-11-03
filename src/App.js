@@ -27,6 +27,7 @@ import Books from "./components/pages/Books/Books";
 import ScrollToTup from "./ScrollToTup";
 import NotFound from "./components/pages/404";
 import ThankYou from "./components/pages/ThankYou";
+import ProfessionalAdvisory from "./components/pages/Professional Advisory/ProfessionalAdvise";
 
 const App = () => {
   const myRef = useRef();
@@ -47,6 +48,10 @@ const App = () => {
           <Route path="/about" children={<About />} />
           <Route path="/verification" children={<Verification />} />
           <Route path="/cpbs" children={<CompleteBuyer />} />
+          <Route
+            path="/professional-advisory"
+            children={<ProfessionalAdvisory />}
+          />
           <Route path="/floracity" children={<Floracity />} />
           <Route path="/fern-island" children={<Floracity />} />
           <Route path="/the-hive" children={<TheHive />} />

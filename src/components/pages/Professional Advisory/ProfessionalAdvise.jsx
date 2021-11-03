@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
 import tawkTo from "tawkto-react";
-import "./style.css";
-import partner from "../../assets/partner2.jpg";
-// import optin_bg from "../../assets/optin-bg.jpg"
-// import verification from "../../assets/verification.png";
-// import background from "../../assets/background.jpg";
-import price from "../../assets/price.png";
-// import iconShape from "../../assets/icon-shape.png";
-import PaymentDetails from "../../SharedComponents/PaymentDetails";
-import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
-import EngageInService from "../../SharedComponents/EngageInService";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import makeConsultation from "../../../actions/verificationConsultation";
-import { useSelector } from "react-redux";
-// import Footer from "../../layouts/Footer";
-
-const Verification = () => {
+import EngageInService from "../../SharedComponents/EngageInService";
+import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
+import PaymentDetails from "../../SharedComponents/PaymentDetails";
+import partner from "../../assets/partner2.jpg";
+import price from "../../assets/price.png";
+const ProfessionalAdvisory = () => {
   const tawkToPropertyId = "5a9e51824b401e45400d70e9";
 
   // Direct Chat Link
@@ -62,17 +54,21 @@ const Verification = () => {
       <section style={{ background: "#541484" }}>
         <div className="heading-container">
           <h1>
-            Don't Lose Your Money, Let Us Help You Verify Your Real Estate
-            Investment.
+            Do you have any real estate related matters you'd like to get
+            clarification, advice, guidance, resolution or rectification?
           </h1>
         </div>
         <div className="heading-paragraph">
           <p>
             {" "}
-            We would be responsible for any demolition issues, fake estate
-            developers, Omo-Onile wahala, government acquisition, structural
-            defects or potential scams of your investments for the next{" "}
-            <span style={{ fontWeight: "bold" }}> 50years.</span>
+            For any matter relating to landed properties either for the purpose
+            of getting a safe and high yield profitable real estate related
+            investments or to clear any subject property against government
+            acquisition, title issues, ownership issues, Omo-Onile wahala, uses
+            issues, dispute, third party claimants, structural defects etc, we
+            affirm our capacity to objectively and professionally advise, guide,
+            resolve and rectify any of these matters for you either you're an
+            existing or an aspiring real estate investor.
           </p>
         </div>
         <div
@@ -103,13 +99,7 @@ const Verification = () => {
             CLICK HERE TO CALL{" "}
           </a>
         </div>
-        {/* <div className="img verification"> */}
-        {/* <h4
-          className="text-center"
-          style={{ marginBottom: "20px", color: "white" }}
-        >
-          Affiliated Professional Bodies
-        </h4> */}
+
         <img
           id="firstP"
           style={{ top: "-20px" }}
@@ -118,6 +108,22 @@ const Verification = () => {
           alt="partners"
         />
         {/* </div> */}
+        <div className="heading-paragraph">
+          <p>
+            Whether you are an individual, group, developer company, clubs,
+            religious organizations, NGOs or corporate organisation… as long as
+            the theme is real estate investments and property developments
+            related, let our certified property investment professionals help
+            you through
+          </p>
+        </div>
+        <ul className="list-style-decimal">
+          <li>One on one online calls</li>
+          <li>Physical meetings</li>
+          <li>Legal resolutions</li>
+          <li>Group advisory/presentation. </li>
+          <li>Others </li>
+        </ul>
       </section>
       <section>
         <div className=" content-column col-lg-12">
@@ -160,8 +166,8 @@ const Verification = () => {
           </ul>
 
           {/* <p style={{ fontWeight: 'bold' }}>
-                So how exactly do you know the genuinity of a property?
-              </p> */}
+              So how exactly do you know the genuinity of a property?
+            </p> */}
         </div>
       </section>
 
@@ -234,114 +240,13 @@ const Verification = () => {
               OR CLICK HERE TO CALL{" "}
             </a>
           </div>
-
-          {/* <div className="content-column">
-            <div className="inner-column">
-              <div className="row">
-                a comment: Bullet Listing Column 
-                <div className="affiliate-block col-lg-12 col-md-12">
-                  <div className="sec-title">
-                    <h2 className="text text-light">ONLY WHEN EVERY REQUIRED LANDED PROPERTY PROFESSIONALS COME TOGETHER TO TAKE EVERY SINGLE PROPERTY THROUGH PROPER VERIFICATION PROCESSES…
-                    </h2>
-                    <h2 className="text text-light">
-                      But Wait, Who are these professionals and What does the process entail?
-                    </h2>
-                  </div>
-                </div>
-              </div>
-             a coment start: <div class="row">
-
-                            <div class="container">
-
-                                <div class="text-center">
-
-                                    <div class="btn-box"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" class="theme-btn btn-style-four"><span class="btn-title">Engage Service</span></a></div>
-
-                                </div>
-
-                            </div>
-
-                       ends: </div>
-
-            </div>
-          </div> */}
         </div>
       </section>
-      {/*       
-      <section>
-        <div className="auto-container">
-          <div className="row">
-            <div className="col-lg-12 mt-5 mb-5">
-              comment: sana 
-              <p>
-                Due to the prevalence of demolition, eviction, dispute, collapse and scam issues relating to landed properties, our verification team which include but not limited to Estate Surveyors, Land Surveyors, Property Lawyers, Town-Planners, Civil Engineers, Architects, Researchers etc set out to help individuals and corporate investors to verify and clear their subject of interest either before paying for the new found property or for already existing property against government acquisition, title issues, ownership issues, Omo-Onile wahala, uses issues, dispute, third party claimants, structural defects etc. This we achieve by taking such properties through our systemised verification checklist.
-              </p>
-              <h5>
-                Where else do you want to do your property verification aside from FloraHomesGC, the most trusted property verification company in Nigeria with the right hands, qualifications and years of experience?
-              </h5>
-              <br />
-              <h2><b>Our property verification includes but not limited to the following:</b></h2>
-              <br /><br />
-              <h5> <b>1) STATUS VERIFICATION: This involves confirming if the land ( either unbuilt or built) is free from any government commitment.</b>
-              </h5>
-              <ul className="list-style-two mt-4">
-                <li>Physical land inspection with our land experts for picking Coordinates, and engaging in other field research.</li>
-                <li>Correlating the document data with the actual site location data and determining the actual status of the land.
-                </li>
-                <li>Competitive analysis of similar adjoining Properties.</li>
-                <li>Coordinate Charting at Surveyor General's office for updated information.</li>
-              </ul>
-              <br /><br />
-              <h5> <b>2) TITLE &amp; OWNERSHIP VALIDATION (TOV): This involves confirming the genuity of the acclaimed property title, checking for debt, encumbrances or dispute of any kind, as well as confirming the real ownership of the said property.</b>
-              </h5>
-              <ul className="list-style-two mt-4">
-                <li>A comprehensive examination of all documents
-                </li>
-                <li>Confirming other government Property requirements
-                </li>
-                <li>Authentication of the claimed title.</li>
-                <li>Authenticating the property ownership</li>
-                <li>Unveiling any possible third-party ownership claims.</li>
-                <li>Unraveling the property history.</li>
-                <li>Root of title research</li>
-                <li>Checking of taxes or collateral issues</li>
-                <li>Checking any internal dispute.</li>
-                <li>Presentation of Report at the end of the exercise.</li>
-              </ul>
-              <br /><br />
-              <h5> <b>3)BUILDING DOCUMENTS, LAND USES &amp; STRUCTURAL VERIFICATION: All documents regarding building regulation are vetted, land uses that ensure structures are fixed according to regulated plans and the structure is vetted to ascertain that there's no structural weaknesses that may lead to collapse, meeting all standard regarding futuristic investment. Contradicting these plans usually lead to demolition, collapse, eviction or paying penal-fees. </b>
-              </h5>
-              <ul className="list-style-two mt-4">
-                <li>Confirming all documents in relation to the structure.
-                </li>
-                <li>Ensure interest land use tally with existing use
-                </li>
-                <li>Confirming the site plan is in conformity with approved layout plan
-                </li>
-                <li>Confirming all planning tallies with the state master plan.
-                </li>
-                <li>Examining the Structural state of the interest building.
-                </li>
-                <li>Flooding susceptibility check.
-                </li>
-              </ul>
-              <br />
-            </div>
-          </div>
-        </div>
-      </section> */}
 
-      {/* <section style={{ backgroundImage: `url(${background})` }}> */}
       <section>
         <div className="auto-container">
           <div className="row">
             <div className="col-lg-12 pt-5 pb-5 text-white">
-              {/* <p style={{ color: 'white' }}> You're still waiting…
-              </p> */}
-              {/* <p style={{ color: 'white' }}>
-                We say
-                Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…
-              </p> */}
               <h5 style={{ color: "black" }}>
                 <b>Benefits and pricing:</b>
               </h5>
@@ -357,7 +262,8 @@ const Verification = () => {
                 </li>
                 <li>
                   Services are executed and delivered between 5-10 working days
-                  from the day of payment.
+                  and hence enabling you to make your transaction decisions on
+                  time.
                 </li>
                 <li>
                   We deploy only qualified property professionals to handle our
@@ -383,100 +289,6 @@ const Verification = () => {
           </div>
         </div>
       </section>
-
-      {/* <section className="about-section"> */}
-      {/* <div className="auto-container"> */}
-      {/* <section className="schedule-section">
-            <div className="anim-icons">
-              <span className="icon icon-circle-4 wow zoomIn animated animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
-              <span className="icon icon-circle-3 wow zoomIn animated animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
-            </div>
-            <div className="auto-container" style={{ overflowX: 'visible !important' }}>
-              <div className="sec-title text-center" style={{ overflowX: "visible !important" }}>
-                <span className="title">HOW TO</span>
-                <h2>Engage Our Verification Service</h2>
-              </div>
-              <div className="schedule-tabs tabs-box" style={{ overflowX: "visible !important" }}>
-                <div className="tabs-content" style={{ overflowX: "visible !important" }}>
-                  {Tab}
-                  <div className="tab active-tab" id="tab-1" style={{ overflowX: "visible !important" }}>
-                    <div className="schedule-timeline" style={{ overflowX: "visible !important" }}>
-                      { schedule Block }
-                      <div className="schedule-block" style={{ overflowX: "visible !important" }}>
-                        <div className="inner-box" style={{ overflowX: "visible !important" }}>
-                          <div className="inner" style={{ overflowX: "visible !important" }}>
-                            <div className="date" style={{ overflowX: "visible !important" }}>1ST <br /> STEP</div>
-                            {   <h4>Click Button</h4> }
-                            {   <div class="text" style="color: #000000">Enter your correct information <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style="text-decoration: underline;">here</a> with all the necessary documents
-
-                                            </div> }
-                            <button className="theme-btn btn-style-three"><span className="btn-title">Get Your Free Consultation</span></button>
-                            {  <div class="text" style="color: #000000; cursor: pointer !important;" ><strong id="form_caller">Get Your Free Consultation</strong>
-                                            </div> }
-                          </div>
-                        </div>
-                      </div>
-                      schedule Block 
-                      <div className="schedule-block even">
-                        <div className="inner-box">
-                          <div className="inner">
-                            <div className="date">2ND <br /> STEP</div>
-                           <h4>Payment</h4> 
-                            <div className="text" style={{ color: '#000000' }}>Make Payment.</div>
-                          </div>
-                        </div>
-                      </div>
-                    schedule are comment ...schedule Block 
-                      <div className="schedule-block">
-                        <div className="inner-box">
-                          <div className="inner">
-                            <div className="date">3RD <br /> STEP</div>
-                              comment starts... <h4>Service Information</h4>
-                           <div class="text" style="color: #000000">Submit Service Information.</div>... comment ends
-                            <a className="theme-btn btn-style-three" href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" style={{ textDecoration: 'none' }}><span className="btn-title">Submit Service Information.</span></a>
-                          </div>
-                        </div>
-                      </div>
-                      schedule Block= a comment
-                      <div className="schedule-block even">
-                        <div className="inner-box">
-                          <div className="inner">
-                            <div className="date">4TH <br /> STEP</div>
-                             comment...<h4>Customer Care</h4> 
-                            <div className="text" style={{ color: '#000000' }}>
-                              Connect with Your Personal Manager.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              *comment start here...<br><br> 
-              <div class="row">
-
-                    <div class="container">
-
-                        <div class="text-center">
-
-                            <div class="btn-box"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform " class="theme-btn btn-style-three"><span class="btn-title">Engage Service</span></a></div>
-
-                        </div> <br> <br>
-
-
-
-
-                    </div>
-
-                </div>
- *comment ends
-              <div className="text-center">
-                <h5 style={{ marginTop: '5px', color: '#3A005F !important' }}><b>NOW IT'S TIME TO TAKE YOUR FIRST STEP</b></h5>
-                <div className="btn-box"><button id className="theme-btn btn-style-four pop_up_form_simple" style={{}}><span className="btn-title">CLICK HERE TO SCHEDULE YOUR 15 MINUTES FREE CONSULTATION NOW</span></button></div>
-              </div>
-            </div>
-          </section> */}
 
       <section className>
         <div className="auto-container">
@@ -546,7 +358,6 @@ const Verification = () => {
             className="ul-text-dark"
             style={{ color: "white", marginLeft: "20px" }}
           >
-
             <li style={{ listStyleType: "decimal", marginBottom: "10px" }}>
               The Verification Service shall be executed and delivered between
               14 - 21 working days of physical site inspection with client or
@@ -557,40 +368,6 @@ const Verification = () => {
               with client or client's representative.
             </li>
           </ul>
-
-            <li style={{listStyleType:"decimal", marginBottom:"10px"}}>The Verification Service shall be executed and delivered between 14 - 21 working days from the day of payment.</li>
-            <li style={{listStyleType:"decimal"}}>VIP delivery of 5 - 10 working days from the day of payment.</li>
-</ul>
-          {/* <div className="content-column">
-            <div className="inner-column">
-              <div className="row">
-                a comment: Bullet Listing Column 
-                <div className="affiliate-block col-lg-12 col-md-12">
-                  <div className="sec-title">
-                    <h2 className="text text-light">ONLY WHEN EVERY REQUIRED LANDED PROPERTY PROFESSIONALS COME TOGETHER TO TAKE EVERY SINGLE PROPERTY THROUGH PROPER VERIFICATION PROCESSES…
-                    </h2>
-                    <h2 className="text text-light">
-                      But Wait, Who are these professionals and What does the process entail?
-                    </h2>
-                  </div>
-                </div>
-              </div>
-             a coment start: <div class="row">
-
-                            <div class="container">
-
-                                <div class="text-center">
-
-                                    <div class="btn-box"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" class="theme-btn btn-style-four"><span class="btn-title">Engage Service</span></a></div>
-
-                                </div>
-
-                            </div>
-
-                       ends: </div>
-
-            </div>
-          </div> */}
         </div>
       </section>
 
@@ -642,29 +419,19 @@ const Verification = () => {
             </div>
             <ul style={{ margin: "0px 20px" }} className="list-style-two">
               <li>
-                The legal fee is for vetting of closure documents, production
-                of contractual documents and execution of contractual documents
+                The legal fee is for vetting of closure documents, production of
+                Deed of Transfer, execution of the deed, processing of the title
+                document in client's name and monitoring it until eventually
+                granted.
               </li>
               <li>
-              Client pays all statutory fees as well as other ancillary expenses 
-              relating to taking property possession, Survey and title perfection, etc.
+                Client pays all government statutory fees as well as other
+                ancillary charges relating to Survey and documentation.
               </li>
             </ul>
 
             <EngageInService />
 
-            {/*    <br><br> */}
-            {/* 
-                    <div>
-                        <h5 style="color: #541484 !important;"><b>CONTACTS </b></h5>
-                        <p>
-                            Mail: hello.florahomesgc@gmail.com<br>
-                            Tel.: +234 809 444 2019<br>
-                            +234 802 442 1356<br>
-                        </p>
-
-                    </div> */}
-            {/*  <br><br> */}
             <br />
 
             <br />
@@ -744,25 +511,6 @@ const Verification = () => {
             </div>
             <br />
             <br />
-            {/*   <div class="row">
-
-
-
-                        <div class="container">
-
-                            <div class="text-center">
-
-                                <div class="btn-box"><a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform " class="theme-btn btn-style-three"><span class="btn-title">Engage Service</span></a></div>
-
-                            </div> <br> <br>
-
-
-
-
-                        </div>
-
-                    </div>
- */}
           </div>
         </div>
       </section>
@@ -780,4 +528,4 @@ const Verification = () => {
   );
 };
 
-export default Verification;
+export default ProfessionalAdvisory;

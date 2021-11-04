@@ -176,16 +176,16 @@ const Product = () => {
                 <div className="inner-box">
                   <div className="image-box">
                     <figure className="image">
-                      <Link to="#">
+                      <Link to="/professional-advisory">
                         <img src={advisory} alt="advisory" />
                       </Link>
                     </figure>
                   </div>
                   <div className="lower-content">
                     <h4>
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform">
-                        Professional Advisory Session
-                      </a>
+                      <Link to="/professional-advisory">
+                        Professional Advisory
+                      </Link>
                     </h4>
                     <p>
                       We offer both existing and aspiring real estate investors
@@ -196,12 +196,12 @@ const Product = () => {
                       offline. It is available for individuals, groups, clubs,
                       corporate, religious organizations, NGOs, etc
                     </p>
-                    <a
+                    <Link
                       className="custom-btn btn btn-lg"
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform"
+                      to="/professional-advisory"
                     >
                       View Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

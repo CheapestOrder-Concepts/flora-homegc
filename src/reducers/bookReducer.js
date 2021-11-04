@@ -6,7 +6,10 @@ export default (bookings = {}, action) => {
     case BOOKING_REQUEST:
       return { loading: true };
     case BOOKING_SUCCESS:
-      return { loading: false, bookings: action.payload?.data };
+      return (
+        { loading: false, bookings: action.payload?.data?.message },
+        (window.location.href = "https://www.florahomesgc.com/thank-you")
+      );
 
     case BOOKING_FAIL:
       return { loading: false, error: action.payload };

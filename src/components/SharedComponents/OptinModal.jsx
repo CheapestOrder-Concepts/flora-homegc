@@ -3,15 +3,18 @@ import ReactDOM from "react-dom";
 import ErrorMessage from "./Error";
 import { Feedback } from "./Feedback";
 import "./optinmodal.css";
-export default function OptinModal({setbookingDetail,componentId, component, error_msg, data }) {
-
- 
-  
+export default function OptinModal({
+  setbookingDetail,
+  componentId,
+  component,
+  error_msg,
+  data,
+}) {
+  console.log(data);
   return ReactDOM.createPortal(
     <>
       <div
         class="modal fade pt-2"
-        
         id={componentId}
         tabindex="-1"
         aria-labelledby={`${componentId}Label`}
@@ -26,30 +29,29 @@ export default function OptinModal({setbookingDetail,componentId, component, err
                 borderBottom: "0px solid #dee2e6",
                 background: "#541484",
                 color: "#fff",
+                marginTop: "15px",
               }}
             >
-                {data === null || !data ? (
-error_msg ? (
-      <ErrorMessage errorMessage={error_msg} />
-    ) : (
-      <h4 className="font-weight-bold text-white text-center mt-4">
-      The Property Investment Checklist
-    </h4>
-    )
-  ) : (
-    <Feedback data={data} />
-  )}
-             
-             
-          
-             
+              {data === null || !data ? (
+                error_msg ? (
+                  <ErrorMessage errorMessage={error_msg} />
+                ) : (
+                  <h4 className="font-weight-bold text-white text-center mt-4">
+                    The Property Investment Checklist
+                  </h4>
+                )
+              ) : (
+                <Feedback data={data} />
+              )}
+
               <button
-    
                 type="button"
                 className={`close mt-2 text-white`}
                 data-dismiss="modal"
                 aria-label="Close"
-                onClick={()=>setbookingDetail({bookings_data:null, error_msg:null})}
+                onClick={() =>
+                  setbookingDetail({ bookings_data: null, error_msg: null })
+                }
               >
                 <span aria-hidden="true">&times;</span>
               </button>

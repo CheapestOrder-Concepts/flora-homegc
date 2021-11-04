@@ -117,7 +117,10 @@ const ProfessionalAdvisory = () => {
             you through
           </p>
         </div>
-        <ul className="list-style-decimal">
+        <ul
+          className="list-style-two ul-text-white"
+          // style={{ color: "#fff", marginLeft: "15px" }}
+        >
           <li>One on one online calls</li>
           <li>Physical meetings</li>
           <li>Legal resolutions</li>
@@ -129,20 +132,15 @@ const ProfessionalAdvisory = () => {
         <div className=" content-column col-lg-12">
           <p>How it works</p>
           <ul className="list-style-decimal">
+            <li>You send in all your detailed briefs.</li>
             <li>
-              Our verification team made up of professionals: Estate Surveyors,
-              Land Surveyors, Property Lawyers, Town Planners, Civil Engineers,
-              Investigative Journalist, Architects, Builders, Quantity
-              Surveyors, etc are set to help individuals and corporate investors
-              to verify their land and building of interest before making
-              payment for it.{" "}
+              Our Property Professionals made up of: Researchers, Estate
+              Surveyors, Land Surveyors, Property Lawyers, Town Planners, Civil
+              Engineers, Investigative Journalist, Architects, Builders,
+              Quantity Surveyors, Property Investment Banker etc will draft out
+              your task roadmap for execution.
             </li>
-            <li>
-              When you allow us to carry out your Real Estate verification, you
-              have our assurance for the next 50 years. And, if there is any
-              matter that arises after our verification between this period. We
-              would refund your investment capital.
-            </li>
+            <li>Your job is executed with a professional report.</li>
             <li>
               <div
                 class="btn-box"
@@ -171,7 +169,7 @@ const ProfessionalAdvisory = () => {
         </div>
       </section>
 
-      <section className="" style={{ background: "#541484" }}>
+      {/* <section className="" style={{ background: "#541484" }}>
         <div className="auto-container">
           <p
             style={{
@@ -241,7 +239,7 @@ const ProfessionalAdvisory = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section>
         <div className="auto-container">
@@ -253,36 +251,40 @@ const ProfessionalAdvisory = () => {
               <br />
               <ul className="list-style-two ul-text-dark">
                 <li>
-                  It protects you against scam, eviction, encumbrance,
-                  demolition or any kind of property losses.
+                  You stay clear regarding any decision you'll be making
+                  regarding your property investment choice.
                 </li>
                 <li>
-                  You get peace of mind on your property as you do not stand any
-                  risk of property losses.
+                  Your decisions will be based on accurate data, not guess work.
                 </li>
                 <li>
-                  Services are executed and delivered between 5-10 working days
-                  and hence enabling you to make your transaction decisions on
-                  time.
+                  Your property has the advantage of being fully covered through
+                  us.
                 </li>
                 <li>
-                  We deploy only qualified property professionals to handle our
-                  clients' projects so you have no fear of losses due to
-                  quackery.
-                </li>
-                <li>Everything is done on your behalf 100%</li>
-                <li>
-                  We produce and execute the pre-purchase agreement and
-                  documentation.
+                  You can get extra call minutes and more physical meetings with
+                  professionals at your will.
                 </li>
                 <li>
-                  You enjoy stress-free, great value for less stress and you
-                  have more time to focus on other things that matter to you.
+                  You can be represented in Court when the situation calls for
+                  it.
                 </li>
                 <li>
-                  We give you a perfect understanding of the true status of your
-                  interest property to create for you a good basis for
-                  negotiation
+                  You can be represented for either one on one or group
+                  meetings.
+                </li>
+                <li>
+                  All your documentation are drafted and executed by us
+                  efficiently and promptly.
+                </li>
+                <li>Your work is done timely and efficiently</li>
+                <li>You can engage our services across different locations.</li>
+                <li>
+                  We ensure optimal privacy and confidentiality in our delivery
+                  to our clients
+                </li>
+                <li>
+                  Our trained workforce delivers truthfully and competently.
                 </li>
               </ul>
             </div>
@@ -292,58 +294,26 @@ const ProfessionalAdvisory = () => {
 
       <section className>
         <div className="auto-container">
-          <h5 style={{ color: "black", fontSize: "30px" }}>
-            <b>
-              Half done verification or No verification is usually a disaster.
-            </b>
+          <h5 style={{ color: "black" }}>
+            <b>Additional benefits</b>
           </h5>
-          <p
-            style={{
-              fontWeight: "bold",
-              color: "black",
-              fontSize: "20px",
-              marginTop: "20px",
-            }}
-          >
-            Verification is not just about
-          </p>
-          <ul
-            className="list-style-two ul-text-dark"
-            style={{ color: "white" }}
-          >
-            <li>Taking a surveyor to the land.</li>
-            <li>Sending documents to a lawyer.</li>
-            <li>
-              Seeing several developments and buildings around the property.
-            </li>
-            <li>The fence and beautiful gatehouse on the estate.</li>
-            <li>The promises of good returns</li>
-            <li>
-              The property has C of O, Gazette or Governor's Consent as a title.
-            </li>
-            <li>The house is beautiful.</li>
-            <li>
-              Being scared of land and so deciding on just buying buildings.
-            </li>
+          <br />
+          <ul className=" ul-text-dark">
+            <li>Normal Advisory:</li>
+            <ul className="ul-text-dark" style={{ marginLeft: "30px" }}>
+              <li style={{ listStyleType: "decimal" }}>0 physical meetings</li>
+              <li style={{ listStyleType: "decimal" }}>
+                0 - 30 minutes briefing and clarification calls.
+              </li>
+            </ul>
+            <li>VIP Advisory:</li>
+            <ul className="ul-text-dark" style={{ marginLeft: "30px" }}>
+              <li style={{ listStyleType: "decimal" }}>1 physical meeting</li>
+              <li style={{ listStyleType: "decimal" }}>
+                0 - 60 minutes briefing and clarification calls.
+              </li>
+            </ul>
           </ul>
-          <br />
-          <p style={{ fontWeight: "bold", fontSize: "18px" }}>
-            Don't be a victim of fake C of O, fake Excision, fake Allocation,
-            encumbered property, internal and external disputes, committed
-            acquisition, property encroaching road, wrong uses, incomplete
-            documentation, fake "title under processing", price extortion,
-            building with defective structure, property that is susceptible to
-            flooding, untruthful professionals, dubious agents, dubious
-            developers, greedy Omo-Onile, property with multiple owners and many
-            other issues…
-          </p>
-          <br />
-          <p style={{ fontWeight: "bold", fontSize: "18px" }}>
-            Let us run a complete property verification for your Real Estate
-            Investments irrespective of your location and get up to 50 years
-            warranty for your property.
-          </p>
-          <br />
           <p
             style={{
               fontWeight: "bold",
@@ -359,13 +329,12 @@ const ProfessionalAdvisory = () => {
             style={{ color: "white", marginLeft: "20px" }}
           >
             <li style={{ listStyleType: "decimal", marginBottom: "10px" }}>
-              The Verification Service shall be executed and delivered between
-              14 - 21 working days of physical site inspection with client or
-              client's representative.
+              Normal Advisory: Maximum of 14-21 working days from the date of
+              payment.
             </li>
             <li style={{ listStyleType: "decimal" }}>
-              VIP delivery of 5 - 10 working days of physical site inspection
-              with client or client's representative.
+              VIP Advisory: 5-10 working days speed execution from the date of
+              payment.
             </li>
           </ul>
         </div>
@@ -397,15 +366,17 @@ const ProfessionalAdvisory = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="text">1 Plot</td>
-                    <td className="text">N150,000 / $400</td>
+                    <td className="text">
+                      Land Mass less than Or equals 1 acre (4000sqm)
+                    </td>
                     <td className="text">N200,000 / $520</td>
-                    <td className="text">5% property purchase fee</td>
+                    <td className="text">N300,000 / $800</td>
+                    <td className="text">5% of property fair market value.</td>
                   </tr>
                   <tr>
                     <td className="text">With Viable Structure</td>
-                    <td className="text">+N50,000/building</td>
-                    <td className="text">+N70,000/building</td>
+                    <td className="text">+N50,000($135) per building</td>
+                    <td className="text">+N70,000($190) per building</td>
                     <td className="text" />
                   </tr>
                   <tr>
@@ -420,13 +391,12 @@ const ProfessionalAdvisory = () => {
             <ul style={{ margin: "0px 20px" }} className="list-style-two">
               <li>
                 The legal fee is for vetting of closure documents, production of
-                Deed of Transfer, execution of the deed, processing of the title
-                document in client's name and monitoring it until eventually
-                granted.
+                contractual documents and execution of contractual documents.
               </li>
               <li>
-                Client pays all government statutory fees as well as other
-                ancillary charges relating to Survey and documentation.
+                Client pays all statutory fees as well as other ancillary
+                expenses relating to taking property possession, Survey and
+                title perfection, etc.
               </li>
             </ul>
 

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "../../css/Modal.css";
+import "./landing-optin.css";
 import ErrorMessage from "./Error";
 import { Feedback } from "./Feedback";
 import LoadingComponent from "./Loading";
@@ -32,7 +33,6 @@ const LandingPageOptinForm = ({
   const onFormClose = (data) => {
     setsetData(null);
     seterror_msg(null);
-    
   };
   const [setData, setsetData] = useState(null);
   const [error_msg, seterror_msg] = useState(null);
@@ -42,7 +42,6 @@ const LandingPageOptinForm = ({
     seterror_msg(error);
     setloading_value(loading);
   }, [data, error, loading]);
- 
 
   // const LoadingComponent = () => (
   //   <button class="btn btn-primary" type="button" disabled>
@@ -62,7 +61,7 @@ const LandingPageOptinForm = ({
   return (
     <>
       <div
-        class="modal fade"
+        class="modal fade optin-root"
         id="landingModal"
         tabindex="-1"
         aria-labelledby="landingModalLabel"
@@ -77,13 +76,14 @@ const LandingPageOptinForm = ({
                 borderBottom: "0px solid #dee2e6",
                 background: "#541484",
                 color: "#fff",
+                marginTop: "40px",
               }}
             >
               {setData === null || !setData ? (
                 error_msg ? (
                   <ErrorMessage errorMessage={error_msg} />
                 ) : (
-                  <h4 className="font-weight-bold text-white text-center">
+                  <h4 className="font-weight-bold text-white text-center mt-5">
                     PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED
                   </h4>
                 )
@@ -91,6 +91,7 @@ const LandingPageOptinForm = ({
                 <Feedback data={setData} />
               )}
               <button
+                style={{ color: "#fff", marginTop: "15px" }}
                 type="button"
                 class="close"
                 data-dismiss="modal"

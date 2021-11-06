@@ -24,39 +24,39 @@ export default function Books() {
 
   const [bookingDetail, setbookingDetail] = useState({
     error_msg: null,
-    bookings_data: null
-  })
+    bookings_data: null,
+  });
 
-
-const {loading, error , bookings} = useSelector((state) =>state.bookingData)
-
-
-useEffect(() => {
- 
-   setbookingDetail({ error_msg:error, bookings_data:bookings})
-  
-  
-  }, [error,bookings])
+  const { loading, error, bookings } = useSelector(
+    (state) => state.bookingData
+  );
+  console.log(bookings);
+  useEffect(() => {
+    setbookingDetail({ error_msg: error, bookings_data: bookings });
+  }, [error, bookings]);
 
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-   e.preventDefault();
-   if (formData.full_name === ""||formData.email === ""||formData.phone_number === ""||formData.whatsapp_number === "") {
-     alert("please fill all provided inputs")
-     return
-   }
-
-   dispatch(booksAction(formData));
-   setformData({
-    full_name: "",
-    email: "",
-    phone_number: "",
-    whatsapp_number: "",
-   })
-   bookings && (window.location.href = "https://www.florahomesgc.com/thank-you")
-
- }
+    e.preventDefault();
+    if (
+      formData.full_name === "" ||
+      formData.email === "" ||
+      formData.phone_number === "" ||
+      formData.whatsapp_number === ""
+    ) {
+      alert("please fill all provided inputs");
+      return;
+    }
+    //  console.log(formData);
+    dispatch(booksAction(formData));
+    setformData({
+      full_name: "",
+      email: "",
+      phone_number: "",
+      whatsapp_number: "",
+    });
+  };
   return (
     <>
       <section style={{ backgroundImage: `url(${background})` }}>
@@ -920,11 +920,18 @@ useEffect(() => {
         </div>
       </section>
       <OptinModal
-      error_msg={bookingDetail.error_msg}
-      setbookingDetail={setbookingDetail}
-      data={bookingDetail.bookings_data}
+        error_msg={bookingDetail.error_msg}
+        setbookingDetail={setbookingDetail}
+        data={bookingDetail.bookings_data}
         componentId="bookOptin"
-        component={<BookOptinForm loading={loading} formData={formData} setformData={setformData} handleSubmit={handleSubmit} />}
+        component={
+          <BookOptinForm
+            loading={loading}
+            formData={formData}
+            setformData={setformData}
+            handleSubmit={handleSubmit}
+          />
+        }
       />
     </>
   );

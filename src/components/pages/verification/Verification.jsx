@@ -27,7 +27,6 @@ const Verification = () => {
     tawkTo(tawkToPropertyId, tawkToKey);
   }, []);
 
-
   const [consultationDetails, setconsultationDetails] = useState({
     full_name: "",
     email: "",
@@ -60,7 +59,6 @@ const Verification = () => {
 
   return (
     <>
-    
       <section style={{ background: "#541484" }}>
         <div className="heading-container">
           <h1>
@@ -227,9 +225,7 @@ const Verification = () => {
               data-target="#landingModal"
               class="theme-btn btn-style-four mb-4 mt-3"
             >
-              <span class="btn-title">
-               CONTACT US NOW
-              </span>
+              <span class="btn-title">CONTACT US NOW</span>
             </button>
           </div>
           <div className="phone-number">
@@ -347,7 +343,7 @@ const Verification = () => {
                 Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…
               </p> */}
               <h5 style={{ color: "black" }}>
-                <b>Benefits And Pricing:</b>
+                <b>Benefits and pricing:</b>
               </h5>
               <br />
               <ul className="list-style-two ul-text-dark">
@@ -535,7 +531,7 @@ const Verification = () => {
             Investments irrespective of your location and get up to 50 years
             warranty for your property.
           </p>
-<br />
+          <br />
           <p
             style={{
               fontWeight: "bold",
@@ -544,15 +540,28 @@ const Verification = () => {
               marginTop: "20px",
             }}
           >
-            PERIOD OF ENGAGEMENT
+            Period of engagement
           </p>
           <ul
             className="ul-text-dark"
-            style={{ color: "white", marginLeft:"20px" }}
+            style={{ color: "white", marginLeft: "20px" }}
           >
+<<<<<<< HEAD
+            <li style={{ listStyleType: "decimal", marginBottom: "10px" }}>
+              The Verification Service shall be executed and delivered between
+              14 - 21 working days of physical site inspection with client or
+              client's representative.
+            </li>
+            <li style={{ listStyleType: "decimal" }}>
+              VIP delivery of 5 - 10 working days of physical site inspection
+              with client or client's representative.
+            </li>
+          </ul>
+=======
             <li style={{listStyleType:"decimal", marginBottom:"10px"}}>The Verification Service shall be executed and delivered between 14 - 21 working days from the day of payment.</li>
             <li style={{listStyleType:"decimal"}}>VIP delivery of 5 - 10 working days from the day of payment.</li>
 </ul>
+>>>>>>> home
           {/* <div className="content-column">
             <div className="inner-column">
               <div className="row">
@@ -589,7 +598,7 @@ const Verification = () => {
       <section className="about-section">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <span className="title">PROFESSIONAL FEE</span>
+            <span className="title">Professional fee</span>
           </div>
           <div className="outer-box">
             <figure id="verification-img-v" className="verification-img-v">

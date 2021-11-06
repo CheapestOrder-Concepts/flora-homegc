@@ -4,18 +4,22 @@
 }
 .heading-container h1 {
   color: #fff;
-  font-size: 48px;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Raleway";
 }
 .heading-paragraph {
   text-align: center;
+  /* font-size: 48px; */
+  /* font-weight: 700; */
 }
 .heading-paragraph p {
   color: #fff;
-  line-height: 29px;
-  font-size: 24px;
+  line-height: 1.2rem;
+  font-size: 16px;
   padding: 10px 15px;
   font-weight: 200;
+  /* font-family: "ABeeZee"; */
 }
 div.img.verification {
   width: 90vw;
@@ -84,7 +88,7 @@ ul.list-style-decimal {
   }
   .heading-container h1 {
     padding: 0 15px;
-    line-height: 1.3em;
+    line-height: 1.5em;
     font-size: 26px;
     font-weight: 800;
   }

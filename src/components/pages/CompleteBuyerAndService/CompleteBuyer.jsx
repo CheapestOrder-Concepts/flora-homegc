@@ -8,6 +8,7 @@ import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
 import { useDispatch, useSelector } from "react-redux";
 import makeConsultation from "../../../actions/verificationConsultation";
 import EngageInService from "../../SharedComponents/EngageInService";
+import partner from "../../assets/partner2.jpg";
 
 const CompleteBuyer = () => {
   const [consultationDetails, setconsultationDetails] = useState({
@@ -41,117 +42,134 @@ const CompleteBuyer = () => {
   };
   return (
     <>
-      {/* <section className="banner-meetup">
-        <div className="bg-pattern" style={{backgroundImage: `url(${cpbs})`}} />
-        <div className="layer-outer">
-          <div className="gradient-layer" />
+      <section style={{ background: "#541484" }}>
+        <div className="heading-container">
+          <h1 style={{ color: "#fff" }}>
+            Even if you are a guru in property transactions... <br />
+            Even if you've been buying properties for countless times… <br />
+            And even if this is your first time purchasing property...
+          </h1>
         </div>
-        <div className="auto-container">
-          <div className="content-box">
-            <div className="address" />
-            <h2>COMPLETE PROPERTY BUYER SERVICE
-            </h2>
-          </div>
-          <div className="btn-box" style={{display: 'none'}}>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc8rf7DAg4Wb4-ghqM-IVMXglwR-M_CwMjLd3d3_sdeGUaxKA/viewform" className="theme-btn btn-style-two"><span className="btn-title">Engage service</span></a>
-          </div>
+        <div className="heading-paragraph">
+          <p>
+            {" "}
+            When we handle your interest or existing property transactions, we
+            would be responsible for any 3rd party claimants, disputes,
+            collateral issues, demolition issues, fake estate developers,
+            Omo-Onile wahala, government acquisition, structural defects or
+            potential scams of your investments for the next
+            <span style={{ fontWeight: "bold" }}> 50years.</span>
+          </p>
         </div>
-      </section> */}
+        <div
+          class="btn-box veriff-first"
+          style={{
+            display: "block",
+            // marginRight: "10px",
+            textAlign: "center",
+          }}
+        >
+          <button
+            data-toggle="modal"
+            data-target="#landingModal"
+            class="theme-btn btn-style-four mb-4 mt-3"
+          >
+            <span class="btn-title">REQUEST A CALL-BACK NOW</span>
+          </button>
+        </div>
+        <div
+          className="phone-number"
+          style={{
+            textAlign: "center",
+            display: "block",
+          }}
+        >
+          <a href="tel:+2348094442019 " className="call-link-one">
+            {" "}
+            CLICK HERE TO CALL{" "}
+          </a>
+        </div>
+        {/* <div className="img verification"> */}
+        {/* <h4
+          className="text-center"
+          style={{ marginBottom: "20px", color: "white" }}
+        >
+          Affiliated Professional Bodies
+        </h4> */}
+        <img
+          id="firstP"
+          style={{ top: "-20px" }}
+          className="mt-4"
+          src={partner}
+          alt="partners"
+        />
+        {/* </div> */}
 
-      <section className="about-section-two">
-        <div className="anim-icons full-width">
-          <span
-            className="icon icon-circle-blue wow fadeIn animated"
-            style={{ visibility: "visible", animationName: "fa-spin" }}
-          />
-          <span
-            className="icon icon-dots wow fadeInleft animated"
-            style={{ visibility: "visible" }}
-          />
-          <span
-            className="icon icon-circle-1 wow zoomIn animated"
-            style={{ visibility: "visible", animationName: "zoomIn" }}
-          />
+        <div className="heading-paragraph">
+          <p>
+            {" "}
+            Let us help you to prevent any form of present or future losses on
+            your Real Estate Investments before you pay for your next interest
+            property.
+          </p>
+          <p>
+            {" "}
+            If you have existing properties, let us help you perfect all your
+            documents the right way so as to secure your property at 100% and to
+            prevent any likelihood of future disputes, government claimants,
+            demolition, penal fees etc
+          </p>
         </div>
-        <div className="auto-container">
-          <h2>
-            <b>
-              Before You Pay For Your Next Property, Let's show you what you can
-              do to avoid any real estate gory story.
-            </b>
-          </h2>
-          <br />
-          <br />
-          <h4>
-            Are you an Individual property investor, Estate developer,
-            Organisation, off takers and you're ready to do another real estate
-            transaction?
-          </h4>
-          <br />
-          <h4>Silently answer this.</h4>
-          <br />
-          <ul className="list-style-two">
+      </section>
+      <section>
+        <div className=" content-column col-lg-12">
+          <p>How it works</p>
+          <ul className="list-style-decimal">
             <li>
-              Do you even know the kind of lawyers to consult for your property
-              or do you think any lawyer can give you the right landed property
-              search and advice?
+              Our Property Acquisition team made up of professionals:
+              Researchers, Estate Surveyors, Land Surveyors, Property Lawyers,
+              Town Planners, Civil Engineers, etc are set to help you secure
+              your property at 100% done for you whether you are an individual,
+              developer company or corporate investors.
             </li>
             <li>
-              Do you know that it's not every "surveyor" that knows about
-              correlating the site with its documents?
+              When you allow us to carry out the 7 property purchase stages:
+              Sourcing, Verification, Valuation, Negotiation, Payment, Survey,
+              and Documentation… 100% on your behalf, you have our assurance for
+              the next 50 years. And, if there is any matter that arises after
+              our delivery between this period. We would refund your investment
+              capital.
             </li>
             <li>
-              Do you know that aside from getting the right lawyer and the right
-              surveyor, there are other professionals that must also check
-              before you pay?
-            </li>
-            <li>How do you get the right agent that won't extort you?</li>
-            <li>
-              How do you know the right developer that will guarantee your
-              investments?
-            </li>
-            <li>
-              Or do you assume that once you're buying from an Estate, you gat
-              no issue?
-            </li>
-            <li>
-              How about knowing how you'll get a competent and truthful
-              professional that will assure you of buying right…
-            </li>
-            <li>
-              How about the stress of going for many inspections, the worries of
-              getting a trusted and ethical professional to represent you
-              without their personal greed, the headache of the humongous
-              documentation processes, the panic of transferring money to the
-              wrong account especially now that property impersonation is on the
-              rise?
+              <div
+                class="btn-box"
+                style={{ display: "inline", marginRight: "10px" }}
+              >
+                <button
+                  data-toggle="modal"
+                  data-target="#landingModal"
+                  class="theme-btn btn-style-four mb-4 mt-3"
+                >
+                  <span class="btn-title">REQUEST A CALL-BACK NOW</span>
+                </button>
+              </div>
+              <div className="phone-number">
+                <a href="tel:+2348094442019 " className="call-link-two">
+                  {" "}
+                  OR CLICK HERE TO CALL{" "}
+                </a>
+              </div>
             </li>
           </ul>
-          <br />
-          <p>
-            This is why there's Complete Property Buyer Service which involves
-            full execution of the buyer task through all the 7 stages of
-            property purchase: Sourcing, Verification, Valuation, Negotiation,
-            Payment, Survey, and Documentation… all done at 100% on behalf of
-            the client.
-          </p>
-          {/* <ul className="list-style-two">
-            <li>Getting the right agent that won't extort you…</li>
-            <li>Ensuring you're not scammed is a hard task…</li>
-            <li>Buying from the right developer or individual that will guarantee your investments...</li>
-            <li>Knowing how you'll get a competent and truthful professional that will assure you of buying right…</li>
-            <li>Do you even know the kind of lawyers to consult for your property or do you think any lawyer can give you the right landed property search and advice?</li>
-            <li>Do you know that it's not every "surveyor" that knows about correlating the site with its documents?</li>
-            <li>Do you know that aside from getting the right lawyer and the right surveyor, there are other professionals that must also check before you pay?</li>
-            <li>How about the stress of going for many inspections, the worries of getting a trusted and ethical professional to represent you without their personal greed, the headache of the humongous documentation processes, the panic of transferring money to the wrong account especially now that property impersonation is on the rise.</li>
-          </ul> */}
-          <br />
-          {/* <h4><b>This is why we are</b></h4> */}
+
+          {/* <p style={{ fontWeight: 'bold' }}>
+                So how exactly do you know the genuinity of a property?
+              </p> */}
         </div>
       </section>
 
       <h4 align="center">
-        <b>DIRECT AGENT Vs COMPLETE PROPERTY BUYER SERVICE.</b>
+        <b>Direct agent vs complete property buyer service</b>
       </h4>
       <br />
       <section style={{ backgroundImage: `url(${background})` }}>
@@ -371,7 +389,7 @@ const CompleteBuyer = () => {
       <br />
       <div className="auto-container">
         <h4>
-          <b>BENEFITS</b>
+          <b>Benefits</b>
         </h4>
         <ul className="list-style-one">
           <li>
@@ -449,7 +467,7 @@ const CompleteBuyer = () => {
         <br />
       </div>
 
-      <br />
+      {/* <br /> */}
       <div className="auto-container">
         <lable>
           <b>
@@ -459,14 +477,37 @@ const CompleteBuyer = () => {
           </b>
         </lable>
         <br />
-        {/* <br><br> */}
+        <p
+          style={{
+            fontWeight: "bold",
+            color: "black",
+            fontSize: "20px",
+            marginTop: "20px",
+          }}
+        >
+          Period of engagement
+        </p>
+        <ul
+          className="ul-text-dark"
+          style={{ color: "white", marginLeft: "20px" }}
+        >
+          <li style={{ listStyleType: "decimal", marginBottom: "10px" }}>
+            This Service shall be executed between 20 - 30 working days from the
+            day of payment.
+          </li>
+          <li style={{ listStyleType: "decimal" }}>
+            VIP delivery shall be executed between 10 - 15 working days from the
+            day of payment.
+          </li>
+        </ul>
         <br />
-        <h4>
-          <b>PROFESSIONAL FEES</b>
+        <br />
+        <h4 align="center">
+          <b>Professional fees</b>
         </h4>
-        <br />
+        {/* <br /> */}
       </div>
-      <br />
+      {/* <br /> */}
       <img src={price_table} width="100%" className="P2" alt="price_table" />
       <br />
       <section style={{ backgroundImage: `url(${background})` }} className="P1">
@@ -530,21 +571,21 @@ const CompleteBuyer = () => {
       <div className="auto-container">
         <ul className="list-style-two">
           <li>
-            The service charge covers for every task except documentation.
+            The service charge is for Sourcing, Verification, Valuation,
+            Negotiation and Payment.
           </li>
           <li>
             The legal fee is for vetting of closure documents, production of
-            Deed of Transfer, execution of the deed, processing of the title
-            document in client's name and monitoring it until eventually
-            granted.
+            contractual documents and execution of contractual documents.
           </li>
           <li>
-            Client pays all government statutory fees as well as other ancillary
-            charges relating to Survey and documentation.
+            Client pays all statutory fees as well as other ancillary expenses
+            relating to taking property possession, Survey and title perfection,
+            etc.
           </li>
         </ul>
         <br />
-        <EngageInService/>
+        <EngageInService />
         <hr
           style={{
             border: "1px solid red",
@@ -617,13 +658,14 @@ const CompleteBuyer = () => {
         </ul>
       </div>
       <PaymentDetails />
-      <LandingPageOptinForm 
-          onSubmit={onSubmit}
-          consultationDetails={consultationDetails}
-          setconsultationDetails={setconsultationDetails}
-          data={data}
-          loading={loading}
-          error={error}/>
+      <LandingPageOptinForm
+        onSubmit={onSubmit}
+        consultationDetails={consultationDetails}
+        setconsultationDetails={setconsultationDetails}
+        data={data}
+        loading={loading}
+        error={error}
+      />
     </>
   );
 };

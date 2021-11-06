@@ -546,22 +546,9 @@ const Verification = () => {
             className="ul-text-dark"
             style={{ color: "white", marginLeft: "20px" }}
           >
-<<<<<<< HEAD
-            <li style={{ listStyleType: "decimal", marginBottom: "10px" }}>
-              The Verification Service shall be executed and delivered between
-              14 - 21 working days of physical site inspection with client or
-              client's representative.
-            </li>
-            <li style={{ listStyleType: "decimal" }}>
-              VIP delivery of 5 - 10 working days of physical site inspection
-              with client or client's representative.
-            </li>
-          </ul>
-=======
             <li style={{listStyleType:"decimal", marginBottom:"10px"}}>The Verification Service shall be executed and delivered between 14 - 21 working days from the day of payment.</li>
             <li style={{listStyleType:"decimal"}}>VIP delivery of 5 - 10 working days from the day of payment.</li>
 </ul>
->>>>>>> home
           {/* <div className="content-column">
             <div className="inner-column">
               <div className="row">

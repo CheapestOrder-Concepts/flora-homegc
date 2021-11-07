@@ -11,12 +11,7 @@
 # files
 .history
 .vscode
-<<<<<<< HEAD
-public
-=======
-
->>>>>>> cce85bb689481e12b566c30e64dbc6978d46a8f6
-
+.eslintcache
 # production
 /build
 

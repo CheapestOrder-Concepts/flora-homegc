@@ -14,20 +14,14 @@ import iconShape from "../../assets/icon-shape.png";
 import mdspeech1 from "../../assets/mdspeech1.jpg";
 import homevideo from "../../assets/videos/home_video.mp4";
 import Footer from "../../layouts/Footer";
-
-// import LorR from './LorR';
 import { SliderData as slides } from "./sliderData";
 import Con2 from "./Con2";
 import BlogCard from "../BlogDetails.jsx/BlogCard";
 // import Nav from "../../layouts/Nav";
 
 const Home = () => {
-  const tawkToPropertyId = "5a9e51824b401e45400d70e9";
-
-  // Direct Chat Link
-  // https://tawk.to/chat/tawkToPropertyId/tawkToKey
-
-  const tawkToKey = "1cit1c3m8";
+  const tawkToPropertyId = "6187cbd66bb0760a49417fc1";
+  const tawkToKey = "1fjt78g7i";
 
   useEffect(() => {
     tawkTo(tawkToPropertyId, tawkToKey);

@@ -1,6 +1,13 @@
 import React from "react";
 
-export default function EngageInService() {
+export default function EngageInService({
+  first_step,
+  second_step,
+  third_step,
+  fourth_step,
+  call_to_action,
+  call_to_action2,
+}) {
   return (
     <>
       <div className="auto-container mt-5 mb-3">
@@ -29,9 +36,7 @@ export default function EngageInService() {
                         data-target="#landingModal"
                         id="form_caller"
                       >
-                        <span className="btn-title">
-                       Enter Your Detail Now To Request A Call-Back
-                        </span>
+                        <span className="btn-title">{first_step}</span>
                       </button>
                     </div>
                   </div>
@@ -45,7 +50,7 @@ export default function EngageInService() {
                       </div>
                       {/* <h4>Review</h4> */}
                       <div className="text" style={{ color: "#000000" }}>
-                        Make Payment.
+                        {second_step}
                       </div>
                     </div>
                   </div>
@@ -63,9 +68,7 @@ export default function EngageInService() {
                         className="theme-btn btn-style-three"
                         style={{ textDecoration: "none" }}
                       >
-                        <span className="btn-title">
-                          Submit Service Information.
-                        </span>
+                        <span className="btn-title">{third_step}</span>
                       </div>
                     </div>
                   </div>
@@ -78,7 +81,7 @@ export default function EngageInService() {
                       </div>
                       {/* <h4>Customer Care</h4> */}
                       <div className="text" style={{ color: "#000000" }}>
-                        Connect with Your Personal Manager.
+                        {fourth_step}
                       </div>
                     </div>
                   </div>
@@ -106,36 +109,9 @@ export default function EngageInService() {
           </div>
         </div>
       </div>
-      
-      <div
-              class="btn-box"
-              style={{
-                display: "block",
-                marginRight: "10px",
-                textAlign: "center",
-              }}
-            >
-              <button
-                data-toggle="modal"
-                data-target="#landingModal"
-                class="theme-btn btn-style-three mb-4 mt-3"
-              >
-                <span class="btn-title">REQUEST A CALL-BACK NOW</span>
-              </button>
-            </div>
-            <div
-              className="phone-number"
-              style={{
-                color: "#ed6c11",
-                textAlign: "center",
-                display: "block",
-              }}
-            >
-              <a href="tel:+2348094442019 " className="call-link-two">
-                {" "}
-                OR CLICK HERE TO CALL{" "}
-              </a>
-            </div>
+      {call_to_action}
+
+      {call_to_action2}
     </>
   );
 }

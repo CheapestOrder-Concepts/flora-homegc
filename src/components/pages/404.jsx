@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Nav from "../layouts/Nav";
 import notFound from "../assets/404.jpg";
 
 const styles = {
@@ -23,7 +22,6 @@ const styles = {
 };
 const NotFound = () => (
   <>
-    <Nav />
     <div style={styles.mainContainer}>
       {/* <h1 style={styles.header}>404 - Page Not Found!</h1> */}
       <img style={styles.image} src={notFound} alt="404" />

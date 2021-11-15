@@ -230,6 +230,59 @@ const Product = () => {
                   </div>
                 </div>
               </div>
+              <div className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
+                <div className="inner-box">
+                  <div className="image-box">
+                    <figure className="image">
+                      <Link to="/investments">
+                        <img src={smp} alt="Investment Management" />
+                      </Link>
+                    </figure>
+                  </div>
+                  <div className="lower-content">
+                    <h4>
+                      <Link to="/investments"> Investment Management</Link>
+                    </h4>
+                    <p>
+                      We help individuals, groups, Omo-Onile, organizations to
+                      sell their properties after having verified them free from
+                      any issues, then these properties are recommended to our
+                      waiting list of customers both in Nigeria and in diaspora.
+                    </p>
+                    <Link to="/investments" className="custom-btn btn btn-lg">
+                      View Now
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
+                <div className="inner-box">
+                  <div className="image-box">
+                    <figure className="image">
+                      <Link to="/bulk-land-purchase">
+                        <img src={smp} alt="bulk land purchase" />
+                      </Link>
+                    </figure>
+                  </div>
+                  <div className="lower-content">
+                    <h4>
+                      <Link to="/bulk-land-purchase"> Bulk Land Purchase</Link>
+                    </h4>
+                    <p>
+                      We help individuals, groups, Omo-Onile, organizations to
+                      sell their properties after having verified them free from
+                      any issues, then these properties are recommended to our
+                      waiting list of customers both in Nigeria and in diaspora.
+                    </p>
+                    <Link
+                      to="/bulk-land-purchase"
+                      className="custom-btn btn btn-lg"
+                    >
+                      View Now
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

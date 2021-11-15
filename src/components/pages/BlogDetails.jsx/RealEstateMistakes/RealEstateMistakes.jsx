@@ -1290,7 +1290,7 @@ const RealEstateMistakes = () => {
                         <div className="mob_view">
                           <img src={mobile_view} alt="" />
                         </div>
-                        <div className="row block">
+                        <div className="row row-block">
                           <div className="col-sm-6">
                             <img src={book} alt="" />
                           </div>

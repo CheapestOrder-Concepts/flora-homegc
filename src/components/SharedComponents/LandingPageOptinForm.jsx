@@ -286,11 +286,16 @@ const LandingPageOptinForm = ({
                   <button
                     disabled={loading_value ? true : false}
                     type="submit"
-                    className="btn btn-primary btn-md"
+                    className="btn btn-primary btn-lg"
                     name="submit_form_btn"
                     id="submit_form_btn"
+                    style={{
+                      width: "100%",
+                      marginBottom: "30px",
+                      textTransform: "uppercase",
+                    }}
                   >
-                    {loading_value ? <LoadingComponent /> : "Send Details"}
+                    {loading_value ? <LoadingComponent /> : "Submit Details"}
                   </button>
                 </div>
                 <div id="notification_div"></div>

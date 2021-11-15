@@ -920,6 +920,7 @@ export default function Books() {
         </div>
       </section>
       <OptinModal
+        header="The Property Investment Checklist"
         error_msg={bookingDetail.error_msg}
         setbookingDetail={setbookingDetail}
         data={bookingDetail.bookings_data}

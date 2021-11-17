@@ -6,6 +6,8 @@ import hsn from "../../assets/hsn-book.png";
 import fern from "../../assets/productAssets/fern.jpg";
 import smp from "../../assets/productAssets/smp.jpg";
 import verification from "../../assets/productAssets/veri_serv.png";
+import blp from "../../assets/productAssets/blp.jpg";
+import investment from "../../assets/productAssets/investment.jpg";
 import workers from "../../assets/workers.jpg";
 
 import "../../../css/Product.css";
@@ -235,7 +237,7 @@ const Product = () => {
                   <div className="image-box">
                     <figure className="image">
                       <Link to="/investments">
-                        <img src={smp} alt="Investment Management" />
+                        <img src={investment} alt="Investment Management" />
                       </Link>
                     </figure>
                   </div>
@@ -244,10 +246,14 @@ const Product = () => {
                       <Link to="/investments"> Investment Management</Link>
                     </h4>
                     <p>
-                      We help individuals, groups, Omo-Onile, organizations to
-                      sell their properties after having verified them free from
-                      any issues, then these properties are recommended to our
-                      waiting list of customers both in Nigeria and in diaspora.
+                      This involves using investors' funds to finance land
+                      sponsorship projects (clearing, sand filling,
+                      documentation, road, bridges), Buying & Selling of lands,
+                      flipping, renovating to sell or lease, building
+                      development , selling of buildings, rentals. The company
+                      fully executes the project 100% while sharing the profit
+                      with the investors either in the form of land or cash
+                      return. <br /> continuing reading…
                     </p>
                     <Link to="/investments" className="custom-btn btn btn-lg">
                       View Now
@@ -260,7 +266,7 @@ const Product = () => {
                   <div className="image-box">
                     <figure className="image">
                       <Link to="/bulk-land-purchase">
-                        <img src={smp} alt="bulk land purchase" />
+                        <img src={blp} alt="bulk land purchase" />
                       </Link>
                     </figure>
                   </div>
@@ -269,10 +275,18 @@ const Product = () => {
                       <Link to="/bulk-land-purchase"> Bulk Land Purchase</Link>
                     </h4>
                     <p>
-                      We help individuals, groups, Omo-Onile, organizations to
-                      sell their properties after having verified them free from
-                      any issues, then these properties are recommended to our
-                      waiting list of customers both in Nigeria and in diaspora.
+                      <span style={{ fontWeight: "bold" }}>
+                        {" "}
+                        FOR DEVELOPERS, ORGANISATIONS AND OTHER INDIVIDUALS
+                        INTERESTED IN PURCHASING LARGE EXPANSE OF LAND.
+                      </span>
+                      Here, our company sell-off part of our land that we had
+                      acquired through sponsorship projects, direct purchase,
+                      partnership etc in order to serve the developer companies,
+                      organisations and other individuals looking to purchase
+                      large expanse of land either to be developed now or to be
+                      fenced and speculated upon as a land banker. <br />{" "}
+                      Continue reading...
                     </p>
                     <Link
                       to="/bulk-land-purchase"

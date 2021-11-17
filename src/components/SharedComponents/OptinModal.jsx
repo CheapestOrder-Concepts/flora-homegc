@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { useMediaQuery } from "react-responsive";
 import ErrorMessage from "./Error";
 import { Feedback } from "./Feedback";
 import "./optinmodal.css";

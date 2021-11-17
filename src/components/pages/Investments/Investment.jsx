@@ -890,7 +890,6 @@ const Investment = () => {
             formData={formData}
             setformData={setformData}
             handleSubmit={handleSubmit}
-            use_amount_of_first_purc={true}
             use_balance_payment={true}
             use_discount={true}
             use_est_name={true}

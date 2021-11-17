@@ -1181,6 +1181,7 @@ const Floracity = () => {
       </section>
       <PaymentDetails />
       <OptinModal
+        bookingDetail={bookingDetail}
         setbookingDetail={setbookingDetail}
         componentId="optinForm"
         header="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"

@@ -361,6 +361,7 @@ const FloraEcopolis = () => {
         </div>
       </section>
       <OptinModal
+        bookingDetail={bookingDetail}
         setbookingDetail={setbookingDetail}
         componentId="optinForm"
         title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"

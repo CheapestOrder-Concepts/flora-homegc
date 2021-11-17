@@ -40,7 +40,7 @@ export default function InestmentReusableForm({
       />
     </div>
   );
-  const Number_Of_Units = () => (
+  const NumberOfUnits = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <input
         type="text"
@@ -58,7 +58,7 @@ export default function InestmentReusableForm({
       />
     </div>
   );
-  const Number_Of_Units_Every_Subscription = () => (
+  const NumberOfUnitsEverySubscription = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <input
         type="text"
@@ -76,7 +76,7 @@ export default function InestmentReusableForm({
       />
     </div>
   );
-  const Amount_Of_First_Purchase = () => (
+  const AmountOfFirstPurchase = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <input
         type="text"
@@ -94,7 +94,7 @@ export default function InestmentReusableForm({
       />
     </div>
   );
-  const No_Of_Units_Unpaid = () => (
+  const NoOfUnitsUnpaid = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <input
         type="text"
@@ -112,7 +112,7 @@ export default function InestmentReusableForm({
       />
     </div>
   );
-  const Date_Input = () => (
+  const DateInput = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <label for="service_of_interested">Proposed payment Date</label>
       <input
@@ -164,7 +164,7 @@ export default function InestmentReusableForm({
       <input type="text" name="landsize" id="" placeholder="Others (specify)" />
     </div>
   );
-  const Balance_Payment = () => (
+  const BalancePayment = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <select className="custom-select" name="balance_payment" required>
         <option value>Duration to Balance Payment</option>
@@ -182,7 +182,7 @@ export default function InestmentReusableForm({
       />
     </div>
   );
-  const Subscription_Plan = () => (
+  const SubscriptionPlan = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <select className="custom-select" name="subscription_plan" required>
         <option value>Subscription Plan after first purchase</option>
@@ -353,20 +353,18 @@ export default function InestmentReusableForm({
                     </option>
                   </select>
                 </div>
-                {useBudget == true && <Budget />}
-                {use_discount == true && <Discount />}
-                {use_est_name == true && <EstateName />}
-                {use_land_size == true && <LandSize />}
-                {use_no_of_units == true && <Number_Of_Units />}
-                {use_amount_of_first_purc == true && (
-                  <Amount_Of_First_Purchase />
-                )}
-                {useDate == true && <Date_Input />}
-                {use_no_of_units_unpaid == true && <No_Of_Units_Unpaid />}
-                {use_balance_payment == true && <Balance_Payment />}
-                {use_sub_plan == true && <Subscription_Plan />}
-                {use_no_of_units_every_sub == true && (
-                  <Number_Of_Units_Every_Subscription />
+                {useBudget === true && <Budget />}
+                {use_discount === true && <Discount />}
+                {use_est_name === true && <EstateName />}
+                {use_land_size === true && <LandSize />}
+                {use_no_of_units === true && <NumberOfUnits />}
+                {use_amount_of_first_purc === true && <AmountOfFirstPurchase />}
+                {useDate === true && <DateInput />}
+                {use_no_of_units_unpaid === true && <NoOfUnitsUnpaid />}
+                {use_balance_payment === true && <BalancePayment />}
+                {use_sub_plan === true && <SubscriptionPlan />}
+                {use_no_of_units_every_sub === true && (
+                  <NumberOfUnitsEverySubscription />
                 )}
                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
                   <select

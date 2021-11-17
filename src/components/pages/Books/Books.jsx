@@ -46,8 +46,8 @@ export default function Books() {
       formData.email === "" ||
       formData.phone_number === "" ||
       formData.whatsapp_number === "" ||
-      formData.category == "" ||
-      formData.how_you_hear_about_us == ""
+      formData.category === "" ||
+      formData.how_you_hear_about_us === ""
     ) {
       alert("please fill all provided inputs");
       return;

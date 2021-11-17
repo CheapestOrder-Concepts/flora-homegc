@@ -333,7 +333,18 @@ const ClientEngagementForm = ({
                   />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                  <select className="custom-select" name="source" required>
+                  <select
+                    className="custom-select"
+                    onChange={(e) =>
+                      setformData({
+                        ...formData,
+                        how_you_hear_about_us: e.target.value,
+                      })
+                    }
+                    value={formData.how_you_hear_about_us}
+                    name=" how_you_hear_about_us"
+                    required
+                  >
                     <option value>How did you know about us?</option>
                     <option value="Facebook">Facebook</option>
                     <option value="Instagram ">Instagram </option>

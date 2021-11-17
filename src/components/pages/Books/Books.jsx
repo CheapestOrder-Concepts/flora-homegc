@@ -20,6 +20,8 @@ export default function Books() {
     email: "",
     phone_number: "",
     whatsapp_number: "",
+    how_you_hear_about_us: "",
+    category: "",
   });
 
   const [bookingDetail, setbookingDetail] = useState({
@@ -43,7 +45,9 @@ export default function Books() {
       formData.full_name === "" ||
       formData.email === "" ||
       formData.phone_number === "" ||
-      formData.whatsapp_number === ""
+      formData.whatsapp_number === "" ||
+      formData.category == "" ||
+      formData.how_you_hear_about_us == ""
     ) {
       alert("please fill all provided inputs");
       return;
@@ -55,6 +59,8 @@ export default function Books() {
       email: "",
       phone_number: "",
       whatsapp_number: "",
+      category: "",
+      how_you_hear_about_us: "",
     });
   };
   return (

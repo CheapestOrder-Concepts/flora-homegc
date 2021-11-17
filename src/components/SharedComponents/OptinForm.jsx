@@ -9,8 +9,8 @@ const OptinForm = ({ showReg = true, handleClose }) => {
     category: "",
     est_interest: "",
     when_to_purchase: "",
-    referer: "",
     budget: "",
+    how_you_hear_about_us: "",
   });
   const {
     fullName,
@@ -19,8 +19,8 @@ const OptinForm = ({ showReg = true, handleClose }) => {
     category,
     est_interest,
     when_to_purchase,
-    referer,
     budget,
+    how_you_hear_about_us,
   } = regDetails;
 
   const onChange = (e) => {
@@ -168,8 +168,8 @@ const OptinForm = ({ showReg = true, handleClose }) => {
         <div className="form-group">
           {/* <label for="how_you_know_about_us">How did you know about us?</label> */}
           <select
-            name="referer"
-            value={referer}
+            name=" how_you_hear_about_us"
+            value={how_you_hear_about_us}
             className="form-control"
             onChange={onChange}
           >

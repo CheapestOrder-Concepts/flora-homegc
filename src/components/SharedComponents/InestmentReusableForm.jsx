@@ -326,7 +326,18 @@ export default function InestmentReusableForm({
                 </div>
                 {useAddress === true && <Address />}
                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                  <select className="custom-select" name="category" required>
+                  <select
+                    className="custom-select"
+                    name="category"
+                    value={formData.category}
+                    onChange={(e) =>
+                      setformData({
+                        ...formData,
+                        category: e.target.value,
+                      })
+                    }
+                    required
+                  >
                     <option value>Select Enquiry Category</option>
                     <option value="Individual buyer/investor">
                       Individual buyer/investor
@@ -358,7 +369,18 @@ export default function InestmentReusableForm({
                   <Number_Of_Units_Every_Subscription />
                 )}
                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                  <select className="custom-select" name="source" required>
+                  <select
+                    className="custom-select"
+                    name="source"
+                    value={formData.how_you_hear_about_us}
+                    onChange={(e) =>
+                      setformData({
+                        ...formData,
+                        how_you_hear_about_us: e.target.value,
+                      })
+                    }
+                    required
+                  >
                     <option value>How did you know about us?</option>
                     <option value="Facebook">Facebook</option>
                     <option value="Instagram ">Instagram </option>

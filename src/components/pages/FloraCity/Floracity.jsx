@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import FloraImgBox from "./FloraImgBox";
 import thefernisland_features from "../../assets/thefernisland-features.png";
@@ -13,14 +13,15 @@ import rocket from "../../assets/rocket.svg";
 import handleAccordion from ".";
 import Optin_Trigger from "./Optin_Trigger";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
-import OptinForm from "./OptinForm";
 import OptinModal from "../../SharedComponents/OptinModal";
+import OptinForm from "../../SharedComponents/OptinForm";
 // import Footer from "../../layouts/Footer";
 
 const Floracity = () => {
   useEffect(() => {
     handleAccordion();
   }, []);
+  const [bookingDetail, setbookingDetail] = useState({});
   return (
     <>
       <section className="banner-meetup">
@@ -1180,8 +1181,10 @@ const Floracity = () => {
       </section>
       <PaymentDetails />
       <OptinModal
+        bookingDetail={bookingDetail}
+        setbookingDetail={setbookingDetail}
         componentId="optinForm"
-        title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
+        header="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}
       />
       {/* <Footer/> */}

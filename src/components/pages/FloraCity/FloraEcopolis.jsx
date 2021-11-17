@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
-import React from "react";
+import React, { useState } from "react";
 
 import Optin_Trigger from "./Optin_Trigger";
 import "./flora.css";
@@ -13,11 +13,12 @@ import gal2 from "../../assets/flora-images/flora-gal2.jpg";
 import gal3 from "../../assets/flora-images/flora-gal3.jpg";
 import gal4 from "../../assets/flora-images/flora-gal4.jpg";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
-import OptinForm from "./OptinForm";
 import OptinModal from "../../SharedComponents/OptinModal";
+import OptinForm from "../../SharedComponents/OptinForm";
 // import Footer from "../../layouts/Footer";
 
 const FloraEcopolis = () => {
+  const [bookingDetail, setbookingDetail] = useState({});
   return (
     <>
       <section className="banner-meetup">
@@ -360,6 +361,8 @@ const FloraEcopolis = () => {
         </div>
       </section>
       <OptinModal
+        bookingDetail={bookingDetail}
+        setbookingDetail={setbookingDetail}
         componentId="optinForm"
         title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}

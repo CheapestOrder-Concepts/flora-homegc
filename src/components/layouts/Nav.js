@@ -200,7 +200,7 @@ const Nai = () => {
               </Link>
               <Link
                 className="dropdown-item"
-                to="#"
+                to="/investments"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
               >
@@ -209,7 +209,7 @@ const Nai = () => {
               <div className="dropdown-divider"></div>
               <Link
                 className="dropdown-item"
-                to="/#"
+                to="#"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
               >

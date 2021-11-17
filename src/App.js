@@ -16,7 +16,6 @@ import Floracity from "./components/pages/FloraCity/Floracity";
 import TheHive from "./components/pages/FloraCity/TheHive";
 import FloraEcopolis from "./components/pages/FloraCity/FloraEcopolis";
 import OurEstates from "./components/pages/OurEstates/OurEstates";
-import OptinForm from "./components/pages/FloraCity/OptinForm";
 import LagosSetToDigitalize from "./components/pages/BlogDetails.jsx/LagosSetToDemolish/LagosSetToDemolish";
 import KnowYourLandSize from "./components/pages/BlogDetails.jsx/KnowYourLandSize/KnowYourLandSize";
 import KnowYourPropertyTitle from "./components/pages/BlogDetails.jsx/KnowYourPropertyTitle/KnowYourTitle";
@@ -28,6 +27,8 @@ import ScrollToTup from "./ScrollToTup";
 import NotFound from "./components/pages/404";
 import ThankYou from "./components/pages/ThankYou";
 import ProfessionalAdvisory from "./components/pages/Professional Advisory/ProfessionalAdvise";
+import Investment from "./components/pages/Investments/Investment";
+import OptinForm from "./components/SharedComponents/OptinForm";
 
 const App = () => {
   const myRef = useRef();
@@ -52,6 +53,7 @@ const App = () => {
             path="/professional-advisory"
             children={<ProfessionalAdvisory />}
           />
+          <Route path="/investments" children={<Investment />} />
           <Route path="/floracity" children={<Floracity />} />
           <Route path="/fern-island" children={<Floracity />} />
           <Route path="/the-hive" children={<TheHive />} />

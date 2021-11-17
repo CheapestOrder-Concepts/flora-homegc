@@ -9,7 +9,8 @@ const OptinForm = ({ showReg = true, handleClose }) => {
     category: "",
     est_interest: "",
     when_to_purchase: "",
-    referer: "",
+    budget: "",
+    how_you_hear_about_us: "",
   });
   const {
     fullName,
@@ -18,7 +19,8 @@ const OptinForm = ({ showReg = true, handleClose }) => {
     category,
     est_interest,
     when_to_purchase,
-    referer,
+    budget,
+    how_you_hear_about_us,
   } = regDetails;
 
   const onChange = (e) => {
@@ -135,11 +137,19 @@ const OptinForm = ({ showReg = true, handleClose }) => {
             <option value="Floracity Ecopolis">Floracity Ecopolis</option>
           </select>
         </div>
-        <div
-          id="dynamic_field"
-          className="form-group"
-          style={{ display: "none" }}
-        ></div>
+        <div className="form-group">
+          <input
+            type="text"
+            name="Budget"
+            className="form-control txtOnly"
+            id="budget"
+            required
+            maxLength={50}
+            placeholder="Budget(Naira)"
+            onChange={onChange}
+            value={budget}
+          />
+        </div>
         <div className="form-group">
           <label for="service_of_interested">
             When do you need this service
@@ -158,8 +168,8 @@ const OptinForm = ({ showReg = true, handleClose }) => {
         <div className="form-group">
           {/* <label for="how_you_know_about_us">How did you know about us?</label> */}
           <select
-            name="referer"
-            value={referer}
+            name=" how_you_hear_about_us"
+            value={how_you_hear_about_us}
             className="form-control"
             onChange={onChange}
           >
@@ -182,11 +192,12 @@ const OptinForm = ({ showReg = true, handleClose }) => {
         <div className="form-group text-center">
           <button
             type="submit"
-            className="btn btn-primary btn-md"
+            className="btn btn-primary btn-lg"
             name="submit_form_btn"
             id="submit_form_btn"
+            style={{ width: "100%", textTransform: "uppercase" }}
           >
-            Send Details
+            Submit Details
           </button>
         </div>
         <div id="notification_div"></div>

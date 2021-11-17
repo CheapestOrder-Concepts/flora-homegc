@@ -1,9 +1,12 @@
 import React from "react";
 import LoadingComponent from "../../SharedComponents/Loading";
 
-
-export default function BookOptinForm({formData, setformData, handleSubmit, loading}) {
-
+export default function BookOptinForm({
+  formData,
+  setformData,
+  handleSubmit,
+  loading,
+}) {
   return (
     <div>
       <form method="POST" id="pricing_modal_form" onSubmit={handleSubmit}>
@@ -86,8 +89,21 @@ export default function BookOptinForm({formData, setformData, handleSubmit, load
                   />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                  <select className="custom-select" name="category" required>
-                    <option value>Select Enquiry Category</option>
+                  <select
+                    className="custom-select"
+                    name="category"
+                    required
+                    value={formData.category}
+                    onChange={(e) =>
+                      setformData({
+                        ...formData,
+                        category: e.target.value,
+                      })
+                    }
+                  >
+                    <option disabled value>
+                      Select Enquiry Category
+                    </option>
                     <option value="Individual buyer/investor">
                       Individual buyer/investor
                     </option>
@@ -103,8 +119,21 @@ export default function BookOptinForm({formData, setformData, handleSubmit, load
                   </select>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                  <select className="custom-select" name="source" required>
-                    <option value>How did you know about us?</option>
+                  <select
+                    className="custom-select"
+                    name="how_you_hear_about_us"
+                    required
+                    value={formData.how_you_hear_about_us}
+                    onChange={(e) =>
+                      setformData({
+                        ...formData,
+                        how_you_hear_about_us: e.target.value,
+                      })
+                    }
+                  >
+                    <option disabled value>
+                      How did you know about us?
+                    </option>
                     <option value="Facebook">Facebook</option>
                     <option value="Instagram ">Instagram </option>
                     <option value="Google">Google</option>
@@ -126,17 +155,20 @@ export default function BookOptinForm({formData, setformData, handleSubmit, load
 
         {/* Modal footer */}
         <div className="modal-footer">
-          {
-            loading ? <LoadingComponent/>:  <button
-            onClick={handleSubmit}
-              className="theme-btn btn-style-one"
+          {loading ? (
+            <LoadingComponent />
+          ) : (
+            <button
+              onClick={handleSubmit}
+              className="theme-btn btn-style-one btn-lg"
               type="submit"
               name="submit-form"
+              style={{ textTransform: "uppercase", width: "100%" }}
             >
-              <span className="btn-title">Submit Now</span>
+              <span className="btn-title">Submit Details</span>
             </button>
-          }
-        
+          )}
+
           {/* <button type="button" class="theme-btn btn-style-four" style=" pointer-events: none; cursor: pointer !important;" data-dismiss="modal">Close</button> */}
         </div>
       </form>

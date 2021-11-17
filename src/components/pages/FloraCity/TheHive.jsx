@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import thehive_header from "../../assets/thehive-header.jpg";
 import Elevation1 from "../../assets/Elevation1.jpg";
@@ -15,14 +15,15 @@ import rocket from "../../assets/rocket.svg";
 import handleAccordion from ".";
 import Optin_Trigger from "./Optin_Trigger";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
-import OptinForm from "./OptinForm";
 import OptinModal from "../../SharedComponents/OptinModal";
+import OptinForm from "../../SharedComponents/OptinForm";
 // import Footer from "../../layouts/Footer";
 // import card_6 from "../../assets/card-6.jpg"
 const TheHive = () => {
   useEffect(() => {
     handleAccordion();
   }, []);
+  const [bookingDetail, setbookingDetail] = useState({});
 
   return (
     <>
@@ -1181,6 +1182,8 @@ const TheHive = () => {
       </section>
       <PaymentDetails />
       <OptinModal
+        bookingDetail={bookingDetail}
+        setbookingDetail={setbookingDetail}
         componentId="optinForm"
         title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}

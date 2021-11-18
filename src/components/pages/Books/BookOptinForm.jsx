@@ -101,7 +101,7 @@ export default function BookOptinForm({
                       })
                     }
                   >
-                    <option disabled value>
+                    <option selected disabled value="">
                       Select Enquiry Category
                     </option>
                     <option value="Individual buyer/investor">
@@ -131,7 +131,7 @@ export default function BookOptinForm({
                       })
                     }
                   >
-                    <option disabled value>
+                    <option selected disabled value="">
                       How did you know about us?
                     </option>
                     <option value="Facebook">Facebook</option>

@@ -167,7 +167,9 @@ const ClientEngagementForm = ({
                     name="service_of_engagement)"
                     required
                   >
-                    <option value>Service of Engagement</option>
+                    <option defaultValue disabled value="">
+                      Service of Engagement
+                    </option>
                     <option value="Complete Verification Service">
                       Complete Verification Service
                     </option>
@@ -203,7 +205,9 @@ const ClientEngagementForm = ({
                     name="choice_of_service_engagement"
                     required
                   >
-                    <option value>Choice of Service Engagement</option>
+                    <option defaultValue disabled value="">
+                      Choice of Service Engagement
+                    </option>
                     <option value="Online">Online</option>
                     <option value="Offline ">Offline</option>
                     <option value="Both online and offline. ">
@@ -217,7 +221,7 @@ const ClientEngagementForm = ({
                     name="Choose your preferred communication choice"
                     required
                   >
-                    <option value>
+                    <option defaultValue disabled value="">
                       Choose your preferred communication choice
                     </option>
                     <option value="Call">Call</option>
@@ -265,7 +269,9 @@ const ClientEngagementForm = ({
                     name="property_uses"
                     required
                   >
-                    <option value>Property Uses</option>
+                    <option defaultValue disabled value="">
+                      Property Uses
+                    </option>
                     <option value="Residential">Residential</option>
                     <option value="Commercial">Commercial</option>
                     <option value="Industrial">Industrial</option>
@@ -345,7 +351,9 @@ const ClientEngagementForm = ({
                     name=" how_you_hear_about_us"
                     required
                   >
-                    <option value>How did you know about us?</option>
+                    <option defaultValue disabled value="">
+                      How did you know about us?
+                    </option>
                     <option value="Facebook">Facebook</option>
                     <option value="Instagram ">Instagram </option>
                     <option value="Google">Google</option>

@@ -17,6 +17,7 @@ const LandingPageOptinForm = ({
     full_name,
     email,
     phone_number,
+    whatsaap_number,
     category,
     est_of_interest,
     contact_me,
@@ -76,7 +77,7 @@ const LandingPageOptinForm = ({
                 borderBottom: "0px solid #dee2e6",
                 background: "#541484",
                 color: "#fff",
-                marginTop: "40px",
+                marginTop: "65px",
               }}
             >
               {setData === null || !setData ? (
@@ -131,6 +132,20 @@ const LandingPageOptinForm = ({
                 </div>
                 <div className="form-group">
                   <input
+                    type="number"
+                    name="whatsaap_number"
+                    className="form-control number"
+                    id="whatsaap_number"
+                    required
+                    placeholder="Whatsaap Number"
+                    onChange={onChange}
+                    value={whatsaap_number}
+                    maxLength={20}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <input
                     type="email"
                     name="email"
                     className="form-control"
@@ -150,8 +165,8 @@ const LandingPageOptinForm = ({
                     onChange={onChange}
                     required
                   >
-                    <option value="" selected disabled>
-                      Select Enquiry category
+                    <option value="" defaultValue disabled>
+                      Select Enquiry Category
                     </option>
                     <option value="Individual buyer/Investors">
                       Individual buyer/Investors
@@ -186,7 +201,7 @@ const LandingPageOptinForm = ({
                     onChange={onChange}
                     required
                   >
-                    <option value="" selected disabled>
+                    <option value="" defaultValue disabled>
                       Select Service Of Interest
                     </option>
                     <option value="Complete Verification Service">
@@ -232,7 +247,7 @@ const LandingPageOptinForm = ({
                     onChange={onChange}
                     className="form-control"
                   >
-                    <option value="" selected disabled>
+                    <option value="" defaultValue disabled>
                       When do you need this service
                     </option>
                     <option value="Now">Now</option>

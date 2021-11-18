@@ -31,6 +31,7 @@ const Verification = () => {
     full_name: "",
     email: "",
     phone_number: "",
+    whatsaap_number: "",
     category: "",
     est_of_interest: "",
     contact_me: "",
@@ -49,6 +50,7 @@ const Verification = () => {
       full_name: "",
       email: "",
       phone_number: "",
+      whatsaap_number: "",
       category: "",
       est_of_interest: "",
       contact_me: "",
@@ -546,9 +548,14 @@ const Verification = () => {
             className="ul-text-dark"
             style={{ color: "white", marginLeft: "20px" }}
           >
-            <li style={{listStyleType:"decimal", marginBottom:"10px"}}>The Verification Service shall be executed and delivered between 14 - 21 working days from the day of payment.</li>
-            <li style={{listStyleType:"decimal"}}>VIP delivery of 5 - 10 working days from the day of payment.</li>
-</ul>
+            <li style={{ listStyleType: "decimal", marginBottom: "10px" }}>
+              The Verification Service shall be executed and delivered between
+              14 - 21 working days from the day of payment.
+            </li>
+            <li style={{ listStyleType: "decimal" }}>
+              VIP delivery of 5 - 10 working days from the day of payment.
+            </li>
+          </ul>
           {/* <div className="content-column">
             <div className="inner-column">
               <div className="row">
@@ -630,12 +637,13 @@ const Verification = () => {
             </div>
             <ul style={{ margin: "0px 20px" }} className="list-style-two">
               <li>
-                The legal fee is for vetting of closure documents, production
-                of contractual documents and execution of contractual documents
+                The legal fee is for vetting of closure documents, production of
+                contractual documents and execution of contractual documents
               </li>
               <li>
-              Client pays all statutory fees as well as other ancillary expenses 
-              relating to taking property possession, Survey and title perfection, etc.
+                Client pays all statutory fees as well as other ancillary
+                expenses relating to taking property possession, Survey and
+                title perfection, etc.
               </li>
             </ul>
 

@@ -135,7 +135,7 @@ export default function InestmentReusableForm({
   const Budget = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <select className="custom-select" name="budget" required>
-        <option value>
+        <option defaultValue disabled value="">
           How much is your budget for purchase/Investment (In Naira)?
         </option>
         <option value="5m-9m">5m - 9m</option>
@@ -167,7 +167,9 @@ export default function InestmentReusableForm({
   const BalancePayment = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <select className="custom-select" name="balance_payment" required>
-        <option value>Duration to Balance Payment</option>
+        <option defaultValue value="">
+          Duration to Balance Payment
+        </option>
         <option value="1 month">1 month</option>
         <option value="3 month ">3 month</option>
         <option value="6 month">6 month</option>
@@ -185,7 +187,9 @@ export default function InestmentReusableForm({
   const SubscriptionPlan = () => (
     <div className="col-lg-6 col-md-6 col-sm-12 form-group">
       <select className="custom-select" name="subscription_plan" required>
-        <option value>Subscription Plan after first purchase</option>
+        <option disabled defaultValue value="">
+          Subscription Plan after first purchase
+        </option>
         <option value="Daily">Daily</option>
         <option value="Bi-Weekly ">Bi-Weekly</option>
         <option value="Weekly">Weekly</option>
@@ -379,7 +383,9 @@ export default function InestmentReusableForm({
                     }
                     required
                   >
-                    <option value>How did you know about us?</option>
+                    <option defaultValue disabled value="">
+                      How did you know about us?
+                    </option>
                     <option value="Facebook">Facebook</option>
                     <option value="Instagram ">Instagram </option>
                     <option value="Google">Google</option>

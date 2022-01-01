@@ -1,0 +1,85 @@
+.subplan-info {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subplan-desc {
+  padding: 10px;
+  text-align: center;
+}
+
+.images-gallery {
+  text-align: center;
+}
+
+.images-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images-gallery-container img {
+  height: 350px;
+  width: 50%;
+  padding: 15px;
+}
+@media screen and (max-width: 700px) {
+  .images-gallery-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .images-gallery-container img {
+    width: 100%;
+    padding: 10px 10px;
+  }
+}
+.call-enquiry {
+  margin: 15px auto;
+  color: #541484;
+}
+.call-enquiry-first {
+  text-align: center;
+  color: #ffff;
+  /* background-color: #541484; */
+}
+/* @media only screen and (max-width: 700px) {
+  .accordion-box li {
+    display: visible !important;
+  }
+} */
+
+/* flora ecopolis */
+
+.estate-contaner {
+  text-align: center;
+}
+h4.estate-title {
+  margin: 10px 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+hr.estate-rule {
+  border: 8px solid rgb(50, 158, 158);
+}
+h6.estate-sub-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0;
+}
+p.estate-desc {
+  line-height: 27px;
+  font-size: 17px;
+}
+ul.estate-ul {
+  margin-bottom: 10px;
+}
+li.estate-features {
+  display: inline;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  li.estate-features {
+    display: block;
+    /* margin-right: 20px; */
+  }
+}

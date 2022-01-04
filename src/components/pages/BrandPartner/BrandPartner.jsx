@@ -6,6 +6,9 @@ import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import background from "../../assets/background.jpg";
 import price from "../../assets/reward.jpeg";
+import EngageInService from "../../SharedComponents/EngageInService";
+import "./styles.css";
+
 const BrandPartner = () => {
   const tawkToPropertyId = "5a9e51824b401e45400d70e9";
 
@@ -366,7 +369,7 @@ const BrandPartner = () => {
                 </tbody>
               </table>
             </div>
-            <p className="text-center" style={{ color: "#41036E" }}>
+            <p className="text-center respo" style={{ color: "#41036E" }}>
               Note: All percentage earnings are subject to review from time to
               time as may be determined by the company board.{" "}
             </p>
@@ -412,7 +415,30 @@ const BrandPartner = () => {
               help to every nuke and cranny of Nigeria through you and every
               other person that shares similar values.{" "}
             </p>
-            {/* <EngageInService /> */}
+            <EngageInService
+              first_step="Enter Your Detail Now To Request A Call-Back"
+              second_step="  Make Payment."
+              third_step="    Submit Service Information."
+              fourth_step=" Connect with Your Personal Manager."
+              call_to_action={
+                <div
+                  class="btn-box"
+                  style={{
+                    display: "block",
+                    marginRight: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  <button
+                    data-toggle="modal"
+                    data-target="#landingModal"
+                    class="theme-btn btn-style-three mb-4 mt-3"
+                  >
+                    <span class="btn-title">REQUEST A CALL-BACK NOW</span>
+                  </button>
+                </div>
+              }
+            />
 
             <br />
 

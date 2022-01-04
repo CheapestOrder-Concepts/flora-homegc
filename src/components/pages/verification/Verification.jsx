@@ -196,24 +196,40 @@ const Verification = () => {
               Coordinate Charting at Surveyor General's office for updated
               information.
             </li>
-            <li>A comprehensive examination of all documents</li>
-            <li>Confirming other government Property requirements</li>
+            <li>A comprehensive examination of all documents.</li>
+            <li>Confirming other government Property requirements.</li>
             <li>Authentication of the claimed title.</li>
-            <li>Authenticating the property ownership</li>
+            <li>Authenticating the property ownership.</li>
             <li>Unveiling any possible third-party ownership claims.</li>
             <li>Unraveling the property history.</li>
-            <li>Root of title research</li>
-            <li>Checking of taxes or collateral issues</li>
+            <li>Root of title research.</li>
+            <li>Checking of taxes or collateral issues.</li>
             <li>Checking any internal dispute.</li>
-            <li>Examining the Structural state of the interest building.</li>
-            <li>Flooding susceptibility check.</li>
-            <li>Confirming all documents in relation to the structure.</li>
-            <li>Ensure interest land use tally with existing use</li>
             <li>
-              Confirming the site plan is in conformity with approved layout
-              plan
+              Examining both the major structural status as well as any minor
+              defects within the subject building.
             </li>
-            <li>Confirming all planning tallies with the state master plan.</li>
+            <li>Flooding susceptibility check.</li>
+            <li>
+              Confirming and correlating all documents in relation to the
+              structure.
+            </li>
+            <li>Ensure interest land use tally with masterplan use</li>
+            <li>
+              Confirming the existing building plan is in conformity with
+              approved plan.
+            </li>
+            <li>
+              Confirming that all site planning tallies with any existing layout
+              plan and/or the state masterplan.
+            </li>
+            <li>
+              Measuring the sizes of the land, site, rooms and all spaces within
+              the property.
+            </li>
+            <li>Determine the option of values as a basis for negotiation.</li>
+            <li>General environmental assessment of the property.</li>
+            <li>Road Encroachment and setback issues.</li>
             <li>Etc</li>
           </ul>
 
@@ -615,31 +631,26 @@ const Verification = () => {
                 <tbody>
                   <tr>
                     <td className="text">1 Plot</td>
-                    <td className="text">N150,000 / $400</td>
-                    <td className="text">N200,000 / $520</td>
-                    <td className="text">10% property purchase fee</td>
+                    <td className="text">N250,000 / $650</td>
+                    <td className="text">N350,000 / $900</td>
+                    <td className="text">10% property fair market value</td>
                   </tr>
                   <tr>
                     <td className="text">With Viable Structure</td>
-                    <td className="text">+N50,000/building</td>
-                    <td className="text">+N70,000/building</td>
+                    <td className="text">+N50,000/$135 per building</td>
+                    <td className="text">+N70,000/$190 per building</td>
                     <td className="text" />
                   </tr>
                   <tr>
                     <td className="text">Above 1 acre</td>
-                    <td className="text">+N20,000/$55 Per Every Extra Acre</td>
-                    <td className="text">+N30,000/$80 Per Every Extra Acre</td>
+                    <td className="text">+N50,000 Per Every Extra Acre</td>
+                    <td className="text">+N70,000 Per Every Extra Acre</td>
                     <td className="text" />
                   </tr>
                 </tbody>
               </table>
             </div>
             <ul style={{ margin: "0px 20px" }} className="list-style-two">
-              <li>
-                Professional fee covers for negotiations, vetting &
-                authentication of closure documents, production of contractual
-                documents, execution of contractual documents etc.
-              </li>
               <li>
                 Client pays all statutory fees as well as other ancillary
                 expenses relating to taking property possession, Survey and

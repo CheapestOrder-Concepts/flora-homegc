@@ -6,7 +6,7 @@ import EngageInService from "../../SharedComponents/EngageInService";
 import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import partner from "../../assets/partner2.jpg";
-import price from "../../assets/papf.jpeg";
+import price from "../../assets/update_img.jpeg";
 const ProfessionalAdvisory = () => {
   const tawkToPropertyId = "5a9e51824b401e45400d70e9";
 
@@ -371,6 +371,36 @@ const ProfessionalAdvisory = () => {
                 </thead>
                 <tbody>
                   <tr>
+                    <td className="text">1 Plot</td>
+                    <td className="text">N250,000 / $650</td>
+                    <td className="text">N350,000 / $900</td>
+                    <td className="text">10% property fair market value</td>
+                  </tr>
+                  <tr>
+                    <td className="text">With Viable Structure</td>
+                    <td className="text">+N50,000/$135 per building</td>
+                    <td className="text">+N70,000/$190 per building</td>
+                    <td className="text" />
+                  </tr>
+                  <tr>
+                    <td className="text">Above 1 acre</td>
+                    <td className="text">+N50,000 Per Every Extra Acre</td>
+                    <td className="text">+N70,000 Per Every Extra Acre</td>
+                    <td className="text" />
+                  </tr>
+                </tbody>
+              </table>
+              {/* <table className="table table-bordered table-center">
+                <thead style={{ backgroundColor: "#448414", color: "#ffffff" }}>
+                  <tr>
+                    <th scope="col">Size</th>
+                    <th scope="col">Service Charge</th>
+                    <th scope="col">VIP Charge</th>
+                    <th scope="col">Legal Fee</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
                     <td className="text">
                       Land Mass less than Or equals 1 acre (4000sqm)
                     </td>
@@ -391,14 +421,14 @@ const ProfessionalAdvisory = () => {
                     <td className="text" />
                   </tr>
                 </tbody>
-              </table>
+              </table> */}
             </div>
             <ul style={{ margin: "0px 20px" }} className="list-style-two">
-              <li>
+              {/* <li>
                 Professional fee covers for negotiations, vetting &
                 authentication of closure documents, production of contractual
                 documents, execution of contractual documents etc.
-              </li>
+              </li> */}
               <li>
                 Client pays all statutory fees as well as other ancillary
                 expenses relating to taking property possession, Survey and

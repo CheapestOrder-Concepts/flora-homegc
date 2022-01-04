@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import tawkTo from "tawkto-react";
 import "./style.css";
 import partner from "../../assets/partner2.jpg";
-import price from "../../assets/vpf.jpeg";
+import price from "../../assets/update_img.jpeg";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
 import EngageInService from "../../SharedComponents/EngageInService";
@@ -229,8 +229,22 @@ const Verification = () => {
             </li>
             <li>Determine the option of values as a basis for negotiation.</li>
             <li>General environmental assessment of the property.</li>
-            <li>Road Encroachment and setback issues.</li>
-            <li>Etc</li>
+            <li>
+              Road Encroachment/setback checks and conformity through both
+              states and federal masterplan.
+            </li>
+            <li>Negotiations</li>
+            <li>
+              Authentication of closure documents in the required offices.
+            </li>
+            <li>
+              Production and execution of all contractual documents including
+              deed of assignment, contract of sale, meeting agreement etc.
+            </li>
+            <li>
+              Perfection of title document after the completion of transactions.
+            </li>
+            <li>And much more...</li>
           </ul>
 
           <div

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // import cpbs from "../../assets/productAssets/cpbs.png";
 import background from "../../assets/background.jpg";
-import price_table from "../../assets/vpf.jpeg";
+import price_table from "../../assets/price_table.png";
 import PaymentDetails from "../../SharedComponents/PaymentDetails";
 import LandingPageOptinForm from "../../SharedComponents/LandingPageOptinForm";
 import { useDispatch, useSelector } from "react-redux";
@@ -525,44 +525,12 @@ const CompleteBuyer = () => {
       <img src={price_table} width="100%" className="P2" alt="price_table" />
       <br />
 
-      <section className="P1">
+      <section style={{ backgroundImage: `url(${background})` }} className="P1">
         <div className="auto-container">
           <div className="row">
             <div className="col-lg-12 pt-5 pb-5 text-white">
               <div className="table-responsive" id="verification-table">
                 <table className="table table-bordered table-center">
-                  <thead
-                    style={{ backgroundColor: "#448414", color: "#ffffff" }}
-                  >
-                    <tr>
-                      <th scope="col">Size</th>
-                      <th scope="col">Service Charge</th>
-                      <th scope="col">VIP Charge</th>
-                      <th scope="col">Legal Fee</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="text">1 Plot</td>
-                      <td className="text">N250,000 / $650</td>
-                      <td className="text">N350,000 / $900</td>
-                      <td className="text">10% property fair market value</td>
-                    </tr>
-                    <tr>
-                      <td className="text">With Viable Structure</td>
-                      <td className="text">+N50,000/$135 per building</td>
-                      <td className="text">+N70,000/$190 per building</td>
-                      <td className="text" />
-                    </tr>
-                    <tr>
-                      <td className="text">Above 1 acre</td>
-                      <td className="text">+N50,000 Per Every Extra Acre</td>
-                      <td className="text">+N70,000 Per Every Extra Acre</td>
-                      <td className="text" />
-                    </tr>
-                  </tbody>
-                </table>
-                {/* <table className="table table-bordered table-center">
                   <thead style={{ backgroundColor: "#fff", color: "#3A005F" }}>
                     <tr>
                       <th scope="col">Property Worth (Naira)</th>
@@ -608,7 +576,7 @@ const CompleteBuyer = () => {
                       <td>8%</td>
                     </tr>
                   </tbody>
-                </table> */}
+                </table>
               </div>
             </div>
           </div>

@@ -201,7 +201,7 @@ const Verification = () => {
             <li>Authentication of the claimed title.</li>
             <li>Authenticating the property ownership.</li>
             <li>Unveiling any possible third-party ownership claims.</li>
-            <li>Unraveling the property history.</li>
+            <li>Unravelling the property history.</li>
             <li>Root of title research.</li>
             <li>Checking of taxes or collateral issues.</li>
             <li>Checking any internal dispute.</li>
@@ -227,7 +227,7 @@ const Verification = () => {
               Measuring the sizes of the land, site, rooms and all spaces within
               the property.
             </li>
-            <li>Determine the option of values as a basis for negotiation.</li>
+            <li>Determine the option of value as a basis for negotiation.</li>
             <li>General environmental assessment of the property.</li>
             <li>
               Road Encroachment/setback checks and conformity through both

@@ -227,7 +227,7 @@ const Verification = () => {
               Measuring the sizes of the land, site, rooms and all spaces within
               the property.
             </li>
-            <li>Determine the option of value as a basis for negotiation.</li>
+            <li>Determine the opinion of value as a basis for negotiation.</li>
             <li>General environmental assessment of the property.</li>
             <li>
               Road Encroachment/setback checks and conformity through both

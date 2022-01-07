@@ -11,7 +11,10 @@ export default (data = {}, action) => {
     case MAKE_CONSULTATION_REQUEST:
       return { loading: true };
     case MAKE_CONSULTATION:
-      return { loading: false, data: action.payload?.data?.message };
+      return (
+        { loading: false, data: action.payload?.data?.message },
+        (window.location.pathname = "/product-thank-you")
+      );
 
     case MAKE_CONSULTATION_FAIL:
       return { loading: false, error: action.payload };

@@ -30,6 +30,7 @@ import ProfessionalAdvisory from "./components/pages/Professional Advisory/Profe
 import BrandPartner from "./components/pages/BrandPartner/BrandPartner";
 import Investment from "./components/pages/Investments/Investment";
 import OptinForm from "./components/SharedComponents/OptinForm";
+import ProductThankYou from "./components/pages/ProductThankYou/ProductThankYou";
 
 const App = () => {
   const myRef = useRef();
@@ -74,6 +75,7 @@ const App = () => {
           <Route path="/links" children={<QuickLinks />} />
           <Route path="/sales-page" children={<Books />} />
           <Route path="/thank-you" children={<ThankYou />} />
+          <Route path="/product-thank-you" children={<ProductThankYou />} />
           <Route component={NotFound} />
         </Switch>
         {/* <Footer /> */}

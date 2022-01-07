@@ -3,8 +3,6 @@ import * as api from "../api";
 
 const loginAction = (loginDetails) => async (dispatch) => {
 
-  
-  
   try {
     dispatch({
       type: LOGIN_REQUEST,

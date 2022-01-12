@@ -73,7 +73,7 @@ const App = () => {
             children={<RealEstateMistakes />}
           />
           <Route path="/links" children={<QuickLinks />} />
-          <Route path="/sales-page" children={<Books />} />
+          <Route path="/book/re-inv-wo-tears" children={<Books />} />
           <Route path="/thank-you" children={<ThankYou />} />
           <Route path="/product-thank-you" children={<ProductThankYou />} />
           <Route component={NotFound} />

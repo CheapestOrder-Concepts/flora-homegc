@@ -184,7 +184,7 @@ const Nai = () => {
               </Link>
               <Link
                 className="dropdown-item"
-                to="/sales-page"
+                to="/book/re-inv-wo-tears"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
               >

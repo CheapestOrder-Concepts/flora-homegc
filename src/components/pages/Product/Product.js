@@ -158,14 +158,14 @@ const Product = () => {
                 <div className="inner-box">
                   <div className="image-box">
                     <figure className="image">
-                      <Link to="/sales-page">
+                      <Link to="/book/re-inv-wo-tears">
                         <img src={hsn} alt="books" />
                       </Link>
                     </figure>
                   </div>
                   <div className="lower-content">
                     <h4>
-                      <Link to="/sales-page">Books</Link>
+                      <Link to="/book/re-inv-wo-tears">Books</Link>
                     </h4>
                     <p>
                       The Time-Tested Information to Making ZERO MISTAKE When
@@ -175,7 +175,10 @@ const Product = () => {
                       stress-free, wahala-free, argument-free, and court
                       case-free profitable property investment deal.
                     </p>
-                    <Link to="/sales-page" className="custom-btn btn btn-lg">
+                    <Link
+                      to="/book/re-inv-wo-tears"
+                      className="custom-btn btn btn-lg"
+                    >
                       View Now
                     </Link>
                   </div>

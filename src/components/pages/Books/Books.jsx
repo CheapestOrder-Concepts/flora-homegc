@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 // import { useHistory } from "react-router";
 export default function Books() {
   const [formData, setformData] = useState({
-    full_name: " ",
+    full_name: "",
     email: "",
     phone_number: "",
     whatsapp_number: "",

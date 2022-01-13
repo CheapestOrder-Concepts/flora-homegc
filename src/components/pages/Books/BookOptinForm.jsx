@@ -59,6 +59,7 @@ export default function BookOptinForm({
                     required
                   />
                 </div>
+
                 <div className="col-lg-6 col-md-6 col-sm-12 form-group">
                   <input
                     type="email"

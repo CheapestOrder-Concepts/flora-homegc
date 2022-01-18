@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import "../../css/Modal.css";
-import "./landing-optin.css";
+// import "../../css/Modal.css";
+// import "./landing-optin.css";
 import ErrorMessage from "./Error";
 import { Feedback } from "./Feedback";
 import LoadingComponent from "./Loading";

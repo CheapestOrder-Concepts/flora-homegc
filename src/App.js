@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./css/App.css";
-
 import Nav from "./components/layouts/Nav";
 import Home from "./components/pages/Home/Home";
 // import Footer from "./components/layouts/Footer";
@@ -32,6 +31,7 @@ import Investment from "./components/pages/Investments/Investment";
 import OptinForm from "./components/SharedComponents/OptinForm";
 import ProductThankYou from "./components/pages/ProductThankYou/ProductThankYou";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 const App = () => {
   const myRef = useRef();
   useEffect(() => {

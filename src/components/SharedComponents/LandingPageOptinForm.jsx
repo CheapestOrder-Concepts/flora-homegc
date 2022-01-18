@@ -6,7 +6,6 @@ import ErrorMessage from "./Error";
 import { Feedback } from "./Feedback";
 import LoadingComponent from "./Loading";
 import { Modal } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const LandingPageOptinForm = ({
   handleClose,

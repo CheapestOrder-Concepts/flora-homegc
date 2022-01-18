@@ -4,7 +4,7 @@ import ErrorMessage from "./Error";
 import { Feedback } from "./Feedback";
 import "./optinmodal.css";
 import { Modal } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 export default function OptinModal({
   handleClose,
   show,

@@ -25,6 +25,10 @@ const TheHive = () => {
     handleAccordion();
   }, []);
   const [bookingDetail, setbookingDetail] = useState({});
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <>
@@ -49,11 +53,7 @@ const TheHive = () => {
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9tp_xEJnKY2yitoCzRp7t6oj9yKF_Y2M6uzQ7nvoFzu6GHw/viewform" className="theme-btn btn-style-two"><span className="btn-title">Reserve Now</span></a>
           </div> */}
           <div className="btn-box">
-            <button
-              data-toggle="modal"
-              data-target="#optinForm"
-              className="theme-btn btn-style-two"
-            >
+            <button onClick={handleShow} className="theme-btn btn-style-two">
               <span className="btn-title">
                 For Enquiry, inspection or reservation, click here to fill the
                 form
@@ -192,8 +192,7 @@ const TheHive = () => {
                 </div>
                 <div className="btn-box">
                   <button
-                    data-toggle="modal"
-                    data-target="#optinForm"
+                    onClick={handleShow}
                     className="theme-btn btn-style-three"
                   >
                     <span className="btn-title">Book Reservation</span>
@@ -388,8 +387,7 @@ const TheHive = () => {
                   <div className="text-center">
                     <div className="btn-box">
                       <button
-                        data-toggle="modal"
-                        data-target="#optinForm"
+                        onClick={handleShow}
                         className="theme-btn btn-style-four"
                       >
                         <span className="btn-title">Reserve Now</span>
@@ -816,7 +814,7 @@ const TheHive = () => {
                 </div> */}
 
                 <div className="form-inner text-center">
-                  <Optin_Trigger />
+                  <Optin_Trigger onClick={handleShow} />
                   {/* <a
                     href="tel:+2348024421356 "
                     className="call-enquiry call-link-three"
@@ -839,6 +837,8 @@ const TheHive = () => {
         componentId="optinForm"
         title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}
+        show={show}
+        handleClose={handleClose}
       />
       {/* <Footer/> */}
     </>

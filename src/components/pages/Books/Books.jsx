@@ -62,6 +62,10 @@ export default function Books() {
       how_you_hear_about_us: "",
     });
   };
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <section style={{ backgroundImage: `url(${background})` }}>
@@ -639,8 +643,7 @@ export default function Books() {
                     {/* <a href="#" data-toggle="modal" data-target="#pricingmodal" class="theme-btn btn-style-one"><span class="btn-title">Wow!!! See what I've been looking for. I want the checklist</span></a> */}
                     <button
                       type="button"
-                      data-toggle="modal"
-                      data-target="#bookOptin"
+                      onClick={handleShow}
                       className="theme-btn btn-style-one pricingmodalCall"
                     >
                       <span className="btn-title">
@@ -769,8 +772,7 @@ export default function Books() {
                       {/*  <a href="#" data-toggle="modal" data-target="#pricingmodal" class="theme-btn btn-style-three mt-3"><span class="btn-title">I'm ready to get it</span></a> */}
                       <button
                         type="button"
-                        data-toggle="modal"
-                        data-target="#bookOptin"
+                        onClick={handleShow}
                         className="theme-btn btn-style-three mt-3 pricingmodalCall"
                       >
                         <span className="btn-title">I'm ready to get it</span>
@@ -880,8 +882,7 @@ export default function Books() {
                   {/* <a href="#" data-toggle="modal" data-target="#pricingmodal" class="theme-btn btn-style-four "><span class="btn-title">Please grant me access already, I can't wait</span></a> */}
                   <button
                     type="button"
-                    data-target="#bookOptin"
-                    data-toggle="modal"
+                    onClick={handleShow}
                     className="theme-btn btn-style-four pricingmodalCall"
                   >
                     <span className="btn-title">
@@ -935,6 +936,8 @@ export default function Books() {
         setbookingDetail={setbookingDetail}
         data={bookingDetail.bookings_data}
         componentId="bookOptin"
+        show={show}
+        handleClose={handleClose}
         component={
           <BookOptinForm
             loading={loading}

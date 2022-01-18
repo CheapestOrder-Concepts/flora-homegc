@@ -25,6 +25,11 @@ const Investment = () => {
   useEffect(() => {
     handleAccordion();
   }, []);
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <section style={{ background: "#541484" }}>
@@ -142,6 +147,7 @@ const Investment = () => {
             </li>
           </ul>
           <CtaButton
+            onClick={handleShow}
             own="#own"
             title="Click here to start your journey into building your dream future"
           />
@@ -154,8 +160,10 @@ const Investment = () => {
             second_step="Make payment"
             third_step="Activate your account"
             fourth_step="Watch your money grow"
+            onClick={handleShow}
             call_to_action={
               <CtaButton
+                onClick={handleShow}
                 own="#own"
                 title=" Click here to start your journey into building your dream
             future"
@@ -176,7 +184,11 @@ const Investment = () => {
             any time, or use it for any other property investment options of
             your choice.
           </h6>
-          <CtaButton exec="#exec" title="CLICK HERE TO SEE HOW IT WORKS" />
+          <CtaButton
+            onClick={handleShow}
+            exec="#exec"
+            title="CLICK HERE TO SEE HOW IT WORKS"
+          />
           <p className="text-left">C) Direct Estate Purchase</p>
           <h6>
             This is when you buy your choice property from our available estates
@@ -246,6 +258,7 @@ const Investment = () => {
             </li>
           </ul>
           <CtaButton
+            onClick={handleShow}
             optinForm="#optinForm"
             title="Click here to access our available estates"
           />
@@ -266,6 +279,7 @@ const Investment = () => {
             demolition wahala <br />
           </h6>
           <CtaButton
+            onClick={handleShow}
             client_eng="#client_eng"
             title=" Enter your request here and one of our sales executives will get
                 in touch"
@@ -863,6 +877,8 @@ const Investment = () => {
         data={bookingDetail.bookings_data}
         exec={true}
         componentId="exec"
+        handleClose={handleClose}
+        show={show}
         component={
           <InestmentReusableForm
             // loading={loading}
@@ -883,6 +899,8 @@ const Investment = () => {
         setbookingDetail={setbookingDetail}
         data={bookingDetail.bookings_data}
         componentId="own"
+        handleClose={handleClose}
+        show={show}
         own={true}
         component={
           <InestmentReusableForm
@@ -908,6 +926,8 @@ const Investment = () => {
         setbookingDetail={setbookingDetail}
         componentId="optinForm"
         header="Property Optin form"
+        handleClose={handleClose}
+        show={show}
         component={<OptinForm />}
       />
       <OptinModal
@@ -915,6 +935,8 @@ const Investment = () => {
         componentId="client_eng"
         client_eng={true}
         header="Client Engagement Form"
+        handleClose={handleClose}
+        show={show}
         component={
           <ClientEngagementForm
             formData={formData}

@@ -10,6 +10,7 @@ const CtaButton = ({
   own,
   optinForm,
   client_eng,
+  onClick,
 }) => {
   return (
     <>
@@ -26,11 +27,7 @@ const CtaButton = ({
             <span class="btn-title">{title}</span>
           </Link>
         ) : (
-          <button
-            data-toggle="modal"
-            data-target={exec || own || optinForm || client_eng}
-            class="theme-btn btn-style-four mb-4 mt-3"
-          >
+          <button onClick={onClick} class="theme-btn btn-style-four mb-4 mt-3">
             <span class="btn-title">{title}</span>
           </button>
         )}

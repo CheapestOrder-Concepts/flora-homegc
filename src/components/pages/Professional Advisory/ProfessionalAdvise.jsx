@@ -19,6 +19,11 @@ const ProfessionalAdvisory = () => {
     tawkTo(tawkToPropertyId, tawkToKey);
   }, []);
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [consultationDetails, setconsultationDetails] = useState({
     full_name: "",
     email: "",
@@ -82,8 +87,7 @@ const ProfessionalAdvisory = () => {
             }}
           >
             <button
-              data-toggle="modal"
-              data-target="#landingModal"
+              onClick={handleShow}
               class="theme-btn btn-style-four mb-4 mt-3"
             >
               <span class="btn-title">CONTACT US NOW</span>
@@ -151,8 +155,7 @@ const ProfessionalAdvisory = () => {
                   style={{ display: "inline", marginRight: "10px" }}
                 >
                   <button
-                    data-toggle="modal"
-                    data-target="#landingModal"
+                    onClick={handleShow}
                     class="theme-btn btn-style-four mb-4 mt-3"
                   >
                     <span class="btn-title">REQUEST A CALL-BACK NOW</span>
@@ -441,6 +444,7 @@ const ProfessionalAdvisory = () => {
               second_step="  Make Payment."
               third_step="    Submit Service Information."
               fourth_step=" Connect with Your Personal Manager."
+              onClick={handleShow}
               call_to_action={
                 <div
                   class="btn-box"
@@ -451,8 +455,7 @@ const ProfessionalAdvisory = () => {
                   }}
                 >
                   <button
-                    data-toggle="modal"
-                    data-target="#landingModal"
+                    onClick={handleShow}
                     class="theme-btn btn-style-three mb-4 mt-3"
                   >
                     <span class="btn-title">REQUEST A CALL-BACK NOW</span>
@@ -551,6 +554,8 @@ const ProfessionalAdvisory = () => {
         data={data}
         loading={loading}
         error={error}
+        show={show}
+        handleClose={handleClose}
       />
       {/* <Footer/> */}
     </>

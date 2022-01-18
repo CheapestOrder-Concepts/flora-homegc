@@ -7,6 +7,7 @@ export default function EngageInService({
   fourth_step,
   call_to_action,
   call_to_action2,
+  onClick,
 }) {
   return (
     <>
@@ -32,8 +33,7 @@ export default function EngageInService({
                         </div> */}
                       <button
                         className="theme-btn btn-style-three"
-                        data-toggle="modal"
-                        data-target="#landingModal"
+                        onClick={onClick}
                         id="form_caller"
                       >
                         <span className="btn-title">{first_step}</span>

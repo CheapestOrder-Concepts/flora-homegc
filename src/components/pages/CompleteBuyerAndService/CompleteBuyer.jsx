@@ -26,6 +26,10 @@ const CompleteBuyer = () => {
   const { data, loading, error } = useSelector(
     (state) => state.verificationConsultation
   );
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -73,8 +77,7 @@ const CompleteBuyer = () => {
             }}
           >
             <button
-              data-toggle="modal"
-              data-target="#landingModal"
+              onClick={handleShow}
               class="theme-btn btn-style-four mb-4 mt-3"
             >
               <span class="btn-title">REQUEST A CALL-BACK NOW</span>
@@ -151,8 +154,7 @@ const CompleteBuyer = () => {
                   style={{ display: "inline", marginRight: "10px" }}
                 >
                   <button
-                    data-toggle="modal"
-                    data-target="#landingModal"
+                    onClick={handleShow}
                     class="theme-btn btn-style-four mb-4 mt-3"
                   >
                     <span class="btn-title">REQUEST A CALL-BACK NOW</span>
@@ -609,6 +611,7 @@ const CompleteBuyer = () => {
           second_step="  Make Payment."
           third_step="    Submit Service Information."
           fourth_step=" Connect with Your Personal Manager."
+          onClick={handleShow}
           call_to_action={
             <div
               class="btn-box"
@@ -619,8 +622,7 @@ const CompleteBuyer = () => {
               }}
             >
               <button
-                data-toggle="modal"
-                data-target="#landingModal"
+                onClick={handleShow}
                 class="theme-btn btn-style-three mb-4 mt-3"
               >
                 <span class="btn-title">REQUEST A CALL-BACK NOW</span>
@@ -707,6 +709,8 @@ const CompleteBuyer = () => {
         data={data}
         loading={loading}
         error={error}
+        show={show}
+        handleClose={handleClose}
       />
     </>
   );

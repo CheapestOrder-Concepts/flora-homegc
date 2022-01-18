@@ -21,6 +21,11 @@ const Floracity = () => {
   useEffect(() => {
     handleAccordion();
   }, []);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [bookingDetail, setbookingDetail] = useState({});
   return (
     <>
@@ -47,11 +52,7 @@ const Floracity = () => {
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9tp_xEJnKY2yitoCzRp7t6oj9yKF_Y2M6uzQ7nvoFzu6GHw/viewform" className="theme-btn btn-style-two"><span className="btn-title">Reserve Now</span></a>
           </div> */}
           <div className="btn-box">
-            <button
-              data-toggle="modal"
-              data-target="#optinForm"
-              className="theme-btn btn-style-two"
-            >
+            <button onClick={handleShow} className="theme-btn btn-style-two">
               <span className="btn-title">
                 For Enquiry, inspection or reservation, click here to fill the
                 form
@@ -128,8 +129,7 @@ const Floracity = () => {
                 </div>
                 <div className="btn-box">
                   <button
-                    data-toggle="modal"
-                    data-target="#optinForm"
+                    onClick={handleShow}
                     className="theme-btn btn-style-three"
                   >
                     <span className="btn-title">Book Reservation</span>
@@ -178,11 +178,7 @@ const Floracity = () => {
               716870.696 mN
             </div>
             <div className="btn-box ml-3">
-              <button
-                data-toggle="modal"
-                data-target="#optinForm"
-                className="theme-btn btn-style-four"
-              >
+              <button onClick={handleShow} className="theme-btn btn-style-four">
                 <span className="btn-title">Reserve Plot</span>
               </button>
             </div>
@@ -1162,7 +1158,7 @@ const Floracity = () => {
                   {/* <div class="btn-box ml-3"></div>
                 </div> */}
                 <div className="form-inner text-center">
-                  <Optin_Trigger />
+                  <Optin_Trigger onClick={handleShow} />
                   {/* <h3 className="call-enquiry">Or call +2348024421356</h3> */}
                   {/* <a
                     href="tel:+2348024421356 "
@@ -1186,6 +1182,8 @@ const Floracity = () => {
         componentId="optinForm"
         header="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}
+        handleClose={handleClose}
+        show={show}
       />
       {/* <Footer/> */}
     </>

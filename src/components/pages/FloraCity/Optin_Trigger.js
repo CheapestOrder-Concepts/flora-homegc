@@ -1,6 +1,6 @@
 import React from "react";
 
-const Optin_Trigger = ({ handleSubmit }) => {
+const Optin_Trigger = ({ onClick }) => {
   return (
     <>
       <div
@@ -10,8 +10,7 @@ const Optin_Trigger = ({ handleSubmit }) => {
         <button
           className="theme-btn btn-style-one"
           style={{ padding: "30px", fontSize: "23px" }}
-          data-toggle="modal"
-          data-target="#optinForm"
+          onClick={onClick}
           type="button"
         >
           <span className="btn-title">

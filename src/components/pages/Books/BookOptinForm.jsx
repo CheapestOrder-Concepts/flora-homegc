@@ -12,14 +12,10 @@ export default function BookOptinForm({
       <form method="POST" id="pricing_modal_form" onSubmit={handleSubmit}>
         <div className="text-box col-lg-12 col-md-12 col-sm-12">
           <p className="text my-1">Congratulations for coming across this.</p>
+
           <p className="text my-1">
             Here is the Time-Tested, Step-by-Step Guide to Making ZERO MISTAKE
-            When Buying Real Estate Anywhere In Nigeria.
-          </p>
-          <p className="text my-1">
-            This book is part of the "Preventing Real Estate Losses" projects By
-            FloraHomes Global Consult Limited...to help Nigerians Property
-            Investors both home and abroad.
+            When Buying Real Estate Anywhere in Nigeria.
           </p>
           <p className="text my-4">
             <b>

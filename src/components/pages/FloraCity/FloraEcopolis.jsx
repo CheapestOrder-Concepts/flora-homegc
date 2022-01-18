@@ -22,6 +22,10 @@ import OptinForm from "../../SharedComponents/OptinForm";
 
 const FloraEcopolis = () => {
   const [bookingDetail, setbookingDetail] = useState({});
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const EstateListing = ({
     est_img,
@@ -82,11 +86,7 @@ const FloraEcopolis = () => {
             </div>
           </div>
           <div className="btn-box">
-            <button
-              data-toggle="modal"
-              data-target="#optinForm"
-              className="theme-btn btn-style-two"
-            >
+            <button onClick={handleShow} className="theme-btn btn-style-two">
               <span className="btn-title">Make Your Reservation Now</span>
             </button>
           </div>
@@ -387,7 +387,7 @@ const FloraEcopolis = () => {
               {/*Register Form*/}
               <div className="register-form col-lg-8 col-md-6 col-sm-12">
                 <div className="form-inner text-center">
-                  <Optin_Trigger onSubmit={""} />
+                  <Optin_Trigger onClick={handleShow} />
                   {/* <a
                     href="tel:+2348024421356 "
                     className="call-enquiry call-link-three"
@@ -409,6 +409,8 @@ const FloraEcopolis = () => {
         componentId="optinForm"
         title="PLEASE ENTER YOUR CORRECT DETAIL AND YOU'LL BE CONTACTED"
         component={<OptinForm />}
+        show={show}
+        handleClose={handleClose}
       />
       <PaymentDetails />
       {/* <Footer/> */}

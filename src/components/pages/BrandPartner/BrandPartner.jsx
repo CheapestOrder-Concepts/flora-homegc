@@ -35,7 +35,10 @@ const BrandPartner = () => {
   const { data, loading, error } = useSelector(
     (state) => state.verificationConsultation
   );
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const onSubmit = (e) => {
     e.preventDefault();
     dispatch(makeConsultation(consultationDetails));
@@ -80,8 +83,7 @@ const BrandPartner = () => {
             }}
           >
             <button
-              data-toggle="modal"
-              data-target="#landingModal"
+              onClick={handleShow}
               class="theme-btn btn-style-four mb-4 mt-3"
             >
               <span class="btn-title">
@@ -130,8 +132,7 @@ const BrandPartner = () => {
                   style={{ display: "inline", marginRight: "10px" }}
                 >
                   <button
-                    data-toggle="modal"
-                    data-target="#landingModal"
+                    onClick={handleShow}
                     class="theme-btn btn-style-four mb-4 mt-3"
                   >
                     <span class="btn-title">
@@ -299,8 +300,7 @@ const BrandPartner = () => {
                     style={{ display: "inline", marginRight: "10px" }}
                   >
                     <button
-                      data-toggle="modal"
-                      data-target="#landingModal"
+                      onClick={handleShow}
                       class="theme-btn btn-style-four mb-4 mt-3"
                     >
                       <span class="btn-title">
@@ -382,8 +382,7 @@ const BrandPartner = () => {
               }}
             >
               <button
-                data-toggle="modal"
-                data-target="#landingModal"
+                onClick={handleShow}
                 class="theme-btn btn-style-four mb-4 mt-3"
               >
                 <span class="btn-title">CLICK HERE TO ENTER YOUR DETAIL</span>
@@ -420,6 +419,7 @@ const BrandPartner = () => {
               second_step="  Make Payment."
               third_step="    Submit Service Information."
               fourth_step=" Connect with Your Personal Manager."
+              onClick={handleShow}
               call_to_action={
                 <div
                   class="btn-box"
@@ -430,8 +430,7 @@ const BrandPartner = () => {
                   }}
                 >
                   <button
-                    data-toggle="modal"
-                    data-target="#landingModal"
+                    onClick={handleShow}
                     class="theme-btn btn-style-three mb-4 mt-3"
                   >
                     <span class="btn-title">REQUEST A CALL-BACK NOW</span>
@@ -530,6 +529,8 @@ const BrandPartner = () => {
         data={data}
         loading={loading}
         error={error}
+        show={show}
+        handleClose={handleClose}
       />
       {/* <Footer/> */}
     </>

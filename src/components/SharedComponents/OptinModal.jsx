@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 import ErrorMessage from "./Error";
 import { Feedback } from "./Feedback";
 import "./optinmodal.css";
+import { Modal } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 export default function OptinModal({
+  handleClose,
+  show,
   setbookingDetail,
   componentId,
   component,
@@ -18,59 +22,34 @@ export default function OptinModal({
 
   return ReactDOM.createPortal(
     <>
-      <div
-        class="modal fade pt-2"
-        id={componentId}
-        tabindex="-1"
-        aria-labelledby={`${componentId}Label`}
-        aria-hidden="true"
-        style={{ marginTop: "15px" }}
+      <Modal
+        show={show}
+        onHide={handleClose}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        scrollable
       >
-        <div class="modal-root modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-          <div
-            class="modal-content"
-            style={{
-              background: "white",
-            }}
-          >
-            <div
-              class="modal-header"
-              style={{
-                borderBottom: "0px solid #dee2e6",
-                background: "#541484",
-                color: "#fff",
-                paddingTop: "15px",
-              }}
-            >
-              {data === null || !data ? (
-                error_msg ? (
-                  <ErrorMessage errorMessage={error_msg} />
-                ) : (
-                  <h4 className="font-weight-bold text-white text-center ">
-                    {header}
-                  </h4>
-                )
+        <Modal.Header closeButton>
+          <Modal.Title>
+            {" "}
+            {data === null || !data ? (
+              error_msg ? (
+                <ErrorMessage errorMessage={error_msg} />
               ) : (
-                <Feedback data={data} />
-              )}
-
-              <button
-                type="button"
-                className={`close mt-2 text-white `}
-                data-dismiss="modal"
-                aria-label="Close"
-                onClick={() =>
-                  setbookingDetail({ bookings_data: null, error_msg: null })
-                }
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">{component}</div>
-          </div>
-        </div>
-      </div>
+                <h4 className="font-weight-bold text-success text-center mt-5">
+                  {header}
+                </h4>
+              )
+            ) : (
+              <Feedback data={data} />
+            )}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{component}</Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
     </>,
-    document.getElementById("portal")
+    document.getElementById("root")
   );
 }

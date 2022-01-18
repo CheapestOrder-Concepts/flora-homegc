@@ -30,7 +30,7 @@ import BrandPartner from "./components/pages/BrandPartner/BrandPartner";
 import Investment from "./components/pages/Investments/Investment";
 import OptinForm from "./components/SharedComponents/OptinForm";
 import ProductThankYou from "./components/pages/ProductThankYou/ProductThankYou";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   const myRef = useRef();
   useEffect(() => {

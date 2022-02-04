@@ -77,23 +77,22 @@ const Verification = () => {
               <span style={{ fontWeight: "bold" }}> 50years.</span>
             </p>
           </div>
-          <div
+          {/* <div
             class="btn-box veriff-first"
             style={{
               display: "block",
-              // marginRight: "10px",
+     
               textAlign: "center",
             }}
           >
             <button
               onClick={handleShow}
-              // data-toggle="modal"
-              // data-target="#landingModal"
+     
               class="theme-btn btn-style-four mb-4 mt-3"
             >
               <span class="btn-title">CONTACT US NOW</span>
             </button>
-          </div>
+          </div> */}
           {/* <div
           className="phone-number"
           style={{
@@ -142,25 +141,7 @@ const Verification = () => {
                 any matter that arises after our verification between this
                 period. We would refund your investment capital.
               </li>
-              <li>
-                <div
-                  class="btn-box"
-                  style={{ display: "inline", marginRight: "10px" }}
-                >
-                  <button
-                    onClick={handleShow}
-                    class="theme-btn btn-style-four mb-4 mt-3"
-                  >
-                    <span class="btn-title">REQUEST A CALL-BACK NOW</span>
-                  </button>
-                </div>
-                {/* <div className="phone-number">
-                <a href="tel:+2348094442019 " className="call-link-two">
-                  {" "}
-                  OR CLICK HERE TO CALL{" "}
-                </a>
-              </div> */}
-              </li>
+              <li>Request a call back now</li>
             </ul>
 
             {/* <p style={{ fontWeight: 'bold' }}>
@@ -370,14 +351,65 @@ const Verification = () => {
         <div className="auto-container">
           <div className="row">
             <div className="col-lg-12 pt-5 pb-5 text-white">
-              {/* <p style={{ color: 'white' }}> You're still waiting…
-              </p> */}
-              {/* <p style={{ color: 'white' }}>
-                We say
-                Don't be a victim of fake C of O, fake Excision, fake Allocation, encumbered property, internal and external disputes, committed acquisition, property encroaching road, wrong uses, incomplete documentation, fake "title under processing", price extortion, building with defective structure, property that is susceptible to flooding, untruthful professionals, dubious agents, dubious developers, greedy Omo-Onile, property with multiple owners and many other issues…
-              </p> */}
-              <h5 style={{ color: "black" }}>
-                <b>Benefits and pricing:</b>
+              <h5 style={{ color: "black", marginTop: "15px" }}>
+                <b>Price </b>
+              </h5>
+              <div className="sec-title text-center">
+                <span className="title">Professional fee</span>
+              </div>
+              <div className="outer-box">
+                <figure id="verification-img-v" className="verification-img-v">
+                  <img
+                    src={price}
+                    alt="Professional Charge"
+                    width="100%"
+                    height="100%"
+                  />
+                </figure>
+                <div className="table-responsive" id="verification-table">
+                  <table className="table table-bordered table-center">
+                    <thead
+                      style={{ backgroundColor: "#448414", color: "#ffffff" }}
+                    >
+                      <tr>
+                        <th scope="col">Size</th>
+                        <th scope="col">Service Charge</th>
+                        <th scope="col">VIP Charge</th>
+                        <th scope="col">Legal Fee</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="text">1 Plot</td>
+                        <td className="text">N250,000 / $650</td>
+                        <td className="text">N350,000 / $900</td>
+                        <td className="text">10% property fair market value</td>
+                      </tr>
+                      <tr>
+                        <td className="text">With Viable Structure</td>
+                        <td className="text">+N50,000/$135 per building</td>
+                        <td className="text">+N70,000/$190 per building</td>
+                        <td className="text" />
+                      </tr>
+                      <tr>
+                        <td className="text">Above 1 acre</td>
+                        <td className="text">+N50,000 Per Every Extra Acre</td>
+                        <td className="text">+N70,000 Per Every Extra Acre</td>
+                        <td className="text" />
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul style={{ margin: "0px 20px" }} className="list-style-two">
+                  <li>
+                    Client pays all statutory fees as well as other ancillary
+                    expenses relating to taking property possession, Survey and
+                    title perfection, etc.
+                  </li>
+                </ul>
+              </div>
+              <h5 style={{ color: "black", marginTop: "15px" }}>
+                <b>Benefits </b>
               </h5>
               <br />
               <ul className="list-style-two ul-text-dark">
@@ -624,10 +656,22 @@ const Verification = () => {
       <section className="about-section">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <span className="title">Professional fee</span>
+            <div
+              class="btn-box"
+              style={{ display: "inline", marginRight: "10px" }}
+            >
+              <button
+                onClick={handleShow}
+                class="theme-btn btn-style-four mb-4 mt-3"
+              >
+                <span class="btn-title">
+                  TO ENGAGE IN THIS SERVICE, CLICK THIS BUTTON{" "}
+                </span>
+              </button>
+            </div>
           </div>
           <div className="outer-box">
-            <figure id="verification-img-v" className="verification-img-v">
+            {/*<figure id="verification-img-v" className="verification-img-v">
               <img
                 src={price}
                 alt="Professional Charge"
@@ -673,7 +717,7 @@ const Verification = () => {
                 expenses relating to taking property possession, Survey and
                 title perfection, etc.
               </li>
-            </ul>
+            </ul> */}
 
             <EngageInService
               first_step="Enter Your Detail Now To Request A Call-Back"

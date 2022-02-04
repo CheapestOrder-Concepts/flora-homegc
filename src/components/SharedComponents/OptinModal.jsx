@@ -37,7 +37,7 @@ export default function OptinModal({
               error_msg ? (
                 <ErrorMessage errorMessage={error_msg} />
               ) : (
-                <h4 className="font-weight-bold text-success text-center mt-5">
+                <h4 className="font-weight-bold text-primary text-center mt-5">
                   {header}
                 </h4>
               )

@@ -11,13 +11,15 @@ export default function BookOptinForm({
     <div>
       <form method="POST" id="pricing_modal_form" onSubmit={handleSubmit}>
         <div className="text-box col-lg-12 col-md-12 col-sm-12">
-          <p className="text my-1">Congratulations for coming across this.</p>
+          <p className="text text-primary my-1">
+            Congratulations for coming across this.
+          </p>
 
-          <p className="text my-1">
+          <p className="text text-primary my-1">
             Here is the Time-Tested, Step-by-Step Guide to Making ZERO MISTAKE
             When Buying Real Estate Anywhere in Nigeria.
           </p>
-          <p className="text my-4">
+          <p className="text text-primary my-4">
             <b>
               Enter your correct details below to access it immediately without
               leaving the page.

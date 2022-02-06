@@ -141,7 +141,7 @@ const Verification = () => {
                 any matter that arises after our verification between this
                 period. We would refund your investment capital.
               </li>
-              <li>Request a call back now</li>
+              <li>Request a call back </li>
             </ul>
 
             {/* <p style={{ fontWeight: 'bold' }}>
@@ -156,7 +156,7 @@ const Verification = () => {
           <p
             style={{
               fontWeight: "bold",
-              color: "#ed6c11",
+              color: "#fff",
               fontSize: "20px",
               paddingTop: "30px",
             }}
@@ -232,7 +232,7 @@ const Verification = () => {
             <li>And much more...</li>
           </ul>
 
-          <div
+          {/* <div
             class="btn-box"
             style={{ display: "inline", marginRight: "10px" }}
           >
@@ -242,7 +242,7 @@ const Verification = () => {
             >
               <span class="btn-title">CONTACT US NOW</span>
             </button>
-          </div>
+          </div> */}
           {/* <div className="phone-number">
             <a href="tel:+2348094442019 " className="call-link-one">
               {" "}
@@ -408,51 +408,67 @@ const Verification = () => {
                   </li>
                 </ul>
               </div>
-              <h5 style={{ color: "black", marginTop: "15px" }}>
-                <b>Benefits </b>
-              </h5>
-              <br />
-              <ul className="list-style-two ul-text-dark">
-                <li>
-                  It protects you against scam, eviction, encumbrance,
-                  demolition or any kind of property losses.
-                </li>
-                <li>
-                  You get peace of mind on your property as you do not stand any
-                  risk of property losses.
-                </li>
-                <li>
-                  Services are executed and delivered between 5-10 working days
-                  from the day of payment.
-                </li>
-                <li>
-                  We deploy only qualified property professionals to handle our
-                  clients' projects so you have no fear of losses due to
-                  quackery.
-                </li>
-                <li>Everything is done on your behalf 100%</li>
-                <li>
-                  We produce and execute the pre-purchase agreement and
-                  documentation.
-                </li>
-                <li>
-                  You enjoy stress-free, great value for less stress and you
-                  have more time to focus on other things that matter to you.
-                </li>
-                <li>
-                  We give you a perfect understanding of the true status of your
-                  interest property to create for you a good basis for
-                  negotiation
-                </li>
-              </ul>
+              <div
+                class="btn-box"
+                style={{ display: "inline", marginRight: "10px" }}
+              >
+                <button
+                  onClick={handleShow}
+                  class="theme-btn btn-style-four mb-4 mt-3"
+                >
+                  <span class="btn-title">
+                    TO ENGAGE THIS SERVICE, CLICK THIS BUTTON{" "}
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <section
+        className
+        style={{ background: "#541484", paddingBottom: "20px" }}
+      >
+        <div className="auto-container">
+          <h5 style={{ color: "white", paddingTop: "30px", fontSize: "20px" }}>
+            <b>Benefits </b>
+          </h5>
+          <br />
+          <ul className="list-style-two ul-text-white">
+            <li>
+              It protects you against scam, eviction, encumbrance, demolition or
+              any kind of property losses.
+            </li>
+            <li>
+              You get peace of mind on your property as you do not stand any
+              risk of property losses.
+            </li>
+            <li>
+              Services are executed and delivered between 5-10 working days from
+              the day of payment.
+            </li>
+            <li>
+              We deploy only qualified property professionals to handle our
+              clients' projects so you have no fear of losses due to quackery.
+            </li>
+            <li>Everything is done on your behalf 100%</li>
+            <li>
+              We produce and execute the pre-purchase agreement and
+              documentation.
+            </li>
+            <li>
+              You enjoy stress-free, great value for less stress and you have
+              more time to focus on other things that matter to you.
+            </li>
+            <li>
+              We give you a perfect understanding of the true status of your
+              interest property to create for you a good basis for negotiation
+            </li>
+          </ul>
 
-      {/* <section className="about-section"> */}
-      {/* <div className="auto-container"> */}
-      {/* <section className="schedule-section">
+          {/* <section className="about-section"> */}
+          {/* <div className="auto-container"> */}
+          {/* <section className="schedule-section">
             <div className="anim-icons">
               <span className="icon icon-circle-4 wow zoomIn animated animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
               <span className="icon icon-circle-3 wow zoomIn animated animated" style={{ visibility: 'visible', animationName: 'zoomIn' }} />
@@ -544,25 +560,24 @@ const Verification = () => {
             </div>
           </section> */}
 
-      <section className>
-        <div className="auto-container">
-          <h5 style={{ color: "black", fontSize: "30px" }}>
+          <h6 style={{ color: "white", fontSize: "30px", marginTop: "30px" }}>
             <b>
               Half done verification or No verification is usually a disaster.
             </b>
-          </h5>
-          <p
+          </h6>
+          <h5
             style={{
-              fontWeight: "bold",
-              color: "black",
+              // fontWeight: "bold",
+              color: "white",
               fontSize: "20px",
               marginTop: "20px",
+              marginButtom: "20px",
             }}
           >
             Verification is not just about
-          </p>
+          </h5>
           <ul
-            className="list-style-two ul-text-dark"
+            className="list-style-two ul-text-white"
             style={{ color: "white" }}
           >
             <li>Taking a surveyor to the land.</li>
@@ -580,6 +595,24 @@ const Verification = () => {
               Being scared of land and so deciding on just buying buildings.
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section>
+        <div className="auto-container">
+          <div
+            class="btn-box"
+            style={{ display: "inline", marginRight: "10px" }}
+          >
+            <button
+              onClick={handleShow}
+              class="theme-btn btn-style-four mb-4 mt-3"
+            >
+              <span class="btn-title">
+                TO ENGAGE THIS SERVICE, CLICK THIS BUTTON{" "}
+              </span>
+            </button>
+          </div>
           <br />
           <p style={{ fontWeight: "bold", fontSize: "18px" }}>
             Don't be a victim of fake C of O, fake Excision, fake Allocation,
@@ -665,7 +698,7 @@ const Verification = () => {
                 class="theme-btn btn-style-four mb-4 mt-3"
               >
                 <span class="btn-title">
-                  TO ENGAGE IN THIS SERVICE, CLICK THIS BUTTON{" "}
+                  TO ENGAGE THIS SERVICE, CLICK THIS BUTTON{" "}
                 </span>
               </button>
             </div>

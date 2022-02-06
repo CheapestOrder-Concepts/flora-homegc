@@ -11,11 +11,11 @@ const ClientEngagementForm = ({
     <div>
       <form method="POST" id="pricing_modal_form" onSubmit={handleSubmit}>
         <div className="text-box col-lg-12 col-md-12 col-sm-12">
-          <p className="text my-1">
+          <p className="text text-primary my-1">
             Kindly fill this form to engage any of our service. Here's our
             account detail to pay to.
           </p>
-          <p className="text my-1">
+          <p className="text text-primary my-1">
             Acc name: FloraHomes Global Consult Ltd <br /> Jaiz Bank Plc:
             0007101193 Naira), 0007101210 (Dollar) <br /> GT bank: 0449454858
             (Naira), 0449454865 (Dollar) <br /> Sterling Bank Plc. 0501420218
@@ -24,7 +24,7 @@ const ClientEngagementForm = ({
           {/* <p className="text my-1">
           
           </p> */}
-          <p className="text my-4">
+          <p className="text text-primary my-4">
             <b>
               Enter your correct details below to access it immediately without
               leaving the page.
@@ -376,19 +376,20 @@ const ClientEngagementForm = ({
 
         {/* Modal footer */}
         <div className="modal-footer">
-          {loading ? (
-            <LoadingComponent />
-          ) : (
-            <button
-              onClick={handleSubmit}
-              className="theme-btn btn-style-one btn-lg"
-              type="submit"
-              name="submit-form"
-              style={{ width: "100%" }}
-            >
-              <span className="btn-title">Submit Details</span>
-            </button>
-          )}
+          <button
+            disabled={loading ? true : false}
+            type="submit"
+            className="btn btn-primary btn-lg"
+            name="submit_form_btn"
+            id="submit_form_btn"
+            style={{
+              width: "100%",
+              marginBottom: "30px",
+              textTransform: "uppercase",
+            }}
+          >
+            {loading ? <LoadingComponent /> : "Submit Details"}
+          </button>
 
           {/* <button type="button" class="theme-btn btn-style-four" style=" pointer-events: none; cursor: pointer !important;" data-dismiss="modal">Close</button> */}
         </div>

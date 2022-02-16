@@ -72,8 +72,13 @@ export default function Books() {
         <div className="auto-container">
           <div className="row">
             <div className="col-lg-12 pt-5 pb-5 text-white">
-              <h3 style={{ color: "white", textTransform: "uppercase" }}>
-                <b>Before you go… know this!</b>
+              <h3 style={{ color: "white", textTransform: "Capitalize" }}>
+                <b>
+                  {" "}
+                  The Exact Checklists Wise Real Estate Investors Are Consulting
+                  Before They Spend Even One Kobo On Buying Property Anywhere In
+                  Nigeria.
+                </b>
               </h3>
               <br />
               <p style={{ color: "white" }}>
@@ -109,7 +114,7 @@ export default function Books() {
           <p>
             If you don't want to throw your money away or spend the next several
             months in Police Stations and courts trying to get it back (that's
-            if you can), then learn
+            if you can), <b> THEN BEFORE YOU GO... KNOW THIS!</b>
           </p>
         </div>
       </div>

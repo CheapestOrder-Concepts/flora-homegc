@@ -114,14 +114,14 @@ export default function Books() {
           <p>
             If you don't want to throw your money away or spend the next several
             months in Police Stations and courts trying to get it back (that's
-            if you can), <b> THEN BEFORE YOU GO... KNOW THIS!</b>
+            if you can).
           </p>
         </div>
       </div>
 
       <section
         className="about-section pb-0"
-        style={{ padding: "40px 0 70px" }}
+        style={{ padding: "30px 0 70px" }}
       >
         <div className="auto-container">
           <div className="row">
@@ -130,9 +130,7 @@ export default function Books() {
               <div className="inner-column pr-0">
                 <div className="sec-title">
                   <h4 className="font-weight-bold">
-                    The Exact Checklists Wise Real Estate Investors Are
-                    Consulting Before They Spend Even One Kobo On Buying
-                    Property Anywhere In Nigeria.
+                    THEN BEFORE YOU GO... KNOW THIS!
                   </h4>
                 </div>
                 <div className="text-box">
